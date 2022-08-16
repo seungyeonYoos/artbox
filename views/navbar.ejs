@@ -13,10 +13,13 @@
                 background-color: blueviolet;
             }
             ul {
+                position: fixed;
                 font-family: 'MaruBuri-Regular';
                 font-size: 35;
                 display: flex;
-                justify-content: center;
+                margin-top: 0px;
+                left: 50%;
+                transform: translate(-50%, 0);
             }
             li {
                 margin: 20px;
@@ -37,15 +40,18 @@
                 width: 30px;
                 height: 20px;
                 display: block;
-                position: relative;
+                position: fixed;
+                top: 30px;
+                right: 30px;
                 cursor: pointer;
+                z-index: 1000;
             }
 
             /* label 중에 for가 trigger인 항목 안의 span */
             label[for=trigger] span {
                 display: block;
                 height: 2px;
-                background-color: #000;
+                background-color: white;
                 left: 0;
                 width: 100%;
                 position: absolute;
@@ -70,6 +76,7 @@
             input[id=trigger]:checked + label span:nth-child(1) {
                 top: 50%;
                 transform: rotate(45deg);
+                background-color: black;
             }
 
             input[id=trigger]:checked + label span:nth-child(2) {
@@ -79,33 +86,36 @@
             input[id=trigger]:checked + label span:nth-child(3) {
                 top: 50%;
                 transform: rotate(-45deg);
+                background-color: black;
+
             }
 
             /* 사이드바 */
             .sidebar {
-                width: 250px;
+                width: 300px;
                 height: 100vh;
                 background-color: white;
                 position: fixed;
                 top: 0;
-                left: 0;
-                left: -250px;
-                transition: 1s;
+                right: 0;
+                right: -300px;
+                transition: 1.2s;
             }
 
             /* input[id=trigger]가 체크되었을 때 사이드바가 나오는 형제 인접자 */
             input[id=trigger]:checked ~ .sidebar {
-                left: 0;
+                right: 0;
             }
 
             /* check시 같이 밀려나가는 CSS 햄버거 메뉴 */
             input[id=trigger]:checked + label[for=trigger] {
-                left: 210px;
-                transition: 3s;
+                right: 250px;
+                transition: 1.2s;
             }
-            .container {
-                position: absolute;
+            .scroll {
+                width: 50px;
             }
+        
             
 
         </style>
@@ -137,5 +147,25 @@
             <div class="sidebar"></div>
         </div>
 
+        <div class="scroll">ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+            ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+            ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+            ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+            ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+        </div>
+        <script>
+            var lastScrollTop = 0;
+            $(window).scroll(function(){
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop){
+                    // downscroll code
+                    $('ul').css("display","none")
+                } else {
+                    // upscroll code
+                    $('ul').css("display","flex")
+                }
+                lastScrollTop = st;
+            });
+        </script>
     </body>
 </html>
