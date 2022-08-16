@@ -115,6 +115,7 @@
             .scroll {
                 width: 50px;
             }
+            
         
             
 
@@ -159,10 +160,10 @@
                 var st = $(this).scrollTop();
                 if (st > lastScrollTop){
                     // downscroll code
-                    $('ul').css("display","none")
+                    $('ul').hide()
                 } else {
                     // upscroll code
-                    $('ul').css("display","flex")
+                    $('ul').show()
                 }
                 lastScrollTop = st;
             });
