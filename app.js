@@ -1,3 +1,4 @@
+
 const express = require("express");
 const app = express();
 
@@ -6,6 +7,7 @@ app.use("/static", express.static(__dirname + "/static"));
 // app.use(express.static(__dirname + "/veiws"));
 
 const port = 8000;
+
 
 app.get("/", (req, res) => {
   res.render("root_page");
@@ -30,3 +32,5 @@ app.get("/year", (req, res) => {
 app.listen(port, () => {
   console.log("server open: ", port);
 });
+
+
