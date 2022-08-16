@@ -1,21 +1,71 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
 </head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+</script>
 
-
+<script>
+    function quick_search_click(subject) {
+        // console.log($(".quick_search").this.context());
+        console.log(subject.text);
+        name = "#" + subject.text;
+        // console.log(name);
+        // console.log($("#"+subject).offset());
+        move_height = $(name).offset();
+        // console.log($(name).offset());
+        console.log(move_height.top)
+        // $("html, body").offset(move_height.top);
+    }
+</script>
 
 
 <body>
-    sdfsd
-    fadfjhasdfjalsdkfjlask
-
+    asdfasdf
+    <ul>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>one</a>
+        </li>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>two</a>
+        </li>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>three</a>
+        </li>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>four</a>
+        </li>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>five</a>
+        </li>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>six</a>
+        </li>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>seven</a>
+        </li>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>eight</a>
+        </li>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>nine</a>
+        </li>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>ten</a>
+        </li>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>eleven</a>
+        </li>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>twelve</a>
+        </li>
+        <li>
+            <a class="quick_search" onclick=quick_search_click(this);>thirteen</a>
+        </li>
+    </ul>
 
 
 
