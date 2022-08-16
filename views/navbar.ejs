@@ -9,23 +9,21 @@
             font-weight: normal;
             font-style: normal;
 }
-            body {
-                background-color: blueviolet;
-            }
-            ul {
+            
+            .nav {
                 position: fixed;
                 font-family: 'MaruBuri-Regular';
-                font-size: 35;
+                font-size: 25;
                 display: flex;
                 margin-top: 0px;
                 left: 50%;
                 transform: translate(-50%, 0);
             }
-            li {
+            .nav > li {
                 margin: 20px;
                 
             }
-            a {
+            .nav-link {
                 text-decoration: none;
                 color: white;
             }
@@ -50,10 +48,9 @@
             /* label 중에 for가 trigger인 항목 안의 span */
             label[for=trigger] span {
                 display: block;
-                height: 2px;
+                height: 3px;
                 background-color: white;
                 left: 0;
-                width: 100%;
                 position: absolute;
                 transition: 0.3s;
                 z-index: 1000; 
@@ -62,14 +59,19 @@
             /* label[for=trigger] > span의 n번째 요소 */
             label[for=trigger] span:nth-child(1) {
                 top:0;
+                width: 120%;
             }
 
             label[for=trigger] span:nth-child(2) {
                 top:50%;
+                width: 80%;
+
             }
 
             label[for=trigger] span:nth-child(3) {
                 top:100%;
+                width: 100%;
+
             }
 
             /* check시 변하는 label[for=trigger] > span의 n번째 요소  */
@@ -77,6 +79,7 @@
                 top: 50%;
                 transform: rotate(45deg);
                 background-color: black;
+                width: 100%;
             }
 
             input[id=trigger]:checked + label span:nth-child(2) {
@@ -87,6 +90,8 @@
                 top: 50%;
                 transform: rotate(-45deg);
                 background-color: black;
+                width: 100%;
+
 
             }
 
@@ -160,10 +165,11 @@
                 var st = $(this).scrollTop();
                 if (st > lastScrollTop){
                     // downscroll code
-                    $('ul').hide()
+                    $('.nav').fadeOut(800);
+                    $('.nav').css('right','-');
                 } else {
                     // upscroll code
-                    $('ul').show()
+                    $('.nav').fadeIn(800)
                 }
                 lastScrollTop = st;
             });
