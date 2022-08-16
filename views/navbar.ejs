@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <style>
+            @font-face {
+            font-family: 'MaruBuri-Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+}
+            body {
+                background-color: blueviolet;
+            }
+            ul {
+                font-family: 'MaruBuri-Regular';
+                font-size: 35;
+                display: flex;
+                justify-content: center;
+            }
+            li {
+                margin: 20px;
+                
+            }
+            a {
+                text-decoration: none;
+                color: white;
+            }
+            /* input 중에 id가 trigger인 항목에 대한 css */
+            input[id=trigger] {
+                display: none;
+            }
+
+            /* label 중에 for가 trigger인 항목 */
+            label[for=trigger] {
+                /* border: 1px solid red; */
+                width: 30px;
+                height: 20px;
+                display: block;
+                position: relative;
+                cursor: pointer;
+            }
+
+            /* label 중에 for가 trigger인 항목 안의 span */
+            label[for=trigger] span {
+                display: block;
+                height: 2px;
+                background-color: #000;
+                left: 0;
+                width: 100%;
+                position: absolute;
+                transition: 0.3s;
+                z-index: 1000; 
+            }
+
+            /* label[for=trigger] > span의 n번째 요소 */
+            label[for=trigger] span:nth-child(1) {
+                top:0;
+            }
+
+            label[for=trigger] span:nth-child(2) {
+                top:50%;
+            }
+
+            label[for=trigger] span:nth-child(3) {
+                top:100%;
+            }
+
+            /* check시 변하는 label[for=trigger] > span의 n번째 요소  */
+            input[id=trigger]:checked + label span:nth-child(1) {
+                top: 50%;
+                transform: rotate(45deg);
+            }
+
+            input[id=trigger]:checked + label span:nth-child(2) {
+                opacity: 0;
+            }
+
+            input[id=trigger]:checked + label span:nth-child(3) {
+                top: 50%;
+                transform: rotate(-45deg);
+            }
+
+            /* 사이드바 */
+            .sidebar {
+                width: 250px;
+                height: 100vh;
+                background-color: white;
+                position: fixed;
+                top: 0;
+                left: 0;
+                left: -250px;
+                transition: 1s;
+            }
+
+            /* input[id=trigger]가 체크되었을 때 사이드바가 나오는 형제 인접자 */
+            input[id=trigger]:checked ~ .sidebar {
+                left: 0;
+            }
+
+            /* check시 같이 밀려나가는 CSS 햄버거 메뉴 */
+            input[id=trigger]:checked + label[for=trigger] {
+                left: 210px;
+                transition: 3s;
+            }
+            .container {
+                position: absolute;
+            }
+            
+
+        </style>
+
+    </head>
+    <body>
+        <ul class="nav justify-content-center" style="list-style: none;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">NEWS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Q&A</a>
+            </li>
+          </ul>
+          <!-- 최상위 div -->
+        <div class="container">
+            <!-- 햄버거 메뉴 -->
+            <input type="checkbox" id="trigger" >
+            <label for="trigger">
+                <!-- 햄버거 세줄 표현 -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- 클릭시 나타날 사이드바 -->
+            <div class="sidebar"></div>
+        </div>
+
+    </body>
+</html>
