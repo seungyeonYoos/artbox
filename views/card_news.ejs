@@ -7,7 +7,7 @@
     <title>card_news</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 <style>
-.title {
+.news_title {
   position: fixed;
   color: white;
   font-size: 50px;
@@ -23,7 +23,7 @@
   width: 35%;
 }
 
-.image {
+.news_img {
   display: block;
   width: 100%;
   height: auto;
@@ -46,12 +46,12 @@
 }
 
 
-.container:hover .textbox{
+.container:hover .news_textbox{
   opacity: 0.7;
 }
 
 
-.text {
+.news_text {
   position: absolute;
   color: white;
   font-size: 120%;
@@ -66,7 +66,7 @@
   font-weight: bold;
 }
 
-.text1 {
+.news_text1 {
   position: absolute;
   color: white;
   font-size: 15px;
@@ -80,7 +80,7 @@
   text-align: center;
 }
 
-.text2 {
+.news_text2 {
   position: absolute;
   color: white;
   font-size: 10px;
@@ -94,7 +94,7 @@
   text-align: center;
 }
 
-/* .img2 {
+/* .news_img2 {
   position: absolute;
   width: 90%;
   margin-top: 20%;
@@ -107,27 +107,27 @@
 
 <body style="background-color: purple;">
 
-<div class="title">
+<div class="news_title">
   Latest Art News
 </div>
 
 <div class="container">
-  <img onclick="newslink()" src="/static/img/artnews_ex.jpg" alt="Picsum" class="image">
-  <div class="textbox">
-    <div class="text">
+  <img onclick="newslink()" src="/static/img/artnews_ex.jpg" alt="Picsum" class="news_img">
+  <div class="news_textbox">
+    <div class="news_text">
       무각사 로터스갤러리, 신인작가 기획전
     </div>
-    <div class="text1">
+    <div class="news_text">
       2017년 로터스갤러리 청년신인작가 공모에
       선정된 양세미 작가의 전시가
       3일 부터 이달 29일까지 광주 무각사 로터스갤러리에서 열린다.
     </div>
-    <div class="text2">
+    <div class="news_text2">
       (클릭 시 기사로 이동)
     </div>
 </div>
 
-<!-- <div class="img2">
+<!-- <div class="news_img2">
   <img src="artnews_ex.jpg" alt="Picsum">
 </div> -->
 
