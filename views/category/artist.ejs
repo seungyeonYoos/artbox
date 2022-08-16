@@ -4,24 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Box</title>
+    <title>Document</title>
 </head>
 
 
-
 <body>
-    <%-include("navbar.ejs")%>
-    <%-include("video_carousel.ejs")%>
-    <%-include("quick_search")%>
+    <%-include("../quick_search.ejs") %>
+
     
     
     <% var era=['원시, 고대', '중세' , '근세' , '근대' , '현대' ]; %>
     <%for(var i=0; i < era.length; i++) { %>
         <div id= "<%= era[i] %>" style="height: 1000px;"> <%= era[i] %> </div>
     <% } %>
-        
-        
-        
-        
 </body>
 </html>
