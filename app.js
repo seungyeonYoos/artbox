@@ -11,7 +11,7 @@ const port = 8000;
 
 
 app.get("/", (req, res) => {
-  res.render("card_news");
+  res.render("root_page");
 });
 
 app.listen(port, () => {
