@@ -4,76 +4,67 @@
     <meta charset="UTF-8">
 
 </head>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+</script>
+
+<script>
+    function quick_search_click(subject) {
+        // console.log($(".quick_search").this.context());
+        console.log(subject.text);
+        name = "#" + subject.text;
+        // console.log(name);
+        // console.log($("#"+subject).offset());
+        move_height = $(name).offset();
+        // console.log($(name).offset());
+        console.log(move_height.top)
+        // $("html, body").offset(move_height.top);
+    }
+</script>
 
 
 <body>
-    <ul class="quick_search">
+    asdfasdf
+    <ul>
         <li>
-            <a>전체</a>
+            <a class="quick_search" onclick=quick_search_click(this);>one</a>
         </li>
         <li>
-            <a>상의</a>
+            <a class="quick_search" onclick=quick_search_click(this);>two</a>
         </li>
         <li>
-            <a>아우터</a>
+            <a class="quick_search" onclick=quick_search_click(this);>three</a>
         </li>
         <li>
-            <a>바지</a>
+            <a class="quick_search" onclick=quick_search_click(this);>four</a>
         </li>
         <li>
-            <a>원피스</a>
+            <a class="quick_search" onclick=quick_search_click(this);>five</a>
         </li>
         <li>
-            <a>스커트</a>
+            <a class="quick_search" onclick=quick_search_click(this);>six</a>
         </li>
         <li>
-            <a>가방</a>
+            <a class="quick_search" onclick=quick_search_click(this);>seven</a>
         </li>
         <li>
-            <a>스니커즈</a>
+            <a class="quick_search" onclick=quick_search_click(this);>eight</a>
         </li>
         <li>
-            <a>신발</a>
+            <a class="quick_search" onclick=quick_search_click(this);>nine</a>
         </li>
         <li>
-            <a>시계</a>
+            <a class="quick_search" onclick=quick_search_click(this);>ten</a>
         </li>
         <li>
-            <a>모자</a>
+            <a class="quick_search" onclick=quick_search_click(this);>eleven</a>
         </li>
         <li>
-            <a>스포츠</a>
+            <a class="quick_search" onclick=quick_search_click(this);>twelve</a>
         </li>
         <li>
-            <a>양말/레그웨어</a>
+            <a class="quick_search" onclick=quick_search_click(this);>thirteen</a>
         </li>
-        <lit_cd="026">
-            <a>속옷</a>
-            </li>
-            <li>
-                <a>안경</a>
-            </li>
-            <li>
-                <a>주얼리</a>
-            </li>
-            <li>
-                <a>액세서리</a>
-            </li>
-            <li>
-                <a>뷰티</a>
-            </li>
-            <li>
-                <a>디지털/테크</a>
-            </li>
-            <li>
-                <a>생활/취미/예술</a>
-            </li>
-            <li>
-                <a>책/음악/티켓</a>
-            </li>
-            <li>
-                <a>반려동물</a>
-            </li>
     </ul>
 
 

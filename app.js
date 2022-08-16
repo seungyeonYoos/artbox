@@ -10,7 +10,7 @@ app.use('/static', express.static('public'));
 const port = 8000;
 
 app.get("/", (req, res) => {
-    res.render("quick_search");
+    res.render("root_page");
   });
 
 
