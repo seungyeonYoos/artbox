@@ -1,135 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>card_news</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-<style>
-.news_title {
-  position: fixed;
-  color: white;
-  font-size: 50px;
-  top: 300px;
-  margin-left: 10%;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>card_news</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <style>
+    .news_title {
+      position: fixed;
+      color: white;
+      font-size: 50px;
+      top: 300px;
+      margin-left: 10%;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
 
-.container {
-  position: relative;
-  margin: 10%;
-  left: 50%;
-  width: 35%;
-}
+    .container {
+      position: relative;
+      margin: 10%;
+      left: 50%;
+      width: 35%;
+    }
 
-.news_img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-
-
-.news_textbox{
-  position: absolute;
-  margin: 0%;
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: black;
-}
+    .news_img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
 
 
-.container:hover .news_textbox{
-  opacity: 0.7;
-}
+
+    .news_textbox {
+      position: absolute;
+      margin: 0%;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: black;
+    }
 
 
-.news_text {
-  position: absolute;
-  color: white;
-  font-size: 120%;
-  font-family:verdana, sans-serif;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  white-space: pre;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-weight: bold;
-}
+    .news_img:hover {
+      opacity: 0.7;
+    }
 
-.news_text1 {
-  position: absolute;
-  color: white;
-  font-size: 15px;
-  font-family:verdana, sans-serif;
-  top: 50%;
-  left: 50%;
-  white-space: pre;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 
-.news_text2 {
-  position: absolute;
-  color: white;
-  font-size: 10px;
-  font-family:verdana, sans-serif;
-  top: 90%;
-  left: 50%;
-  white-space: pre;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+    .news_text {
+      position: absolute;
+      color: white;
+      font-size: 120%;
+      font-family: verdana, sans-serif;
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      white-space: pre;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-weight: bold;
+    }
 
-.news_img2 {
-  position: absolute;
-  margin-top: 10%;
-  width: 100%;
-  height: 100%;
-  right: 20%;
-}
+    .news_text1 {
+      position: absolute;
+      color: white;
+      font-size: 15px;
+      font-family: verdana, sans-serif;
+      top: 50%;
+      left: 50%;
+      white-space: pre;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
 
-</style>
+    .news_text2 {
+      position: absolute;
+      color: white;
+      font-size: 10px;
+      font-family: verdana, sans-serif;
+      top: 90%;
+      left: 50%;
+      white-space: pre;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .news_img2 {
+      position: absolute;
+      margin-top: 10%;
+      width: 100%;
+      height: 100%;
+      right: 20%;
+    }
+  </style>
 </head>
 
 <body style="background-color: darkcyan;">
 
-<div class="news_title">
-  Latest Art News
-</div>
+  <div class="news_title">
+    Latest Art News
+  </div>
 
-<div class="container">
-  <img onclick="newslink()" src="/static/img/artnews_ex.jpg" alt="Picsum" class="news_img">
-  <div class="news_textbox">
-    <div class="news_text">
-      무각사 로터스갤러리, 신인작가 기획전
+  <div class="container">
+    <img onclick="newslink()" src="/static/img/artnews_ex.jpg" alt="Picsum" class="news_img">
+    <div class="news_textbox">
+      <div class="news_text">
+        무각사 로터스갤러리, 신인작가 기획전
+      </div>
+      <div class="news_text1">
+        2017년 로터스갤러리 청년신인작가 공모에
+        선정된 양세미 작가의 전시가
+        3일 부터 이달 29일까지 광주 무각사 로터스갤러리에서 열린다.
+      </div>
+      <div class="news_text2">
+        (클릭 시 기사로 이동)
+      </div>
     </div>
-    <div class="news_text1">
-      2017년 로터스갤러리 청년신인작가 공모에
-      선정된 양세미 작가의 전시가
-      3일 부터 이달 29일까지 광주 무각사 로터스갤러리에서 열린다.
-    </div>
-    <div class="news_text2">
-      (클릭 시 기사로 이동)
-    </div>
-</div>
-<div>
-  <img src="/static/img/artnews_ex2.jpg" class="news_img2">
-</div>
+  </div>
+  <div>
+    <img src="/static/img/artnews_ex2.jpg" class="news_img2">
+  </div>
 
 </body>
+
 </html>
 </div>
-</html>
 
+</html>

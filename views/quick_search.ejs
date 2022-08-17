@@ -1,31 +1,3 @@
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-
-</head>
-<style>
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    .quick_search{
-        font-weight: 500;
-        font-size: 20px;
-        text-decoration: none;
-        color: black;
-    }
-    .quick_search:hover{
-        color: black;
-        font-size: larger;
-    }
-    
-</style>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
-    </script>
-
-
 <!-- 클릭시 text와 일치하는 id의 요소를 찾아낸 후 그 요소의 위치로 이동 -->
 <script>
     function quick_search_click(subject) {
@@ -34,30 +6,15 @@
         $("html").scrollTop(move_height.top);
     }
 </script>
+<!-- category list -->
+<% var era=['원시, 고대', '중세' , '근세' , '근대' , '현대' ]; %>
 
-
-<!-- <script>
-    var era = ['원시, 고대', '중세', '근세', '근대', '현대']
-    for(var i=0; i< era.length; i++)
-    {
-        console.log(era[i]);
-    }
-</script> -->
-
-
-<body>
-    <% var era=['원시, 고대', '중세' , '근세' , '근대' , '현대' ]; %>
-    
     <ul>
         <% for(var i=0; i< era.length; i++){ %>
             <li>
-                <a class="quick_search" onclick=quick_search_click(this);><%= era[i] %></a>
+                <a class="quick_search" onclick=quick_search_click(this);>
+                    <%= era[i] %>
+                </a>
             </li>
-        <% } %>
+            <% } %>
     </ul>
-
-
-
-</body>
-
-</html>
