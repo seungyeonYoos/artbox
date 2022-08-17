@@ -30,7 +30,7 @@ app.get("/year", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("server open: ", port);
+  console.log("Server open: ", port);
 });
 
 
