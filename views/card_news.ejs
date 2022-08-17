@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>card_news</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
   <style>
     .news_title {
       position: fixed;
@@ -27,8 +21,10 @@
 
     .news_img {
       display: block;
-      width: 100%;
-      height: 100%;
+      /* margin: 10%; */
+      /* width: 100%;
+      height: 100%; */
+      border-radius: 5%;
     }
 
 
@@ -42,18 +38,20 @@
       right: 0px;
       height: 100%;
       width: 100%;
+      border-radius: 5%;
       opacity: 0;
       transition: .5s ease;
       background-color: black;
     }
 
 
-    .news_img:hover {
+    #new:hover .news_textbox {
       opacity: 0.7;
     }
 
 
     .news_text {
+      display: flex;
       position: absolute;
       color: white;
       font-size: 120%;
@@ -69,16 +67,9 @@
     }
 
     .news_text1 {
-      position: absolute;
-      color: white;
       font-size: 15px;
-      font-family: verdana, sans-serif;
       top: 50%;
       left: 50%;
-      white-space: pre;
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      text-align: center;
     }
 
     .news_text2 {
@@ -94,13 +85,15 @@
       text-align: center;
     }
 
-    .news_img2 {
+    /* .news_img2 {
       position: absolute;
-      margin-top: 10%;
+      margin: 10%;
+      margin-left: 60%;
       width: 100%;
       height: 100%;
       right: 20%;
-    }
+      border-radius: 5%;
+    } */
   </style>
 </head>
 
@@ -111,10 +104,11 @@
   </div>
 
   <div class="container">
-    <img onclick="newslink()" src="/static/img/artnews_ex.jpg" alt="Picsum" class="news_img">
+
     <div class="news_textbox">
       <div class="news_text">
         무각사 로터스갤러리, 신인작가 기획전
+      </div>
       </div>
       <div class="news_text1">
         2017년 로터스갤러리 청년신인작가 공모에
@@ -125,14 +119,15 @@
         (클릭 시 기사로 이동)
       </div>
     </div>
+    <p id="new">
+      <!-- <img onclick="newslink()" src="/static/img/artnews_1.jpg" alt="Picsum" class="news_img"> -->
+      <img src="/static/img/artnews_1.jpg" alt="Picsum" class="news_img">
+    </p>
+    <div>
+      <img src="/static/img/artnews_2.jpg" class="news_img">
+    </div>
   </div>
-  <div>
-    <img src="/static/img/artnews_ex2.jpg" class="news_img2">
-  </div>
+
 
 </body>
 
-</html>
-</div>
-
-</html>
