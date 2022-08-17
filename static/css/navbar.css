@@ -9,7 +9,7 @@
     .nav {
         position: fixed; 
         font-family: 'MaruBuri-Regular';
-        font-size: 25;
+        font-size: 27px;
         display: flex;
         margin-top: 0px;
         left: 50%;
@@ -94,14 +94,30 @@
 
     /* 사이드바 */
     .sidebar {
-        width: 300px;
+        width: 600px;
         height: 100vh;
         background-color: white;
         position: fixed;
         top: 0;
         right: 0;
-        right: -300px;
+        right: -600px;
         transition: 1.2s;
+        z-index: 10000;
+    }
+
+    /* 사이드바 메뉴 */
+    .sideMenu {
+        list-style-type: none;
+        font-size: 35px ;
+        margin-top: 70px;
+    }
+    .sideMenu > li > a {
+        font-family: 'MaruBuri-Regular';
+        text-decoration: none;
+        color: black;
+    }
+    .accordion-body {
+        margin-top: 0;
     }
 
     /* input[id=trigger]가 체크되었을 때 사이드바가 나오는 형제 인접자 */
@@ -111,7 +127,7 @@
 
     /* check시 같이 밀려나가는 CSS 햄버거 메뉴 */
     input[id=trigger]:checked + label[for=trigger] {
-        right: 250px;
+        right: 530px;
         transition: 1.2s;
     }
     .scroll {
