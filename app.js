@@ -18,15 +18,15 @@ app.get("/artist", (req, res) => {
 });
 
 app.get("/era", (req, res) => {
-  res.render("");
+  res.render("category/era");
 });
 
 app.get("/sytle", (req, res) => {
-  res.render("");
+  res.render("category/style");
 });
 
 app.get("/year", (req, res) => {
-  res.render("");
+  res.render("category/year");
 });
 
 app.listen(port, () => {
