@@ -4,23 +4,29 @@
     font-weight: normal;
     font-style: normal;
 }
+<<<<<<< HEAD
     /* body {
         background-color: cadetblue;
     } */
+=======
+
+>>>>>>> 4678912b43b693705ae4e8636d423bc4a66b02ff
     /* 네비게이션 바 고정 */
     .nav {
-        position: fixed;
+        position: fixed; 
         font-family: 'MaruBuri-Regular';
         font-size: 25;
         display: flex;
         margin-top: 0px;
         left: 50%;
         transform: translate(-50%, 0);
+        z-index: 10000;
     }
     .nav > li {
         margin: 20px;
         
     }
+    /*  */
     .nav-link {
         text-decoration: none;
         color: white !important;
@@ -32,7 +38,6 @@
 
     /* label 중에 for가 trigger인 항목 */
     label[for=trigger] {
-        /* border: 1px solid red; */
         width: 30px;
         height: 20px;
         display: block;
@@ -40,7 +45,7 @@
         top: 30px;
         right: 30px;
         cursor: pointer;
-        z-index: 1000;
+        z-index: 100010;
     }
 
     /* label 중에 for가 trigger인 항목 안의 span */
@@ -51,7 +56,7 @@
         left: 0;
         position: absolute;
         transition: 0.3s;
-        z-index: 1000; 
+        z-index: 100010; 
     }
 
     /* label[for=trigger] > span의 n번째 요소 */
