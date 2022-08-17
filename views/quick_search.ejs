@@ -1,18 +1,4 @@
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-
-</head>
-<style>
-    html{
-        scroll-behavior: smooth;
-    }
-</style>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
-</script>
-
+<!-- 클릭시 text와 일치하는 id의 요소를 찾아낸 후 그 요소의 위치로 이동 -->
 <script>
     function quick_search_click(subject) {
         name = "#" + subject.text;
@@ -20,54 +6,15 @@
         $("html").scrollTop(move_height.top);
     }
 </script>
+<!-- category list -->
+<% var era=['원시, 고대', '중세' , '근세' , '근대' , '현대' ]; %>
 
-
-<body>
-    asdfasdf
     <ul>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>one</a>
-        </li>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>two</a>
-        </li>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>three</a>
-        </li>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>four</a>
-        </li>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>five</a>
-        </li>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>six</a>
-        </li>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>seven</a>
-        </li>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>eight</a>
-        </li>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>nine</a>
-        </li>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>ten</a>
-        </li>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>eleven</a>
-        </li>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>twelve</a>
-        </li>
-        <li>
-            <a class="quick_search" onclick=quick_search_click(this);>thirteen</a>
-        </li>
+        <% for(var i=0; i< era.length; i++){ %>
+            <li>
+                <a class="quick_search" onclick=quick_search_click(this);>
+                    <%= era[i] %>
+                </a>
+            </li>
+            <% } %>
     </ul>
-
-
-
-</body>
-
-</html>

@@ -1,42 +1,41 @@
+<!-- 네비게이션바 -->
+<ul class="nav justify-content-center" style="list-style: none;">
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">NEWS</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Q&A</a>
+    </li>
+</ul>
+<!-- 최상위 div -->
+<div class="container">
+    <!-- 햄버거 메뉴 -->
+    <input type="checkbox" id="trigger">
+    <label for="trigger">
+        <!-- 햄버거 세줄 표현 -->
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <!-- 클릭시 나타날 사이드바 -->
+    <div class="sidebar"></div>
+</div>
 
-        <!-- 네비게이션바 -->
-        <ul class="nav justify-content-center" style="list-style: none;">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">HOME</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">NEWS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Q&A</a>
-            </li>
-          </ul>
-          <!-- 최상위 div -->
-        <div class="container">
-            <!-- 햄버거 메뉴 -->
-            <input type="checkbox" id="trigger" >
-            <label for="trigger">
-                <!-- 햄버거 세줄 표현 -->
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <!-- 클릭시 나타날 사이드바 -->
-            <div class="sidebar"></div>
-        </div>
-
-        <script>
-            var lastScrollTop = 0;
-            $(window).scroll(function(){
-                var st = $(this).scrollTop();
-                if (st > lastScrollTop){
-                    // downscroll code
-                    $('.nav').fadeOut(800);
-                    $('.nav').css('right','-');
-                } else {
-                    // upscroll code
-                    $('.nav').fadeIn(800)
-                }
-                lastScrollTop = st;
-            });
-        </script>
+<script>
+    var lastScrollTop = 0;
+    $(window).scroll(function () {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            // downscroll code
+            $('.nav').fadeOut(800);
+            $('.nav').css('right', '-');
+        } else {
+            // upscroll code
+            $('.nav').fadeIn(800)
+        }
+        lastScrollTop = st;
+    });
+</script>
