@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+    <% var artist = data[0]; %>
+    <% var era = data[1]; %>
+    <% var style = data[2]; %>
+    <% var year = data[3]; %>
+    <% var category = data[4]; %>
+
+    <%-include("quick_search", {artist:artist, era:era, style:style, year:year, category:category}) %>
+    
+</body>
+
+</html>
