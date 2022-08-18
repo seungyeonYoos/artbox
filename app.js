@@ -18,7 +18,7 @@ var category = ["artist", "era", "style", "year"];
 var data = {"artist":artist, "era":era, "style":style, "year":year};
 
 app.get("/", (req, res) => {
-  res.render("root_page");
+  res.render("root_page", { videoList });
 });
 
 const listQnA = [
