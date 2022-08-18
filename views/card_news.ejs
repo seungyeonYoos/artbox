@@ -1,11 +1,11 @@
 
 <div style="background-color: darkcyan;">
 
-  <div class="news_title">
+  <div class="news_title show">
     Latest Art News
   </div>
 
-  <div class="container">
+  <div class="news_container">
 
     <div class="news_textbox">
       <div class="news_text">
@@ -28,10 +28,27 @@
       <img src="/static/img/artnews_1.jpg" alt="Picsum" class="news_img">
     </p>
   </div>
-  <div class="container2">
+  <div class="news_container2">
     <p>
       <img src="/static/img/artnews_2.jpg" class="news_img">
     </p>
   </div>
 </div>
+
+<script>
+// var divs = $('.show');
+// $(window).scroll(function(){
+//    if($(window).scrollTop()<=100){
+//          divs.fadeIn(500);
+//    } else {
+//          divs.fadeOut(500);
+//    }
+// });
+if (a >= 300 && a < 500) {
+            $('.show').addClass('on');
+        }
+if (a >= 500) {
+            $('.show').removeClass('on');
+}
+</script>
 
