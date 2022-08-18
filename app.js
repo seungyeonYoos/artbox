@@ -31,6 +31,10 @@ app.get("/inquery", (req, res) => {
   res.render("inquery");
 });
 
+app.get("/exhibit", (req, res) => {
+  res.render("exhibit");
+});
+
 app.listen(port, () => {
   console.log("Server open: ", port);
 });
