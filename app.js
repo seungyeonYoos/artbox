@@ -56,6 +56,10 @@ for (var i = 0; i < category.length; i++) {
 
 
 
+app.get("/exhibit", (req, res) => {
+  res.render("exhibit");
+});
+
 app.listen(port, () => {
   console.log("Server open: ", port);
 }); 
