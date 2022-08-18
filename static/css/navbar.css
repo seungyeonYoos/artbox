@@ -93,13 +93,13 @@
 
     /* 사이드바 */
     .sidebar {
-        width: 600px;
+        width: 400px;
         height: 100vh;
         background-color: white;
         position: fixed;
         top: 0;
         right: 0;
-        right: -600px;
+        right: -400px;
         transition: 1.2s;
         z-index: 10000;
     }
@@ -116,8 +116,20 @@
         color: black;
     }
     .accordion-body {
-        margin-top: 0;
+        list-style-type: none;
+        text-decoration: none;
+        font-family: 'MaruBuri-Regular';
+        font-size: 25px;
     }
+    /* 사이드메뉴 밑줄없애기 */
+    .accordion-body li a {
+        text-decoration: none;
+        color: black;
+    }
+    .accordion-button {
+        font-size: 35px;
+    }
+
 
     /* input[id=trigger]가 체크되었을 때 사이드바가 나오는 형제 인접자 */
     input[id=trigger]:checked ~ .sidebar {
@@ -126,9 +138,9 @@
 
     /* check시 같이 밀려나가는 CSS 햄버거 메뉴 */
     input[id=trigger]:checked + label[for=trigger] {
-        right: 530px;
+        right: 350px;
         transition: 1.2s;
     }
     .scroll {
-        width: 50px;
+        width: 50px; 
     }
