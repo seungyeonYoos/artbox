@@ -6,6 +6,7 @@ app.use("/static", express.static(__dirname + "/static"));
 // app.use(express.static(__dirname + "/veiws"));
 
 const port = 8000;
+const videoList = ["0.mp4", "1.mp4", "2.mp4"];
 
 // 전역으로 사용할 변수
 var artist = ['고흐', '김영각', '김밥통'];
@@ -16,7 +17,7 @@ var data = [artist, era, style, year];
 var category = ["artist", "era", "style", "year"];
 
 app.get("/", (req, res) => {
-  res.render("root_page");
+  res.render("root_page", { videoList });
 });
 
 app.get("/inquery", (req, res) => {

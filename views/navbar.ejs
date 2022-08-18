@@ -4,8 +4,12 @@
         <a class="nav-link active" aria-current="page" href="/">HOME</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="#">MAIN</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="#">NEWS</a>
     </li>
+    
     <li class="nav-item">
         <a class="nav-link" href="/inquery">Q&A</a>
     </li>
@@ -39,6 +43,7 @@
             <li><a href="#">NEWS</a></li>
             <li><a href="#">Q&A</a></li>
         </ul>
+        
     </div>
 </div>
 
@@ -55,5 +60,14 @@
             $('.nav').fadeIn(800)
         }
         lastScrollTop = st;
+    });
+
+    $("#trigger").change(function() {
+        if ($("#trigger").is(":checked")) {
+            $('.nav').fadeOut(500);
+        }
+        else {
+            $('.nav').fadeIn(500)
+        }
     });
 </script>
