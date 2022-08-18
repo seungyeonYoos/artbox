@@ -12,6 +12,6 @@ color: black;
 
 /* 글자에 마우스 올렸을 때 hover */
 .quick_search:hover{
-color: black;
+color: #747474;
 font-size: larger;
 }
