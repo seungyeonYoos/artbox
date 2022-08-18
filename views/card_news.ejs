@@ -1,8 +1,8 @@
-<div style="background-color: darkcyan;">
+<div style="background-color: lightsteelblue;">
 
-  <div class="news_title show">
-    Latest Art News
-  </div>
+<div class="news_title">
+  Latest Art News
+</div>
 
 
   <div class="news_container">
@@ -24,7 +24,6 @@
       </div>
     </div>
     <p>
-      <!-- <img onclick="newslink()" src="/static/img/artnews_1.jpg" alt="Picsum" class="news_img"> -->
       <img src="/static/img/artnews_1.jpg" alt="Picsum" class="news_img">
     </p>
   </div>
@@ -38,21 +37,35 @@
 
 </div>
 
+
+<!-- Title 카드뉴스 구간에서 Fade in and out -->
 <script>
-// var divs = $('.show');
-// $(window).scroll(function(){
-//    if($(window).scrollTop()<=100){
-//          divs.fadeIn(500);
-//    } else {
-//          divs.fadeOut(500);
-//    }
+
+// $(document).ready(function() {
+//     $(window).scroll( function(){
+//         $('.news_title').each( function(i){
+//             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+//             var bottom_of_window = $(window).scrollTop() + $(window).height();
+//             if( bottom_of_window > bottom_of_object/2 ){
+//                 $(this).animate({'opacity':'1'},50);
+//             }
+//         }); 
+//     });
 // });
-if (a >= 300 && a < 500) {
-            $('.show').addClass('on');
-        }
-if (a >= 500) {
-            $('.show').removeClass('on');
+
+$(function() {
+$(window).scroll(function () {
+var scroll_height = $(document).scrollTop();
+if ( 400 <= scroll_height ) {
+$(".news_title").fadeIn();
+ 
+} 
+else {
+$(".news_title").fadeOut();
 }
+});
+});
+
 </script>
 
 </div>

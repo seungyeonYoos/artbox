@@ -31,6 +31,10 @@ app.get("/inquery", (req, res) => {
   res.render("inquery");
 });
 
+app.get("/news_page", (req, res) => {
+  res.render("news_page");
+});
+
 app.listen(port, () => {
   console.log("Server open: ", port);
 });
