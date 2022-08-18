@@ -9,13 +9,8 @@
 
 
 <body>
-    <% var artist = data[0]; %>
-    <% var era = data[1]; %>
-    <% var style = data[2]; %>
-    <% var year = data[3]; %>
-    <% var category = data[4]; %>
-
-    <%-include("quick_search", {artist:artist, era:era, style:style, year:year, category:category}) %>
+    <% var data = data[data.category] %>
+    <%-include("quick_search", {data:data}) %>
     
 </body>
 
