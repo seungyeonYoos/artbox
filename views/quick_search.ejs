@@ -5,21 +5,32 @@
         move_height = $(name).offset();
         $("html").scrollTop(move_height.top);
     }
+
 </script>
 
-<!-- category list -->
-<% var artist=[]; %>
-<% var era=['원시, 고대', '중세' , '근세' , '근대' , '현대' ]; %>
-<% var styel=[]; %>
-<% var year=['1000', '1100', '1200', '1300', '1400', '1500', '1600', '1700', '1800', '1900', '2000']; %>
+<ul>
+    <%for (var i =0; i < data.length; i ++){ %>
+        <li  class="quick_search"><%= data[i] %></li>
+    <% } %>
+</ul>
 
-
-    <ul>
-        <% for(var i=0; i< era.length; i++){ %>
-            <li>
-                <a class="quick_search" onclick=quick_search_click(this);>
-                    <%= era[i] %>
-                </a>
-            </li>
-            <% } %>
-    </ul>
+<div class="sidebar">
+        <ul class="sideMenu">
+            <li><a href="#">HOME
+                </a></li>
+            <li><a href="#" lass="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    MAIN<div id="flush-collapseOne" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <ul class="accordion-body">
+                            <li><a href="/show_data">artist</a></li>
+                            <li><a href="/show_data">era</a></li>
+                            <li><a href="/show_data">style</a></li>
+                            <li><a href="/show_data">year</a></li>
+                        </ul>
+                    </div></a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">Q&A</a></li>
+        </ul>
+        
+    </div>
