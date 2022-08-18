@@ -27,8 +27,27 @@ app.get("/year", (req, res) => {
   res.render("");
 });
 
+const listQnA = [
+  {
+    btn: "#1 어떻게 검색해볼 수 있나요?",
+    content: "네이게이션 바의 목차대로 하나씩 살펴보시면 될꺼에요.",
+  },
+  {
+    btn: "#2 어떻게 검색해볼 수 있나요?",
+    content: "네이게이션 바의 목차대로 하나씩 살펴보시면 될꺼에요.",
+  },
+  {
+    btn: "#3 어떻게 검색해볼 수 있나요?",
+    content: "네이게이션 바의 목차대로 하나씩 살펴보시면 될꺼에요.",
+  },
+  {
+    btn: "#4 아 보기 불편한데..",
+    content: "네이게이션 바의 목차대로 하나씩 살펴보시면 될꺼에요.",
+  },
+];
+
 app.get("/inquery", (req, res) => {
-  res.render("inquery");
+  res.render("inquery", { listQnA });
 });
 
 app.listen(port, () => {
