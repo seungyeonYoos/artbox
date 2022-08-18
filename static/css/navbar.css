@@ -4,26 +4,25 @@
     font-weight: normal;
     font-style: normal;
 }
-    body {
-        background-color: cadetblue;
-    }
     /* 네비게이션 바 고정 */
     .nav {
-        position: fixed;
+        position: fixed; 
         font-family: 'MaruBuri-Regular';
-        font-size: 25;
+        font-size: 27px;
         display: flex;
         margin-top: 0px;
         left: 50%;
         transform: translate(-50%, 0);
+        z-index: 10000;
     }
     .nav > li {
         margin: 20px;
         
     }
+    /*  */
     .nav-link {
         text-decoration: none;
-        color: white;
+        color: white !important;
     }
     /* input 중에 id가 trigger인 항목에 대한 css */
     input[id=trigger] {
@@ -32,7 +31,6 @@
 
     /* label 중에 for가 trigger인 항목 */
     label[for=trigger] {
-        /* border: 1px solid red; */
         width: 30px;
         height: 20px;
         display: block;
@@ -40,7 +38,7 @@
         top: 30px;
         right: 30px;
         cursor: pointer;
-        z-index: 1000;
+        z-index: 100010;
     }
 
     /* label 중에 for가 trigger인 항목 안의 span */
@@ -51,7 +49,7 @@
         left: 0;
         position: absolute;
         transition: 0.3s;
-        z-index: 1000; 
+        z-index: 100010; 
     }
 
     /* label[for=trigger] > span의 n번째 요소 */
@@ -95,14 +93,30 @@
 
     /* 사이드바 */
     .sidebar {
-        width: 300px;
+        width: 600px;
         height: 100vh;
         background-color: white;
         position: fixed;
         top: 0;
         right: 0;
-        right: -300px;
+        right: -600px;
         transition: 1.2s;
+        z-index: 10000;
+    }
+
+    /* 사이드바 메뉴 */
+    .sideMenu {
+        list-style-type: none;
+        font-size: 35px ;
+        margin-top: 70px;
+    }
+    .sideMenu > li > a {
+        font-family: 'MaruBuri-Regular';
+        text-decoration: none;
+        color: black;
+    }
+    .accordion-body {
+        margin-top: 0;
     }
 
     /* input[id=trigger]가 체크되었을 때 사이드바가 나오는 형제 인접자 */
@@ -112,7 +126,7 @@
 
     /* check시 같이 밀려나가는 CSS 햄버거 메뉴 */
     input[id=trigger]:checked + label[for=trigger] {
-        right: 250px;
+        right: 530px;
         transition: 1.2s;
     }
     .scroll {
