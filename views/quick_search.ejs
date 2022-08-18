@@ -5,17 +5,9 @@
         move_height = $(name).offset();
         $("html").scrollTop(move_height.top);
     }
+
 </script>
 
-<!-- category list -->
-<% var era=['원시, 고대', '중세' , '근세' , '근대' , '현대']; %>
-
-    <ul>
-        <% for(var i=0; i< era.length; i++){ %>
-            <li>
-                <a class="quick_search" onclick=quick_search_click(this);>
-                    <%= era[i] %>
-                </a>
-            </li>
-            <% } %>
-    </ul>
+<ul>
+    <%= category %>
+</ul>
