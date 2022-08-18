@@ -6,9 +6,10 @@ app.use("/static", express.static(__dirname + "/static"));
 // app.use(express.static(__dirname + "/veiws"));
 
 const port = 8000;
+const videoList = ["0.mp4", "1.mp4", "2.mp4"];
 
 app.get("/", (req, res) => {
-  res.render("root_page");
+  res.render("root_page", { videoList });
 });
 
 app.get("/artist", (req, res) => {
