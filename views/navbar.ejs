@@ -20,8 +20,8 @@
 <!-- 최상위 div -->
 <div class="container">
     <!-- 햄버거 메뉴 -->
-    <input type="checkbox" id="trigger">
-    <label for="trigger">
+    <input type="checkbox" id="hamburgerTrigger">
+    <label for="hamburgerTrigger">
         <!-- 햄버거 세줄 표현 -->
         <span></span>
         <span></span>
@@ -32,11 +32,11 @@
         <ul class="sideMenu">
             <li><a href="#">HOME
                 </a></li>
-            <li><a href="#" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            <li><a href="#" class="accordion-button collapsed accordion-bottom" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     MAIN<div id="flush-collapseOne" class="accordion-collapse collapse"
                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <ul class="accordion-body">
+                        <ul class="accordion-body accordion-baby">
                             <li><a href="/show_data">artist</a></li>
                             <li><a href="/show_data">era</a></li>
                             <li><a href="/show_data">style</a></li>
@@ -65,8 +65,8 @@
         lastScrollTop = st;
     });
 
-    $("#trigger").change(function() {
-        if ($("#trigger").is(":checked")) {
+    $("#hamburgerTrigger").change(function() {
+        if ($("#hamburgerTrigger").is(":checked")) {
             $('.nav').fadeOut(500);
         }
         else {
