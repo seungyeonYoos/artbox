@@ -9,12 +9,27 @@
 </script>
 
 <ul>
-    <%for (var i =0; i < data.length; i ++){ %>
-        <li  class="quick_search"><%= data[i] %></li>
-    <% } %>
+    <% category %>
+
+    <%for (var i=0; i < data.length; i ++){ %>
+        <li class="quick_search">
+            <%= data[i] %>
+        </li>
+        <% } %>
 </ul>
 
-<div class="sidebar">
+<div class="container">
+    <!-- 햄버거 메뉴 -->
+    <input type="checkbox" id="trigger">
+    <label for="trigger">
+        <!-- 햄버거 세줄 표현 -->
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- 클릭시 나타날 사이드바 -->
+    <div class="sidebar">
         <ul class="sideMenu">
             <li><a href="#">HOME
                 </a></li>
@@ -32,5 +47,30 @@
             <li><a href="#">NEWS</a></li>
             <li><a href="#">Q&A</a></li>
         </ul>
-        
+
     </div>
+</div>
+<script>
+    var lastScrollTop = 0;
+    $(window).scroll(function () {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            // downscroll code
+            $('.nav').fadeOut(800);
+            // $('.nav').css('right', '-');
+        } else {
+            // upscroll code
+            $('.nav').fadeIn(800)
+        }
+        lastScrollTop = st;
+    });
+
+    $("#trigger").change(function () {
+        if ($("#trigger").is(":checked")) {
+            $('.nav').fadeOut(500);
+        }
+        else {
+            $('.nav').fadeIn(500)
+        }
+    });
+</script>

@@ -1,8 +1,11 @@
-<div style="background-color: darkcyan;">
+<div style="background-color: lightsteelblue;">
 
-  <div class="news_title">Latest Art News </div>
+<div class="news_title">
+  Latest Art News
+</div>
 
-  <div class="container">
+
+  <div class="news_container">
 
     <div class="news_textbox">
       <div class="news_text">
@@ -21,13 +24,49 @@
       </div>
     </div>
     <p>
-      <!-- <img onclick="newslink()" src="/static/img/artnews_1.jpg" alt="Picsum" class="news_img"> -->
       <img src="/static/img/artnews_1.jpg" alt="Picsum" class="news_img">
     </p>
   </div>
-  <div class="container">
+
+  <div class="news_container2">
+
     <p>
       <img src="/static/img/artnews_2.jpg" class="news_img">
     </p>
   </div>
+
 </div>
+
+
+<!-- Title 카드뉴스 구간에서 Fade in and out -->
+<script>
+
+// $(document).ready(function() {
+//     $(window).scroll( function(){
+//         $('.news_title').each( function(i){
+//             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+//             var bottom_of_window = $(window).scrollTop() + $(window).height();
+//             if( bottom_of_window > bottom_of_object/2 ){
+//                 $(this).animate({'opacity':'1'},50);
+//             }
+//         }); 
+//     });
+// });
+
+$(function() {
+$(window).scroll(function () {
+var scroll_height = $(document).scrollTop();
+if ( 400 <= scroll_height ) {
+$(".news_title").fadeIn();
+ 
+} 
+else {
+$(".news_title").fadeOut();
+}
+});
+});
+
+</script>
+
+</div>
+
