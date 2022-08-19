@@ -1,8 +1,10 @@
+<!-- Main Page CardNews -->
+
 <div class="news_title">
   Latest Art News
 </div>
 
-
+<!-- first Card News -->
   <div class="news_container">
     <a href="http://www.gwangjuin.com/news/articleView.html?idxno=95819">
     <div class="news_textbox">
@@ -14,13 +16,7 @@
           3일 부터 이달 29일까지 광주 무각사 로터스갤러리에서 열린다.
           ...(자세히 보기)
         </div>
-
-        <!-- <div class="news_text3">
-          (클릭 시 기사로 이동)
-        </div> -->
-        
       </div>
-
     </div>
 
     <p>
@@ -30,6 +26,7 @@
   </a>
   </div>
 
+<!-- second Card News -->
   <div class="news_container2">
     <p>
       <img src="/static/img/artnews_2.jpg" class="news_img">
@@ -38,21 +35,8 @@
 
 
 
-<!-- Title 카드뉴스 구간에서 Fade in and out -->
 <script>
-
-// $(document).ready(function() {
-//     $(window).scroll( function(){
-//         $('.news_title').each( function(i){
-//             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-//             var bottom_of_window = $(window).scrollTop() + $(window).height();
-//             if( bottom_of_window > bottom_of_object/2 ){
-//                 $(this).animate({'opacity':'1'},50);
-//             }
-//         }); 
-//     });
-// });
-
+// Title 카드뉴스 구간에서 Fade in and out
 $(function() {
 $(window).scroll(function () {
 var scroll_height = $(document).scrollTop();
