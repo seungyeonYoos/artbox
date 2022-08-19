@@ -4,8 +4,9 @@ video::-webkit-media-controls {
 }
 video {
   /* display: absolute; */
+  margin-top: 10vh;
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   object-fit: fill;
 }
 video:focus {
