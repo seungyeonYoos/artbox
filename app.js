@@ -46,7 +46,6 @@ app.get("/inquery", (req, res) => {
 });
 
 
-
 for (var i = 0; i < category.length; i++) {
   data["category"] = category[i];
 
