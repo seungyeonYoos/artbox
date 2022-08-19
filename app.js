@@ -47,7 +47,6 @@ app.get("/inquery", (req, res) => {
 });
 
 
-
 for (var i = 0; i < category.length; i++) {
   data["category"] = category[i];
 
@@ -69,4 +68,3 @@ app.get("/news_page", (req, res) => {
 app.listen(port, () => {
   console.log("Server open: ", port);
 }); 
-
