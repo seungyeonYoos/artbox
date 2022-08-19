@@ -1,0 +1,9 @@
+body {
+    background-color: #B0C3DE;
+}
+#qnaBtn, #inqueryBtn{
+    border-radius: 30px!important;
+}
+#arcAndPagination {
+    height: 70vh;
+}
