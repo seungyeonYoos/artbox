@@ -1,123 +1,65 @@
-/* input 중에 id가 trigger인 항목에 대한 css */
-input[id=trigger] {
+@font-face {
+    font-family: 'MaruBuri-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* sidebar trigger */
+input[id=quick_search_sidebar_checkbox] {
     display: none;
 }
 
-/* label 중에 for가 trigger인 항목 */
-label[for=trigger] {
-    width: 30px;
-    height: 20px;
-    display: block;
+/* side_bar tirgger button */
+label[for=quick_search_sidebar_checkbox] {
+    /* display: block; */
     position: fixed;
-    top: 30px;
-    right: 30px;
+    width: 100px;
+    height: 80px;
+    left: 0%;
+    top: 10%;
+    transition: 2s;
     cursor: pointer;
     z-index: 100010;
 }
 
-/* label 중에 for가 trigger인 항목 안의 span */
-label[for=trigger] span {
-    display: block;
-    height: 3px;
-    background-color: white;
-    left: 0;
-    position: absolute;
-    transition: 0.3s;
-    z-index: 100010;
-}
-
-/* label[for=trigger] > span의 n번째 요소 */
-label[for=trigger] span:nth-child(1) {
-    top: 0;
-    width: 120%;
-}
-
-label[for=trigger] span:nth-child(2) {
-    top: 50%;
-    width: 80%;
-
-}
-
-label[for=trigger] span:nth-child(3) {
-    top: 100%;
-    width: 100%;
-
-}
-
-/* check시 변하는 label[for=trigger] > span의 n번째 요소  */
-input[id=trigger]:checked+label span:nth-child(1) {
-    top: 50%;
-    transform: rotate(45deg);
-    background-color: black;
-    width: 100%;
-}
-
-input[id=trigger]:checked+label span:nth-child(2) {
-    opacity: 0;
-}
-
-input[id=trigger]:checked+label span:nth-child(3) {
-    top: 50%;
-    transform: rotate(-45deg);
-    background-color: black;
-    width: 100%;
-
-
-}
-
-/* 사이드바 */
-.sidebar {
-    width: 400px;
-    height: 100vh;
-    background-color: white;
+/* img of side_bar button */
+#quick_search_sidebar_checkbox_img {
+    /* display: block; */
+    width: 100px;
+    height: 50px;
     position: fixed;
-    top: 0;
-    right: 0;
-    right: -400px;
+}
+
+/* side_bar check event - button move */
+input[id=quick_search_sidebar_checkbox]:checked + label {
+    transform: translateX(180px) rotateY(180deg);
+    right: 300px;
+    transition: 2s;
+}
+
+/* input[id=trigger]가 체크되었을 때 사이드바가 나오는 형제 인접자 */
+input[id=quick_search_sidebar_checkbox]:checked ~ .qucik_search_sidebar {
+    left: 0px;
+}
+
+/* 사이드바 */  
+.qucik_search_sidebar {
+    width: 300px;
+    background-color: rgba(76, 76, 76, 0.5);
+    /* background-color: lightcoral; */
+    opacity: 0.3;
+    margin-top: 5%;
+    left: -300px;
     transition: 1.2s;
     z-index: 10000;
 }
 
 /* 사이드바 메뉴 */
-.sideMenu {
+.sort_sidebar_menu {
     list-style-type: none;
     font-size: 35px;
     margin-top: 70px;
-}
-
-.sideMenu>li>a {
-    font-family: 'MaruBuri-Regular';
-    text-decoration: none;
-    color: black;
-}
-
-.accordion-body {
-    list-style-type: none;
-    text-decoration: none;
-    font-family: 'MaruBuri-Regular';
-    font-size: 25px;
-}
-
-/* 사이드메뉴 밑줄없애기 */
-.accordion-body li a {
-    text-decoration: none;
-    color: black;
-}
-
-.accordion-button {
-    font-size: 35px;
-}
-
-
-/* input[id=trigger]가 체크되었을 때 사이드바가 나오는 형제 인접자 */
-input[id=trigger]:checked~.sidebar {
-    right: 0;
-}
-
-/* check시 같이 밀려나가는 CSS 햄버거 메뉴 */
-input[id=trigger]:checked+label[for=trigger] {
-    right: 350px;
-    transition: 1.2s;
 }
 
 .scroll {
