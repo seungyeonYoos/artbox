@@ -4,18 +4,25 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
     /* 네비게이션 바 고정 */
     .nav {
         position: fixed; 
         top: 0;
         left: 0;
         font-family: 'MaruBuri-Regular';
-        font-size: 27px;
+        font-size: 25px;
         display: flex;
         margin-top: 0px;
         width: 100%;
         z-index: 10000;
-        border-bottom: solid 1px rgb(155, 155, 155);
+        justify-content: center;
+        border-bottom: 1px solid gray;
     }
     .nav > li {
         margin: 20px;
@@ -37,8 +44,8 @@
         height: 20px;
         display: block;
         position: fixed;
-        top: 30px;
-        right: 30px;
+        top: 24px;
+        right: 50px;
         cursor: pointer;
         z-index: 100010;
     }
@@ -146,6 +153,29 @@
     .scroll {
         width: 50px; 
     }
-    .nav {
-        background-color: white;
+    /* 로고 위치랑 디자인 */
+    .logoMain > a{
+        position: fixed;
+        font-family: 'PyeongChangPeace-Light';
+        font-size: 23px;
+        top: 22px;
+        left: 50px;
+        text-decoration: none;
+        color: black;
+        display: block;
+        z-index: 100000;
+    }
+    /* 네브바 메뉴 클릭 시 나오는 하위메뉴 */
+    .navItem-2 {
+        list-style-type: none;
+        display: flex;
+        display: none;
+        position: absolute;
+    }
+    .navItem-2 li {
+        margin-right: 14px;
+    }
+    .navItem-2 li a {
+        text-decoration: none;
+        color: black;
     }

@@ -53,6 +53,10 @@ app.get("/exhibit", (req, res) => {
   res.render("exhibit");
 });
 
+app.get("/main", (req, res) => {
+  res.render("main");
+});
+
 app.get("/news_page", (req, res) => {
   res.render("news_page");
 });
