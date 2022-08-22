@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/css/navbar.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> exhibit </title>
+
+    <style>
+        /*  */
+        .exhibit {
+            display: flex;
+            justify-content: center;
+        }
+        .content {
+            text-align: center;
+        }
+        /* all 박스 */
+        .exhibit > div {
+            background-color: blue;
+            margin: 5px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        /* 박스 크기 조절 */
+        .allExhibit {
+            width: 400px;
+            height: 400px;
+            background-image: url(../static/img/art_3.jpg);
+            background-size : cover;
+        }
+        .exhibit7 {
+            width: 100px;
+            height: 400px;
+            background-image: url(../static/img/art_5.jpg);
+            background-size : cover;
+
+        }
+        .exhibit8 {
+            width: 100px;
+            height: 400px;
+            background-image: url(../static/img/art_1.jpg);
+            background-size : cover;
+
+        }
+        .exhibit9 {
+            width: 100px;
+            height: 400px;
+            background-image: url(../static/img/art_2.jpg);
+            background-size : cover;
+
+        }
+        .etc {
+            width: 100px;
+            height: 400px;
+            background-image: url(../static/img/art_4.jpg);
+            background-size : cover;
+
+        }
+        .divBox {
+            display: none;
+     
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+  <%-include('navbar');%>
+
+    <div class="content">
+        <h1>EXHIBIT</h1>
+        <div class="exhibit">
+            <div class="allExhibit">
+                <div class="divBox">전체 보기</div>
+            </div>
+            <div class="exhibit7">
+                <div class="divBox">7월 전시회</div>
+            </div>
+            <div class="exhibit8">
+                <div class="divBox">8월 전시회</div>
+        </div>
+            <div class="exhibit9">
+                <div class="divBox">9월 전시회</div>
+        </div>
+            <div class="etc">
+                <div class="divBox">etc</div>
+        </div>
+        </div>
+    </div>
+    <script>
+        $().ready(function() {$(".exhibit > div").hover(function() {
+            $(this).animate({'width':'400px'});
+            $(".exhibit > div").not(this).animate({'width':'100px'},400,"swing");
+            $(this).children(".divBox").css("display","block");
+        });
+        });
+
+        
+    </script>
+ 
+</body>
+</html>

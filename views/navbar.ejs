@@ -84,7 +84,9 @@
         }
     });
     
-    // $(".nav-link").click(function() {
-    //     $(".navItem-2").show();
-    // });
+    $(".nav-link").hover(function() {
+        $(".navItem-2").show('slow');
+    },function() {
+        $(".navItem-2").hide('slow');
+    });
 </script>

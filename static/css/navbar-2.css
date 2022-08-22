@@ -167,16 +167,22 @@
     /* 네브바 메뉴 클릭 시 나오는 하위메뉴 */
     .navItem-2 {
         list-style-type: none;
-        display: flex;
         display: none;
         position: absolute;
     }
+    /* 네브바 하위메뉴 css */
     .navItem-2 li {
-        margin-right: 14px;
+        height: 30px;
+        padding: 0px 20px;
+        float: left;
+        border-right: 1px solid white;
+    }
+    .navItem-2 li:last-child {
+        border: 0px;
     }
     .navItem-2 li a {
         text-decoration: none;
-        color: black;
+        color: white;
     }
     .logomain {
         color: white !important;
