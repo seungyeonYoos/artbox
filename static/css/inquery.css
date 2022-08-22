@@ -1,11 +1,17 @@
 #qnaBtn, #inqueryBtn{
     border-radius: 30px!important;
-    border: 0.5px solid black;
+    /* background-color: var(--btn-bg); */
+    border: var(--btn-border);
+    min-width: 130px;
+    /* max-width: 200px; */
+    
 }
 #arcAndPagination {
     height: 50vh;
 }
 #qnaImage {
+    /* nav height 수정시 margin-top변경 필요 */
+    margin-top: 94px;
     width: 100%;
     height: 50vh;
 }
@@ -17,8 +23,10 @@ a:link, a:visited, a:hover{
     text-decoration: none;
 }
 #q-select {
+    min-width: 180px;
     width: 35%;
 }
 #formFileMultiple {
+    min-width: 250px;
     width: 30%;
 }

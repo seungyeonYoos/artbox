@@ -21,49 +21,87 @@
         transform: scale(1.05);
     }
     .news_table {
-        position: fixed;
-        width: 10%;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        margin-left: 85%;
+        position:absolute;
+        z-index: 0;
+        color: black;
+        width: 15%;
+        margin-left: 80%;
         bottom: 5%;
     }
+
+    .first_img {
+      margin-top: 5%;
+      opacity: 0.8;
+      width: 100%;
+      height: 600px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .banner_text {
+      color: white;
+      position: absolute;
+      top: 260px;
+      left: 35%;
+      text-align: center;
+      font-size: 90px;
+      font-weight: bold;
+      -webkit-text-stroke: 1.5px black;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      z-index: 100;
+
+    }
+
+  .card-title {
+    font-weight: bolder;
+  }
+
+  .fix{position:fixed;_position:absolute;width:100%;top:0;z-index:100;}
 
 </style>
 </head>
 <body>
+  <%-include('navbar');%>
 
-    <%-include('navbar');%>
+  <div>
+    <img src="/static/img/news_banner.png" class="first_img">
+    <div class="banner_text">
+      Art News
+    </div>
+  </div>
 
-    <table class="table news_table">
-        <tr>
-            <td style="font-weight: bold;">Latest</td>
-        </tr>
-        <tr>
-            <td>
-                2022<br>
-                August 18<br><br>
-                뉴스 뉴스<br>
-                news text<br>
-                news text<br><br>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                July 15<br><br>
-                news text<br>
-                news text<br>
-                news text<br><br>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                May 5<br><br>
-                news text<br>
-                news text<br>
-                news text<br><br>
-            </td>
-        </tr>
-        </table>
+  <!-- 페이지 오른쪽에 고정된 표 -->
+
+  <table class="table news_table">
+    <tr>
+        <td style="font-weight: bold;">Latest</td>
+    </tr>
+    <tr>
+        <td>
+            2022<br>
+            August 22<br><br>
+            <a href="https://www.seoul.co.kr/news/newsView.php?id=20220822500049">
+              제주 해녀를 재해석하다…<br>선관위 사무총장서 화가 변신 김대년 제주 첫 전시회
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            July 15<br><br>
+            news text<br>
+            news text<br>
+            news text<br><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            May 5<br><br>
+            news text<br>
+            news text<br>
+            news text<br><br>
+        </td>
+    </tr>
+  </table>
 
 
 
@@ -78,17 +116,19 @@
 
     <div class="row row-cols-1 row-cols-md-3 g-4" style="margin: 10%; ">
         <div class="col">
+          <a href="http://www.gwangjuin.com/news/articleView.html?idxno=95819">
           <div class="card h-100 news_eff">
-            <img src="/static/img/artnews_1.jpg" class="card-img-top" alt="...">
+            <img src="/static/img/artnews_1.jpg" class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-title">무각사 로터스갤러리, 신인작가 기획전</h5>
+          </a>
+              <p class="card-text">2017년 로터스갤러리 청년신인작가 공모에 선정된 양세미 작가의 전시가 3일 부터 이달 29일까지 광주 무각사 로터스갤러리에서 열린다.</p>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card h-100 news_eff">
-            <img src="/static/img/artnews_2.jpg" class="card-img-top" alt="...">
+            <img src="/static/img/artnews_2.jpg" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a short card.</p>
@@ -97,7 +137,7 @@
         </div>
         <div class="col">
           <div class="card h-100 news_eff">
-            <img src="/static/img/artnews_1.jpg" class="card-img-top" alt="...">
+            <img src="/static/img/artnews_1.jpg" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -106,7 +146,7 @@
         </div>
         <div class="col">
           <div class="card h-100 news_eff">
-            <img src="/static/img/artnews_2.jpg" class="card-img-top" alt="...">
+            <img src="/static/img/artnews_2.jpg" class="card-img-top">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -125,7 +165,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4" style="margin: 10%;">
         <div class="col">
         <div class="card h-100 news_eff">
-            <img src="/static/img/artnews_1.jpg" class="card-img-top" alt="...">
+            <img src="/static/img/artnews_1.jpg" class="card-img-top">
             <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -134,7 +174,7 @@
         </div>
         <div class="col">
         <div class="card h-100 news_eff">
-            <img src="/static/img/artnews_2.jpg" class="card-img-top" alt="...">
+            <img src="/static/img/artnews_2.jpg" class="card-img-top">
             <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This is a short card.</p>
@@ -143,7 +183,7 @@
         </div>
         <div class="col">
         <div class="card h-100 news_eff">
-            <img src="/static/img/artnews_1.jpg" class="card-img-top" alt="...">
+            <img src="/static/img/artnews_1.jpg" class="card-img-top">
             <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
@@ -152,7 +192,7 @@
         </div>
         <div class="col">
         <div class="card h-100 news_eff">
-            <img src="/static/img/artnews_2.jpg" class="card-img-top" alt="...">
+            <img src="/static/img/artnews_2.jpg" class="card-img-top">
             <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -162,8 +202,22 @@
   </div>
 </div>
 
+<script>
+$(window).scroll(  
+    function(){  
+        //스크롤의 위치가 상단에서 450보다 크면  
+        if($(window).scrollTop() > 450){  
+        /* if(window.pageYOffset >= $('원하는위치의엘리먼트').offset().top){ */  
+            $('.news_table').addClass("fix");  
+            //위의 if문에 대한 조건 만족시 fix라는 class를 부여함  
+        }else{  
+            $('.news_table').removeClass("fix");  
+            //위의 if문에 대한 조건 아닌경우 fix라는 class를 삭제함  
+        }  
+    }  
+);
 
-
+</script>
 
 </body>
 </html>

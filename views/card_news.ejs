@@ -20,7 +20,7 @@
     </div>
 
     <p>
-      <img src="/static/img/artnews_1.jpg" alt="Picsum" class="news_img">
+      <img src="/static/img/artnews_1.jpg" alt="News" class="news_img">
     </p>
 
   </a>
@@ -28,10 +28,47 @@
 
 <!-- second Card News -->
   <div class="news_container2">
-    <p>
-      <img src="/static/img/artnews_2.jpg" class="news_img">
-    </p>
+    <a href="http://www.gwangjuin.com/news/articleView.html?idxno=95819">
+      <div class="news_textbox">
+        <div class="news_text">
+          <div class="news_text1 fromLeft">이인성의 ‘여름 실내에서’</div>
+          <div class="news_text2">
+            2017년 로터스갤러리 청년신인작가 공모에
+            선정된 양세미 작가의 전시가
+            3일 부터 이달 29일까지 광주 무각사 로터스갤러리에서 열린다.
+            ...(자세히 보기)
+          </div>
+        </div>
+      </div>
+
+      <p>
+        <img src="/static/img/artnews_2.jpg" class="news_img" >
+      </p>
+      </div>
+    </a>
   </div>
+
+<!-- third Card News -->
+<div class="news_container">
+  <a href="http://www.gwangjuin.com/news/articleView.html?idxno=95819">
+  <div class="news_textbox">
+    <div class="news_text">
+      <div class="news_text1 fromLeft">무각사 로터스갤러리, 신인작가 기획전</div>
+      <div class="news_text2">
+        2017년 로터스갤러리 청년신인작가 공모에
+        선정된 양세미 작가의 전시가
+        3일 부터 이달 29일까지 광주 무각사 로터스갤러리에서 열린다.
+        ...(자세히 보기)
+      </div>
+    </div>
+  </div>
+
+    <p>
+      <img src="/static/img/artnews_1.jpg" alt="News" class="news_img">
+    </p>
+
+  </a>
+</div>
 
 
 
@@ -41,6 +78,8 @@ $(function() {
 $(window).scroll(function () {
 var scroll_height = $(document).scrollTop();
 if ( 1800 <= scroll_height ) {
+
+if ( 1600 <= scroll_height ) {
 $(".news_title").fadeIn();
  
 } 
