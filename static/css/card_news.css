@@ -1,6 +1,5 @@
 .news_title {
     position: fixed;
-    color: white;
     font-size: 50px;
     top: 300px;
     margin-left: 10%;
@@ -14,12 +13,12 @@
     left: 50%;
     width: 35%;
 }
+
 .news_container2 {
     position: relative;
     margin: 10%;
-    left: 50%;
+    left: 40%;
     width: 35%;
-
 }
 
 .news_img {
@@ -51,7 +50,10 @@
 .news_container:hover .news_textbox{
     opacity: 0.7;
 }
-  
+
+.news_container2:hover .news_textbox{
+    opacity: 0.7;
+}
   
 .news_text {
     z-index: 10;
