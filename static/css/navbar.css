@@ -11,7 +11,7 @@
     font-style: normal;
 }
     /* 네비게이션 바 고정 */
-    .nav {
+    #navbar {
         position: fixed; 
         top: 0;
         left: 0;
@@ -23,8 +23,9 @@
         z-index: 10000;
         justify-content: center;
         border-bottom: 1px solid gray;
+        background-color: white;
     }
-    .nav > li {
+    #navbar > li {
         margin: 20px;
         
     }
