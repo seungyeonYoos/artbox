@@ -11,9 +11,8 @@
     font-style: normal;
 }
     /* 네비게이션 바 고정 */
-    .nav {
-        position: fixed;
-        top: 0%;
+    #navbar {
+        position: fixed; 
         font-family: 'MaruBuri-Regular';
         font-size: 25px;
         display: flex;
@@ -22,8 +21,9 @@
         z-index: 10000;
         justify-content: center;
         border-bottom: 1px solid gray;
+        background-color: white;
     }
-    .nav > li {
+    #navbar > li {
         margin: 20px;
         
     }
