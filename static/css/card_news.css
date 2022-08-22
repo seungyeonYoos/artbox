@@ -1,24 +1,26 @@
 .news_title {
     position: fixed;
+    color: white;
     font-size: 50px;
     top: 300px;
     margin-left: 10%;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    display: none;
 }
 
 /* 첫번째 카드뉴스 */
 .news_container {
     position: relative;
     top: 1600px;
-    left: 50%;
+    left: 60%;
     width: 35%;
 }
 
 /* 두번째 카드뉴스 */
 .news_container2 {
     position: relative;
-    top: 1700px;
-    left: 50%;
+    top: 1600px;
+    left: 45%;
     width: 35%;
 }
 
