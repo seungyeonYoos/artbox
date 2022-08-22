@@ -11,8 +11,10 @@
     font-style: normal;
 }
     /* 네비게이션 바 고정 */
-    #navbar {
+    .nav {
         position: fixed; 
+        top: 0;
+        left: 0;
         font-family: 'MaruBuri-Regular';
         font-size: 25px;
         display: flex;
@@ -20,17 +22,15 @@
         width: 100%;
         z-index: 10000;
         justify-content: center;
-        border-bottom: 1px solid gray;
-        background-color: white;
     }
-    #navbar > li {
+    .nav > li {
         margin: 20px;
         
     }
     /*  */
     .nav-link {
         text-decoration: none;
-        color: black !important;
+        color: white !important;
     }
     /* input 중에 id가 trigger인 항목에 대한 css */
     input[id=hamburgerTrigger] {
@@ -53,7 +53,7 @@
     label[for=hamburgerTrigger] span {
         display: block;
         height: 3px;
-        background-color: black;
+        background-color: white;
         left: 0;
         position: absolute;
         transition: 0.3s;
@@ -87,7 +87,7 @@
     }
 
     input[id=hamburgerTrigger]:checked + label span:nth-child(2) {
-        opacity: 0; 
+        opacity: 0;
     }
 
     input[id=hamburgerTrigger]:checked + label span:nth-child(3) {
@@ -178,3 +178,7 @@
         text-decoration: none;
         color: black;
     }
+    .logomain {
+        color: white !important;
+    }
+    

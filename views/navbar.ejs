@@ -1,9 +1,9 @@
 <!-- 로고 -->
-<div class="logoMain"><a href="/main" aria-current="page" href="/" class="logomain">ART-BOX</a></div>
+<div class="logoMain"><a href="/" aria-current="page" href="/" class="logomain">ART-BOX</a></div>
 <!-- 네비게이션바 -->
-<ul class="nav justify-content-center" style="list-style: none;">
+<ul class="nav justify-content-center" style="list-style: none;" id="navbar">
     <li class="nav-item">
-        <a class="nav-link" href="#">MAIN</a>
+        <a class="nav-link" href="#">MUSEUM</a>
             <!-- 메인 하위메뉴 -->
             <ul class="navItem-2">
                 <li><a href="#">artist</a></li>
@@ -41,7 +41,7 @@
                 </a></li>
             <li><a href="#" class="accordion-button collapsed accordion-bottom" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    MAIN
+                    MUSEUM
                     </a>
                     <div id="flush-collapseOne" class="accordion-collapse collapse"
                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
@@ -66,21 +66,21 @@
         var st = $(this).scrollTop();
         if (st > lastScrollTop) {
             // downscroll code
-            $('.nav').fadeOut(800);
+            $('#navbar').fadeOut(800);
             // $('.nav').css('right', '-');
         } else {
             // upscroll code
-            $('.nav').fadeIn(800)
+            $('#navbar').fadeIn(800)
         }
         lastScrollTop = st;
     });
 
     $("#hamburgerTrigger").change(function () {
         if ($("#hamburgerTrigger").is(":checked")) {
-            $('.nav').fadeOut(500);
+            $('#navbr').fadeOut(500);
         }
         else {
-            $('.nav').fadeIn(500)
+            $('#navbar').fadeIn(500)
         }
     });
     

@@ -3,8 +3,11 @@ scroll-behavior: smooth;
 }
 
 #show_data{
-    top: 11.5%;
-    background-color: red;
+    margin-top: 20%;
+    background-color: lightcyan;
+}
+#show_data p{
+    margin-top: 20%;
 }
 /* quick_search 글자 스타일 */
 .quick_search{
@@ -18,4 +21,8 @@ color: black;
 .quick_search:hover{
 color: #747474;
 font-size: larger;
+}
+
+#first_category_switch{
+    top:-30px;
 }
