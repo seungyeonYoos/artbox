@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="static/css/bgVideo.css">
     <link rel="stylesheet" href="/static/css/card_news.css">
-    <link rel="stylesheet" href="static/css/navbar.css">
+    <link rel="stylesheet" href="static/css/navbar-2.css">
     <link rel="stylesheet" href="static/css/exhibit.css">
 
     <!-- Card_news ScrollMagic -->
@@ -27,14 +27,78 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
+
+    <style>
+        /* 1번째 단락 텍스트 */
+        .main-text-1 {
+        color: white;
+        font-size: 200px;
+        position: absolute;
+        left: 150px;
+        top: 510px;
+        }
+        /* 2번째 단락 전체 */
+        .main-text-2 {
+            position: relative;
+            top: 1200px;
+            left: 150px;
+            color: white;
+        }
+        .main-text-2 div:first-child , .main-text-2 div:nth-child(2) , .main-text-2 div:nth-child(3) {
+            position: absolute;
+            z-index: 1000;
+        }
+        /* Welcome to Museum */
+        .main-text-2 div:first-child {
+            font-size: 150px;
+        }
+        /* 자연에서 찾은 순수한 아름다운 ~ */
+        .main-text-2 div:nth-child(2) {
+            font-size: 30px;
+            top: 400px;
+        }
+        /* BRAND STORY */
+        .main-text-2 div:nth-child(3) {
+            font-size: 25px;
+            top: 520px;
+        }
+        .main-text-2-img {
+            position: relative;
+            top: 150px;
+            left: 520px;
+            width: 700px;
+            height: 400px;
+            background-color: bisque;
+        }
+        /* 3번째 단락 전체 */
+        .main-text-3 {
+            position: absolute;
+            top: 2000px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 
 
 <body>
     <%-include("navbar.ejs")%>
     <%-include("bg_video.ejs")%>
+
+    <div class="main-text-1">Art-box</div>
+            <div class="main-text-2">
+                <div>Welcome<br>to Museum</div>
+                <div>자연에서 찾은<br>순수한 아름다움의 비밀</div>
+                <div>BRAND STORY</div>
+                <div class="main-text-2-img"></div>
+            </div>
+
+            <div class="main-text-3">
+                <div>Card News</div>
+            </div>
     
     <%-include("card_news.ejs")%>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
