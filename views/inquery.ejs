@@ -12,6 +12,7 @@
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
     <!-- css links -->
+    <link rel="stylesheet" href="static/css/variables.css">
     <link rel="stylesheet" href="static/css/navbar.css">
     <link rel="stylesheet" href="static/css/inquery.css">
 </head>
@@ -22,7 +23,7 @@
   <!-- qna 및 문의 사항 화면. 해당 버튼 클릭시 화면이 바뀜. -->
   <div class="container">
     <div class="row">
-      <div class="col-2 d-flex justify-content-start flex-column mt-5" id="navCol">
+      <div class="col-12 col-xs-2 col-sm-2 d-flex justify-content-start align-items-center flex-column mt-5" id="navCol">
         <button class="btn btn-light" type="button" id="qnaBtn">
           Q&A
         </button>
@@ -30,7 +31,7 @@
           문의하기
         </button>
       </div>
-      <div class="col-9 ms-3">
+      <div class="col-9 ms-4" id="contentCol">
         <!-- Q&A 부분 -->
         <div id="qnaDiv" class="mt-3">
           <h3>Q&A</h3>
@@ -79,7 +80,7 @@
                 </h3>
             </label>
             <select name="question" id="q-select" class="form-select">
-                <option value="">--Please choose an option--</option>
+                <option value="">문의 내용:</option>
                 <option value="errorInform">자료 정보 오류 확인</option>
                 <option value="webBug">웹 버그 확인</option>
                 <option value="etc">기타 사항</option>
@@ -102,6 +103,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   <script>
+    // qna or 문의사항 버튼 누를 시 해당 화면으로 전환
     const btn = document.querySelectorAll('button');
     const qna = document.querySelector('#qnaDiv');
     const inquery = document.querySelector('#inqueryDiv');
@@ -110,8 +112,7 @@
     inquery.hidden = true;
 
     function handleNavScreen(event) {
-      const btnId = event.path[0].attributes[2].value;
-      console.log(btnId);
+      const btnId = event.composedPath()[0].attributes[2].value;
 
       if(btnId === 'qnaBtn'){
         qna.hidden = false;
