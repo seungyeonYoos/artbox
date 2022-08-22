@@ -1,12 +1,17 @@
+<!-- 로고 -->
+<div class="logoMain"><a href="/main" aria-current="page" href="/" class="logomain">ART-BOX</a></div>
 <!-- 네비게이션바 -->
 <ul class="nav justify-content-center" style="list-style: none;">
     <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/">HOME</a>
-    </li>
-    <li class="nav-item">
         <a class="nav-link" href="#">MAIN</a>
+            <!-- 메인 하위메뉴 -->
+            <ul class="navItem-2">
+                <li><a href="#">artist</a></li>
+                <li><a href="#">era</a></li>
+                <li><a href="#">style</a></li>
+                <li><a href="#">year</a></li>
+            </ul>
         </li>
-    </li>
     <li class="nav-item">
         <a class="nav-link" href="/news_page">NEWS</a>
     </li>
@@ -35,7 +40,9 @@
                 </a></li>
             <li><a href="#" class="accordion-button collapsed accordion-bottom" type="button" data-bs-toggle="collapse"
                     data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    MAIN<div id="flush-collapseOne" class="accordion-collapse collapse"
+                    MAIN
+                    </a>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <ul class="accordion-body accordion-baby">
                             <li><a href="/show_data">artist</a></li>
@@ -43,7 +50,7 @@
                             <li><a href="/show_data">style</a></li>
                             <li><a href="/show_data">year</a></li>
                         </ul>
-                    </div></a></li>
+                    </div></li>
             <li><a href="#">NEWS</a></li>
             <li><a href="#">Q&A</a></li>
         </ul>
@@ -75,4 +82,8 @@
             $('.nav').fadeIn(500)
         }
     });
+    
+    // $(".nav-link").click(function() {
+    //     $(".navItem-2").show();
+    // });
 </script>
