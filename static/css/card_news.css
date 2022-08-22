@@ -5,19 +5,20 @@
     top: 300px;
     margin-left: 10%;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    display: none;
 }
 
 /* 첫번째 카드뉴스 */
 .news_container {
     position: relative;
-    top: 1600px;
+    top: 1800px;
     left: 50%;
     width: 35%;
 }
 /* 두번째 카드뉴스 */
 .news_container2 {
     position: relative;
-    top: 1700px;
+    top: 2000px;
     left: 50%;
     width: 35%;
 
