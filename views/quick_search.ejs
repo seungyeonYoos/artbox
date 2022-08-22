@@ -1,9 +1,15 @@
-  <!-- 클릭시 text와 일치하는 id의 요소를 찾아낸 후 그 요소의 위치로 이동 -->
+<!-- 클릭시 text와 일치하는 id의 요소를 찾아낸 후 그 요소의 위치로 이동 -->
 <script>
   function quick_search_click(subject) {
     name = "#" + subject.text;
     move_height = $(name).offset();
     $("html").scrollTop(move_height.top);
+  }
+</script>
+
+<script>
+  function first_sort(checkbox) {
+    console.log(checkbox);
   }
 </script>
 
@@ -42,7 +48,7 @@
   </div> -->
 
 
-  <!-- 최상위 div -->
+<!-- 최상위 div -->
 <div class="quick_search_container">
 
   <!-- 사진 정렬 목록 사이드바 작동 버튼-->
@@ -57,30 +63,45 @@
   <!-- 클릭시 나타날 사이드바 -->
   <div class="qucik_search_sidebar">
     <ul class="quick_search_sidebar_menu">
-      <li>sdf</li>
-      <li>sdfasdf</li>
-      <li>sdfasd</li>
-      <li>sdfsadfa</lfi>
-      <li>sdfasdf</li>
-      <!-- <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-        <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
-        <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
-      </div>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
-        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
-      </div> -->
-          
+      <!-- switch -->
+      <li id="first_category_switch">
+        분류
+        <hr>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="first_sort_time" checked
+            onclick="first_sort(this)">
+          <label class="form-check-label" for="flexSwitchCheckChecked">TIME</label>
+        </div>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="first_sort_artist"
+            onclick="first_sort(this)">
+          <label class="form-check-label" for="flexSwitchCheckDefault">ARTIST</label>
+        </div>
+      </li>
+      <!-- switch fin -->
+
+      <!-- scrollspy -->
+      <!-- <li>
+        <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link" href="#item-1">Item 1</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+              <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
+            </nav>
+            <a class="nav-link" href="#item-2">Item 2</a>
+            <a class="nav-link" href="#item-3">Item 3</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+              <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+            </nav>
+          </nav>
+        </nav>
+      </li> -->
+      <!-- scrollspy fin -->
 
     </ul>
-
   </div>
 </div>
+  <!-- sidebar fin   -->

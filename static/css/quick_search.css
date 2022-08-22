@@ -2,6 +2,10 @@ html {
 scroll-behavior: smooth;
 }
 
+#show_data{
+    top: 11.5%;
+    background-color: red;
+}
 /* quick_search 글자 스타일 */
 .quick_search{
 font-weight: 500;
