@@ -1,4 +1,4 @@
-<!-- 클릭시 text와 일치하는 id의 요소를 찾아낸 후 그 요소의 위치로 이동 -->
+  <!-- 클릭시 text와 일치하는 id의 요소를 찾아낸 후 그 요소의 위치로 이동 -->
 <script>
   function quick_search_click(subject) {
     name = "#" + subject.text;
@@ -41,45 +41,42 @@
     <p>...</p>
   </div> -->
 
-<div class="container">
-  <!-- 햄버거 메뉴 -->
-  <input type="checkbox" id="trigger">
-  <label for="trigger">
-    <!-- 햄버거 세줄 표현 -->
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
+
+  <!-- 최상위 div -->
+<div class="quick_search_container">
+
+  <!-- 사진 정렬 목록 사이드바 작동 버튼-->
+  <input type="checkbox" id="quick_search_sidebar_checkbox">
+
+  <!-- 사진 정렬 목록의 사이드바 버튼 사진 -->
+  <label for="quick_search_sidebar_checkbox">
+    <img id="quick_search_sidebar_checkbox_img" src="/static/img/right.png">
+  <label>
+
+
   <!-- 클릭시 나타날 사이드바 -->
-  <div class="sidebar">
-    <ul class="sideMenu">
-      <li><a href="#">HOME
-        </a></li>
-      <li><a href="#" class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-          MAIN<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-            data-bs-parent="#accordionFlushExample">
-            <ul class="accordion-body">
-              <li><a href="/show_data">artist</a></li>
-              <li><a href="/show_data">era</a></li>
-              <li><a href="/show_data">style</a></li>
-              <li><a href="/show_data">year</a></li>
-            </ul>
-          </div></a></li>
-      <li><a href="#">NEWS</a></li>
-      <li><a href="#">Q&A</a></li>
+  <div class="qucik_search_sidebar">
+    <ul class="quick_search_sidebar_menu">
+      <li>sdf</li>
+      <!-- <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+        <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+        <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+      </div>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+        <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+      </div> -->
+          
+
     </ul>
 
   </div>
 </div>
-
-<script>
-  $("#trigger").change(function () {
-    if ($("#trigger").is(":checked")) {
-      $('.nav').fadeOut(500);
-    }
-    else {
-      $('.nav').fadeIn(500)
-    }
-  });
-</script>

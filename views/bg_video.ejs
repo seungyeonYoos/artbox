@@ -1,0 +1,22 @@
+<video controls muted id="bgVideo" src="static/videos/1.mp4" class="fadeInVid">
+</video>
+
+<script>
+    const bgVideo = document.querySelector('#bgVideo');
+    
+    bgVideo.play();
+
+    function vidChange() {
+        bgVideo.classList.remove("fadeinVid");
+        if(bgVideo.attributes[3].value === 'static/videos/0.mp4'){
+            bgVideo.attributes[3].value = `static/videos/1.mp4`;
+        }else{
+            bgVideo.attributes[3].value = 'static/videos/0.mp4';
+        }
+        bgVideo.classList.add("fadeinVid");
+        bgVideo.play();
+        // vidSource.attributes[0].value = `static/videos/0.mp4`;
+    }
+    bgVideo.addEventListener('ended', vidChange);
+
+</script>
