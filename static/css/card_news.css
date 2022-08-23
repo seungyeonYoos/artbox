@@ -7,11 +7,13 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: none;
 }
+.news_title_in {
+    display: block;
+}
 
 /* 첫번째 카드뉴스 */
 .news_container {
     position: relative;
-    top: 1600px;
     left: 60%;
     width: 35%;
 }
@@ -19,7 +21,6 @@
 /* 두번째 카드뉴스 */
 .news_container2 {
     position: relative;
-    top: 1600px;
     left: 45%;
     width: 35%;
 }

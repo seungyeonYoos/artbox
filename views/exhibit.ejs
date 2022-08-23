@@ -1,33 +1,36 @@
 
 
     <div class="exhibit-contents">
-        <h1>EXHIBIT</h1>
         <div class="exhibit">
-            <div class="allExhibit">
-                <div class="divBox">전체 보기</div>
+            <div class="allExhibit hover">
+                <a href="#" class="allexhibit-view">전체 보기</a>
             </div>
             <div class="exhibit7">
-                <div class="divBox">7월 전시회</div>
+                <a href="#" class="exhibit7-view">7월 전시회</a>
             </div>
             <div class="exhibit8">
-                <div class="divBox">8월 전시회</div>
-        </div>
+                <a href="#" class="exhibit8-view">8월 전시회</a>
+            </div>
             <div class="exhibit9">
-                <div class="divBox">9월 전시회</div>
-        </div>
+                <a href="#" class="exhibit9-view">9월 전시회</a>
+            </div>
             <div class="etc">
-                <div class="divBox">etc</div>
-        </div>
+                <a href="#" class="etc-view">etc</a>
+            </div>
         </div>
     </div>
-    <!-- <script>
-        $().ready(function() {$(".exhibit > div").hover(function() {
-            $(this).animate({'width':'400px'});
-            $(".exhibit > div").not(this).animate({'width':'100px'},400,"swing");
-            $(this).children(".divBox").css("display","block");
-        });
+    <script>
+        $().ready(function() {$(".exhibit > div").hover(
+            function() {
+                $(".exhibit > div").removeClass("hover");
+                $(this).addClass("hover");
+
+                // $(this).animate({'width':'400px'});
+                // $(".exhibit > div").not(this).animate({'width':'100px'},400,"swing");
+                // $(this).children(".divBox").css("display","block");
+            });
         });
 
         
-    </script> -->
+    </script>
  

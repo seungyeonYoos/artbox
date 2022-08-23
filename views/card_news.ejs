@@ -61,12 +61,12 @@
           </div>
         </div>
       </div>
-
         <p>
           <img src="/static/img/NewsPage/artnews_1.jpg" alt="News" class="news_img">
         </p>
       </a>
     </div>
+
 </div>
 
 
@@ -77,7 +77,24 @@ TEST 박스
 
 <script>
 // Title 카드뉴스 구간에서 Fade in & out
+    $(function() {
+      $(window).scroll(function () {
+      var scroll_height = $(document).scrollTop();
+        console.log(scroll_height, $(".nnnews").offset().top, $(".nnnews").offset().top + $(".nnnews").height() );
 
+        if( scroll_height >= 1600 && scroll_height <= $(".nnnews").offset().top+ $(".nnnews").height()) {
+          $(".news_title").addClass("news_title_in");
+          console.log("bbbbb");
+        }
+        else {
+          $(".news_title").removeClass("news_title_in");
+          console.log("aaaa");
+        }
+      });
+    });
+    // $(document).ready(function(){
+      // alert($(window).height()-$(".nnnews").offset().top+ $(".nnnews").outerHeight());
+    // });
 </script>
 
 </div>

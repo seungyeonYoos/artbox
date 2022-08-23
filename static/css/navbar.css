@@ -12,6 +12,7 @@
 }
     /* 네비게이션 바 고정 */
     #navbar {
+        top: 0%;
         position: fixed; 
         font-family: 'MaruBuri-Regular';
         font-size: 25px;

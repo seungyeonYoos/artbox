@@ -1,7 +1,0 @@
-:root {
-    
-    /* button */
-    --btn-bg: #f8f9fa;
-    --btn-border: 0.5px solid black;
-}
-/* 사용시 background-color: var(--btn-bg); 이렇게 사용 가능.*/
