@@ -17,7 +17,7 @@ label[for=quick_search_sidebar_checkbox] {
     width: 100px;
     height: 80px;
     left: 0%;
-    top: 8%;
+    top: 11%;
     transition: 2s;
     cursor: pointer;
     z-index: 100010;
@@ -45,6 +45,7 @@ input[id=quick_search_sidebar_checkbox]:checked ~ label {
 
 /* 사이드바 */  
 .qucik_search_sidebar {
+    display: block;
     position: fixed;
     width: 200px;
     height: 30vh;
@@ -56,19 +57,12 @@ input[id=quick_search_sidebar_checkbox]:checked ~ label {
 
 /* 사이드바 메뉴 */
 .quick_search_sidebar_menu {
-    /* list-style-type: none; */
+    display: block;
     font-size: 35px;
+    margin-top: 10px;
     font-weight: bolder;
-    /* margin-top: 70px; */
 }
 
 #first_category_switch{
     font-size: 15px;
-}
-
-.scrollspy_searchbar{
-    position: fixed;
-    right: 0%;
-    /* top: 30%; */
-    width: 30%;
 }
