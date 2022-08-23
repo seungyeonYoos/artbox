@@ -1,0 +1,17 @@
+<!-- scrollspy -->
+<nav id="data_scrollspy" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+    <a class="navbar-brand" href="#">최상단</a>
+    <nav class="nav nav-pills flex-column">
+        <%for(var i=0; i< artbox_data[0].length; i++) { %>
+            <% var first_id =  "#" + artbox_data[0][i] %>
+            <a class="nav-link" href=<%= first_id %>><%= artbox_data[0][i] %></a>
+            <nav class="nav nav-pills flex-column">
+                <%for(var j=0; j< artbox_data[1][i].length; j++) { %>
+                    <% var second_id = "#" + artbox_data[1][i][j] %>
+                    <a class="nav-link ms-3 my-1" href=<%= second_id %>><%= artbox_data[1][i][j] %></a>
+                <% } %>
+            </nav>
+        <% } %>
+    </nav>
+</nav>
+<!-- scrollspy fin -->
