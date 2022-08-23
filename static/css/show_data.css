@@ -1,14 +1,14 @@
 html {
-scroll-behavior: smooth;
-}
-
-#show_data{
-    margin-top: 15%;
-    background-color: lightcyan;
-}
-
-
-#artbox_img{
-    width: 100px;
-    height: 100px;
-}
+    scroll-behavior: smooth;
+    }
+    
+    #show_data{
+        margin-top: 15%;
+        background-color: lightcyan;
+    }
+    
+    
+    #artbox_img{
+        width: 100px;
+        height: 100px;
+    }
