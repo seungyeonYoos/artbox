@@ -1,10 +1,47 @@
 #qnaBtn, #inqueryBtn{
+    margin-left: 10px;
+    width: 120px;
+    min-width: 100px;
+}
+.art-boxBtn {
+    background-color: rgba(181, 181, 181, 0.4)!important;
+    border: 0.8px solid black;
     border-radius: 30px!important;
-    /* background-color: var(--btn-bg); */
-    border: var(--btn-border);
-    min-width: 130px;
-    /* max-width: 200px; */
-    
+    animation: all 10s ease-in-out;
+}
+.art-boxBtn:hover {
+    background-color: black!important;
+    color: white!important;
+    border: 0.8px solid rgba(201, 201, 201, 0.3)!important;
+    font-weight: 700;
+}
+.art-boxBtn:focus {
+    background-color: rgba(0, 0, 0, 0.9)!important;
+    color: white!important;
+    font-weight: 700;
+}
+/* 576 이하일때는 navBtn이 가로로 보여짐*/
+@media screen and (max-width: 576px){
+    #navCol {
+        display: flex;
+        justify-content: start;
+        align-items: baseline;
+    }
+}
+/* 576 이상일때는 navBtn이 세로로 보여짐*/
+@media screen and (min-width: 576px){
+    #navCol {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .control {
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 #arcAndPagination {
     height: 50vh;
@@ -16,7 +53,7 @@
     height: 50vh;
 }
 .accordion-collapse > .bgColorGray {
-    background-color: rgba(237, 237, 237, 0.5);
+    background-color: rgba(237, 237, 237, 0.2);
 }
 a:link, a:visited, a:hover{
     color: black!important; 
@@ -29,4 +66,25 @@ a:link, a:visited, a:hover{
 #formFileMultiple {
     min-width: 250px;
     width: 30%;
+}
+.art-boxAccordionBtn {
+    background-color: white!important;
+    color: black!important;
+    border-style: none!important;
+}
+.art-boxAccordionBtn:hover, .art-boxAccordionBtn:focus{
+    background-color: white!important;
+    color: black!important;
+    outline: none!important;
+    box-shadow:none!important;
+}
+.accordion {
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='var%28--bs-body-color%29'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e")!important;
+}
+/* .accordion-item:active, .accordion-item:focus {
+    border-bottom: var(--bs-accordion-border-width) solid black;
+} */
+.form-control:focus, .form-select:focus {
+    border-color: rgba(0, 0, 0, 0.3);
+    box-shadow: none;
 }

@@ -23,24 +23,24 @@
   <!-- qna 및 문의 사항 화면. 해당 버튼 클릭시 화면이 바뀜. -->
   <div class="container">
     <div class="row">
-      <div class="col-12 col-xs-2 col-sm-2 d-flex justify-content-start align-items-center flex-column mt-5" id="navCol">
-        <button class="btn btn-light" type="button" id="qnaBtn">
+      <div class="col-12 col-sm-2 mt-5" id="navCol">
+        <button class="btn art-boxBtn" type="button" id="qnaBtn">
           Q&A
         </button>
-        <button class="btn btn-light mt-2" type="button" id="inqueryBtn">
+        <button class="btn mt-2 art-boxBtn" type="button" id="inqueryBtn">
           문의하기
         </button>
       </div>
       <div class="col-9 ms-4" id="contentCol">
         <!-- Q&A 부분 -->
         <div id="qnaDiv" class="mt-3">
-          <h3>Q&A</h3>
+          <h1>Q&A</h1>
           <div class="d-flex flex-column justify-content-between" id="arcAndPagination">
             <div class="accordion accordion-flush" id="accordionFlushQnA">
               <% for(let i=0; i < listQnA.length; i++){ %>
                 <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-qna-heading<%=i%>">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-qna-collapse<%=i%>" aria-expanded="false" aria-controls="flush-qna-collapse<%=i%>">
+                  <h2 class="accordion-header art-boxAccordionHeader" id="flush-qna-heading<%=i%>">
+                    <button class="accordion-button collapsed art-boxAccordionBtn" type="button" data-bs-toggle="collapse" data-bs-target="#flush-qna-collapse<%=i%>" aria-expanded="false" aria-controls="flush-qna-collapse<%=i%>">
                       <%=listQnA[i].btn; %>
                     </button>
                   </h2>
@@ -93,7 +93,7 @@
               <label for="formFileMultiple" class="form-label">오류 캡쳐 파일</label>
               <input class="form-control" type="file" id="formFileMultiple" multiple accept=".gif,.jpg,.jpeg,.png">
             </div>
-            <button id="inqueryBtn" class="btn btn-secondary" type="submit">문의하기</button>
+            <button id="inquerySubmitBtn" class="btn art-boxBtn" type="submit">문의하기</button>
           </form>
         </div>
       </div>
