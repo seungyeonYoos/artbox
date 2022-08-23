@@ -76,6 +76,7 @@
 $(function() {
 $(window).scroll(function () {
 var scroll_height = $(document).scrollTop();
+if ( 1800 <= scroll_height ) {
 
 if ( 1650 <= scroll_height ) {
 $(".news_title").fadeIn(500);
