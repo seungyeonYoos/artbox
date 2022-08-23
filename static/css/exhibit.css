@@ -3,50 +3,45 @@
             display: flex;
             justify-content: center;
         }
+        .exhibit div a {
+            display: none;
+        }
         .exhibit-contents {
             position: absolute;
-            text-align: center;
             z-index: 100000;
+            width: 100%;
+  
         }
         /* all 박스 */
         .exhibit > div {
             margin: 5px;
             border-radius: 15px;
             cursor: pointer;
+            width: 100px;
+            height: 400px;
+            background-size : cover;
+            transition: all 0.5s;
         }
         /* 박스 크기 조절 */
         .allExhibit {
-            width: 400px;
-            height: 400px;
-            background-image: url(../static/img/art_3.jpg);
-            background-size : cover;
+            background-image: url(../img/art_1.jpg);
         }
         .exhibit7 {
-            width: 100px;
-            height: 400px;
-            background-image: url(../static/img/art_5.jpg);
-            background-size : cover;
+            background-image: url(../img/art_5.jpg);
 
         }
         .exhibit8 {
-            width: 100px;
-            height: 400px;
-            background-image: url(../static/img/art_1.jpg);
-            background-size : cover;
-
+            background-image: url(../img/art_1.jpg);
         }
         .exhibit9 {
-            width: 100px;
-            height: 400px;
-            background-image: url(../static/img/art_2.jpg);
-            background-size : cover;
-
+            background-image: url(../img/art_2.jpg);
         }
         .etc {
-            width: 100px;
-            height: 400px;
-            background-image: url(../static/img/art_4.jpg);
-            background-size : cover;
-
+            background-image: url(../img/art_4.jpg);
         }
-    
+
+
+        .exhibit > div.hover {
+            width: 400px;
+        } 
+
