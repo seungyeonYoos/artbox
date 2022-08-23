@@ -26,7 +26,7 @@
         }
         /* 박스 크기 조절 */
         .allExhibit {
-            width: 400px;
+            width: 100px;
             height: 400px;
             background-image: url(../static/img/art_3.jpg);
             background-size : cover;
@@ -64,6 +64,7 @@
      
         }
 
+
         
         
     </style>
@@ -92,12 +93,17 @@
         </div>
     </div>
     <script>
-        $().ready(function() {$(".exhibit > div").hover(function() {
-            $(this).animate({'width':'400px'});
-            $(".exhibit > div").not(this).animate({'width':'100px'},400,"swing");
-            $(this).children(".divBox").css("display","block");
-        });
-        });
+        // $().ready(function() {
+        //     $(".exhibit > div").hover(function() {
+        //         $(this).animate({'width':'400px'});
+
+        //         // $(".exhibit > div").not(this).animate({'width':'100px'},200,"swing");
+        //         $(this).children(".divBox").css("display","block");
+        //     }, function(){
+        //         $(this).animate({'width':'100px'});
+        //         $(this).children(".divBox").css("display","none");
+        //     });
+        // });
 
         
     </script>

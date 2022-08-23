@@ -113,6 +113,10 @@ app.get("/exhibit", (req, res) => {
   res.render("exhibit");
 });
 
+app.get("/exhibition", (req, res) => {
+  res.render("exhibition");
+});
+
 app.get("/main", (req, res) => {
   res.render("main");
 });
