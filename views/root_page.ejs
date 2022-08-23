@@ -29,83 +29,134 @@
     </script>
 
     <style>
-        /* 1번째 단락 텍스트 */
+        
+        /* 1번째 단락 전체 */
+        .first-floor , .second-floor , .third-floor , .fourth-floor {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* Art-box */
         .main-text-1 {
+        position: absolute;
         color: white;
         font-size: 200px;
-        position: absolute;
-        left: 150px;
         top: 510px;
+        left: 100px;
         }
         /* 2번째 단락 전체 */
         .main-text-2 {
-            position: relative;
-            top: 1100px;
-            left: 150px;
+            position: absolute;
+            top: 150px;
             color: white;
         }
-        .main-text-2 div:first-child , .main-text-2 div:nth-child(2) , .main-text-2 div:nth-child(3) {
-            position: absolute;
-            z-index: 1000;
-        }
+        
+        
         /* Welcome to Museum */
         .main-text-2 div:first-child {
-            font-size: 150px;
+            font-size: 130px;
+            margin-top: 20px;
+            margin-left: 100px;
         }
         /* 자연에서 찾은 순수한 아름다운 ~ */
         .main-text-2 div:nth-child(2) {
-            font-size: 30px;
-            top: 440px;
+            font-size: 25px;
+            margin-left: 150px;
+
         }
         /* BRAND STORY */
         .main-text-2 div:nth-child(3) {
-            font-size: 25px;
-            top: 540px;
+            font-size: 20px;
+            margin-left: 150px;
+
         }
         .main-text-2-img {
-            position: relative;
-            top: 150px;
-            left: 520px;
+            margin-left: 500px;
             width: 700px;
             height: 400px;
             background-color: bisque;
-            border-radius: 18%;
+            border-radius: 5%;
         }
         /* 3번째 단락 전체 */
+        /* Card News */
         .main-text-3 {
-            position: absolute;
-            top: 2000px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 150px;
+            width: 100%;
+            text-align: center;
+            font-size: 120px;
             color: white;
+        }
+        /* 4번째 단락 전체 */
+        .main-text-4 {
+
+            color: white;
+            font-size: 120px;
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
 
 
 <body>
+    <!-- 네브바 -->
     <%-include("navbar.ejs")%>
+    <!-- 배경비디오 -->
     <%-include("bg_video.ejs")%>
 
-    <div class="main-text-1">Art-box</div>
-            <div class="main-text-2">
-                <div>Welcome<br>to Museum</div>
-                <div>자연에서 찾은<br>순수한 아름다움의 비밀</div>
-                <div>BRAND STORY</div>
-                <div class="main-text-2-img"></div>
-            </div>
-
-            <div class="main-text-3">
-                <div>Card News</div>
-            </div>
-
-            <div class="main-text-4">
-                <div>EXHIBITION</div>
-            </div>
+    <!-- 1번째 단락 -->
+    <div class="first-floor">
+        <div class="main-text-1">Art-box</div>
+    </div>
     
-    <%-include("card_news.ejs")%>
-    <%-include("exhibit.ejs")%>
+    <!-- 2번째 단락 -->
+    <div class="second-floor">
+        <div class="main-text-2">
+            <div>Welcome<br>to Museum</div>
+            <div>자연에서 찾은<br>순수한 아름다움의 비밀</div>
+            <div>BRAND STORY</div>
+            </div>    
+        <div class="main-text-2-img"></div>    
+        
+    </div>
+    
+    <!-- 3번째 단락 -->
+    <div class="third-floor">
+        <div class="main-text-3">
+            <div>Card News</div>
+        </div>
+        <%-include("card_news.ejs")%>
+    </div>
+    
+    <!-- 4번째 단락 -->
+    <div class="fourth-floor">
+        <div class="main-text-4">
+            <div>Exhibition</div>
+        </div>
+        <%-include("exhibit.ejs")%>
+    </div>
+    
+    
+    
+    
+    
+    
+
+    <script>
+        // $(function() {
+        //     $(window).scroll(function () {
+        //     var scroll_height = $(document).scrollTop();
+
+        //     if ( 1650 <= scroll_height ) {
+        //     $(".news_title").fadeIn(500);
+            
+        //     } 
+        //     else {
+        //     $(".news_title").fadeOut(500);
+        //     }
+        //     });
+        // });
+    </script>
 
 
 
