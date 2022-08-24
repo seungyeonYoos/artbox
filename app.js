@@ -66,39 +66,8 @@ app.get("/", (req, res) => {
   res.render("root_page");
 });
 
-const listQnA = [
-  {
-    btn: "#1 웹사이트를 어떻게 활용하나요?",
-    content:
-      "art-box 사이트는 미술 및 전시 관련 정보를 제공하고 있습니다. 목차의 링크를 타고 검색을 하여 활용하셔서 필요한 정보를 얻으시기 바랍니다.",
-  },
-  {
-    btn: "#2 미술 정보들을 확인은 어디서 하나요?",
-    content:
-      "상단의 'MUSEUM' 링크를 눌러서 정보를 확인할 수 있습니다. 연혁별, 작가별 등으로 검색하여 확인할 수 있으니 필요한 내용을 더 쉽게 확인할 수 있습니다.",
-  },
-  {
-    btn: "#3 전시 관련 정보는 어디서 확인하나요?",
-    content:
-    "상단의 'EXHIBITION' 링크를 눌러서 정보를 확인할 수 있습니다. 페이지 내의 카드들에 마우스를 올려서 다가올 전시 정보들을 확인할 수 있습니다.",
-  },
-  {
-    btn: "#4 미술 관련 뉴스들은 어디서 확인하나요?",
-    content: "상단의 'NEWS' 링크를 눌러서 정보를 확인할 수 있습니다.",
-  },
-  {
-    btn: "#5 정보에 오류가 있나요?",
-    content:
-    "왼쪽에 문의사항 버튼을 클릭하여 문의 내용을 입력하여, 문의주시기 바랍니다.",
-  },
-];
-
-
-
-
-
 app.get("/inquery", (req, res) => {
-  res.render("inquery", { listQnA });
+  res.render("inquery");
 });
 
 app.get("/show_data", (req, res) => {
@@ -107,6 +76,10 @@ app.get("/show_data", (req, res) => {
 
 app.get("/exhibit", (req, res) => {
   res.render("exhibit");
+});
+
+app.get("/footer", (req, res) => {
+  res.render("footer");
 });
 
 app.get("/exhibition", (req, res) => {
