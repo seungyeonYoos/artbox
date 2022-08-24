@@ -52,6 +52,16 @@ var era_5 = ["포스트 모더니즘", "추상표현주의", "미니멀리즘", 
 
 var artbox_data = [era, [era_1, era_2, era_3, era_4, era_5]];
 
+// 사진 폴더 리스트 디렉토리
+const testFolder = './static/img/artbox';
+const fs = require('fs');
+var artbox_img;
+
+artbox_img = fs.readdirSync(testFolder, (err, files) => {
+  return files;
+});
+/////////////////////////////////
+
 app.get("/", (req, res) => {
   res.render("root_page");
 });
@@ -70,7 +80,7 @@ const listQnA = [
   {
     btn: "#3 전시 관련 정보는 어디서 확인하나요?",
     content:
-      "상단의 'EXHIBITION' 링크를 눌러서 정보를 확인할 수 있습니다. 페이지 내의 카드들에 마우스를 올려서 다가올 전시 정보들을 확인할 수 있습니다.",
+    "상단의 'EXHIBITION' 링크를 눌러서 정보를 확인할 수 있습니다. 페이지 내의 카드들에 마우스를 올려서 다가올 전시 정보들을 확인할 수 있습니다.",
   },
   {
     btn: "#4 미술 관련 뉴스들은 어디서 확인하나요?",
@@ -79,16 +89,20 @@ const listQnA = [
   {
     btn: "#5 정보에 오류가 있나요?",
     content:
-      "왼쪽에 문의사항 버튼을 클릭하여 문의 내용을 입력하여, 문의주시기 바랍니다.",
+    "왼쪽에 문의사항 버튼을 클릭하여 문의 내용을 입력하여, 문의주시기 바랍니다.",
   },
 ];
+
+
+
+
 
 app.get("/inquery", (req, res) => {
   res.render("inquery", { listQnA });
 });
 
 app.get("/show_data", (req, res) => {
-  res.render("show_data", { artbox_data:artbox_data });
+  res.render("show_data", { artbox_data:artbox_data, artbox_img:artbox_img });
 });
 
 app.get("/exhibit", (req, res) => {

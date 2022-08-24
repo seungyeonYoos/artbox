@@ -1,14 +1,22 @@
 html {
     scroll-behavior: smooth;
-    }
-    
-    #show_data{
-        margin-top: 15%;
-        background-color: lightcyan;
-    }
-    
-    
-    #artbox_img{
-        width: 100px;
-        height: 100px;
-    }
+}
+
+/* #img_container{
+    margin-top: 10%; */
+/* } */
+
+#img_container{
+    /* top: 15%; */
+    /* background-color: lightcyan; */
+}
+
+
+.museum_img {
+    width: 100%;
+    height: 100%;
+}
+
+/* .era_title{
+    padding-top: 16%;
+} */
