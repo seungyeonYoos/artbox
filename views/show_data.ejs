@@ -30,7 +30,6 @@
 
 <!-- nav바 아래에 body가 오도록 height를 찾고 body margin top을 변경해준다 -->
 <script>
-
     function mod_scroll() {
         console.log('workdinsdf')
         const change_height = function () {
@@ -40,18 +39,8 @@
         }
         const timeoutId = setTimeout(change_height, 1000);
     }
-
 </script>
 
-<!-- 클릭시 text와 일치하는 id의 요소를 찾아낸 후 그 요소의 위치로 이동 -->
-<!-- <script>
-  function quick_search_click(subject) {
-      name = "#" + subject.text;
-    }
-</script> -->
-
-
-    
 <body>
     <%-include("navbar") %>
     <%-include("quick_search") %>
