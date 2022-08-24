@@ -11,7 +11,7 @@
     font-style: normal;
 }
     /* 네비게이션 바 고정 */
-    .nav {
+    .love {
         position: fixed; 
         top: 0;
         left: 0;
@@ -23,12 +23,12 @@
         z-index: 10000;
         justify-content: center;
     }
-    .nav > li {
+    .love > li {
         margin: 20px;
         
     }
     /*  */
-    .nav-link {
+    .love-link {
         text-decoration: none;
         color: white !important;
     }
