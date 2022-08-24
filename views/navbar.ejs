@@ -30,51 +30,23 @@
     <!-- 클릭시 나타날 사이드바 -->
     <div class="sidebar">
         <ul class="sideMenu">
-            <li><a href="#">HOME
-                </a></li>
-            <li><a href="#" class="accordion-button collapsed accordion-bottom" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <li><a href="#">HOME</a></li>
+            <li>
+                <a href="#" class="accordion-button collapsed accordion-bottom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                     MUSEUM
-                    </a>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse"
-                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                        <ul class="accordion-body accordion-baby">
-                            <li><a href="/show_data">artist</a></li>
-                            <li><a href="/show_data">era</a></li>
-                            <li><a href="/show_data">style</a></li>
-                            <li><a href="/show_data">year</a></li>
-                        </ul>
-                    </div></li>
-            <li><a href="#">NEWS</a></li>
-            <li><a href="#">Q&A</a></li>
+                </a>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <ul class="accordion-body accordion-baby">
+                        <li><a href="/show_data">artist</a></li>
+                        <li><a href="/show_data">era</a></li>
+                        <li><a href="/show_data">style</a></li>
+                        <li><a href="/show_data">year</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="/news_page">NEWS</a></li>
+            <li><a href="/inquery">Q&A</a></li>
         </ul>
 
     </div>
 </div>
-
-<script>
-    // scroll 내리면 nav 사라지고, 올리면 나타남.
-    var lastScrollTop = 0;
-    $(window).scroll(function () {
-        var st = $(this).scrollTop();
-        if (st > lastScrollTop) {
-            // downscroll code
-            $('#navbar').fadeOut(800);
-            // $('.nav').css('right', '-');
-        } else {
-            // upscroll code
-            $('#navbar').fadeIn(800)
-        }
-        lastScrollTop = st;
-    });
-
-    $("#hamburgerTrigger").change(function () {
-        if ($("#hamburgerTrigger").is(":checked")) {
-            $('#navbr').fadeOut(500);
-        }
-        else {
-            $('#navbar').fadeIn(500)
-        }
-    });
-    
-</script>
