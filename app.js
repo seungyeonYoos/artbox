@@ -52,6 +52,16 @@ var era_5 = ["포스트 모더니즘", "추상표현주의", "미니멀리즘", 
 
 var artbox_data = [era, [era_1, era_2, era_3, era_4, era_5]];
 
+// 사진 폴더 리스트 디렉토리
+const testFolder = './static/img/artbox';
+const fs = require('fs');
+var artbox_img;
+
+artbox_img = fs.readdirSync(testFolder, (err, files) => {
+  return files;
+});
+/////////////////////////////////
+
 app.get("/", (req, res) => {
   res.render("root_page");
 });
@@ -61,7 +71,7 @@ app.get("/inquery", (req, res) => {
 });
 
 app.get("/show_data", (req, res) => {
-  res.render("show_data", { artbox_data:artbox_data });
+  res.render("show_data", { artbox_data:artbox_data, artbox_img:artbox_img });
 });
 
 app.get("/exhibit", (req, res) => {
