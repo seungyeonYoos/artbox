@@ -95,6 +95,10 @@ app.get("/exhibit", (req, res) => {
   res.render("exhibit");
 });
 
+app.get("/footer", (req, res) => {
+  res.render("footer");
+});
+
 app.get("/exhibition", (req, res) => {
   res.render("exhibition");
 });
