@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="/static/css/card_news.css">
     <link rel="stylesheet" href="static/css/navbar-2.css">
     <link rel="stylesheet" href="static/css/exhibit.css">
+    <link rel="stylesheet" href="static/css/footer.css">
+
+    <!-- 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Card_news ScrollMagic -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
@@ -37,6 +41,7 @@
             min-height: 100vh;
         }
 
+
         /* Art-box */
         .main-text-1 {
         position: absolute;
@@ -49,7 +54,9 @@
         .main-text-2 {
             position: absolute;
             top: 150px;
+            left: 100px;
             color: white;
+            z-index: 10000;
         }
         
         
@@ -57,25 +64,27 @@
         .main-text-2 div:first-child {
             font-size: 130px;
             margin-top: 20px;
-            margin-left: 100px;
         }
         /* 자연에서 찾은 순수한 아름다운 ~ */
         .main-text-2 div:nth-child(2) {
             font-size: 25px;
-            margin-left: 150px;
 
         }
         /* BRAND STORY */
-        .main-text-2 div:nth-child(3) {
+        .main-text-2 span:nth-child(3) {
             font-size: 20px;
-            margin-left: 150px;
+            margin-top: 10px;
 
         }
         .main-text-2-img {
-            margin-left: 500px;
-            width: 700px;
-            height: 400px;
-            background-color: bisque;
+            position: absolute;
+            top: 270px;
+            right: 200px;
+            width: 570px;
+            height: 370px;
+            background-image: url(../static/img/museum.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
             border-radius: 5%;
         }
         /* 3번째 단락 전체 */
@@ -88,7 +97,6 @@
         }
         /* 4번째 단락 전체 */
         .main-text-4 {
-
             color: white;
             font-size: 120px;
             width: 100%;
@@ -112,9 +120,10 @@
     <!-- 2번째 단락 -->
     <div class="second-floor">
         <div class="main-text-2">
-            <div>Welcome<br>to Museum</div>
-            <div>자연에서 찾은<br>순수한 아름다움의 비밀</div>
-            <div>BRAND STORY</div>
+            <div class="welcome">Welcome<br>to Museum</div>
+            <div class="nature">자연에서 찾은<br>순수한 아름다움의 비밀</div>
+            <span class="plus-icon"><i class="fa-solid fa-plus"></i></span>
+            <span>BRAND STORY</span>
             </div>    
         <div class="main-text-2-img"></div>    
         
@@ -135,28 +144,11 @@
         </div>
         <%-include("exhibit.ejs")%>
     </div>
-    
-    
-    
-    
-    
-    
 
-    <script>
-        // $(function() {
-        //     $(window).scroll(function () {
-        //     var scroll_height = $(document).scrollTop();
-
-        //     if ( 1650 <= scroll_height ) {
-        //     $(".news_title").fadeIn(500);
-            
-        //     } 
-        //     else {
-        //     $(".news_title").fadeOut(500);
-        //     }
-        //     });
-        // });
-    </script>
+    <!-- footer -->
+    <div class="footer">
+        <%-include("footer.ejs")%>
+    </div>
 
 
 
