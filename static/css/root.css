@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'HallymGothic-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+        /* 바디 오퍼시티 */
+        
+        /* 1번째 단락 전체 */
+        .first-floor , .second-floor , .third-floor , .fourth-floor , .fifth-floor {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+        }
+
+
+        /* Art-box */
+        .main-text-1 {
+        position: absolute;
+        color: white;
+        font-size: 200px;
+        top: 510px;
+        left: 100px;
+        }
+        /* 2번째 단락 전체 */
+        .main-text-2 {
+            position: absolute;
+            top: 150px;
+            left: 100px;
+            color: white;
+            z-index: 10000;
+        }
+        
+        
+        /* Welcome to Museum */
+        .main-text-2 div:first-child {
+            font-size: 130px;
+            margin-top: 20px;
+            line-height: 170px;
+        }
+        /* 자연에서 찾은 순수한 아름다운 ~ */
+        .main-text-2 div:nth-child(2) {
+            font-size: 25px;
+        }
+        /* BRAND STORY */
+        .main-text-2 span:nth-child(3) {
+            font-size: 20px;
+
+        }
+        .main-text-2-img {
+            position: absolute;
+            top: 240px;
+            right: 200px;
+            width: 570px;
+            height: 370px;
+            background-image: url(../img/museum.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 5%;
+        }
+        /* 3번째 단락 전체 */
+        /* Card News */
+        .main-text-3 {
+            width: 100%;
+            text-align: center;
+            font-size: 120px;
+            color: white;
+        }
+        /* 4번째 단락 전체 */
+        .main-text-4 {
+            color: white;
+            font-size: 120px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* 5번째 단락 */
+        .fifth-floor {
+            height: 1000px;
+        }
+        .main-text-5 {
+            color: white;
+        }
+        .qa-text {
+            font-size: 130px;
+            margin-left: 100px;
+        }
+        .qa-img {
+            width: 75%;
+            height: 400px;
+            position: absolute;
+            top: 600px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            border: 1px solid gray;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+            url(../img/question.jpg);
+            background-size: cover;
+            transition: 0.3s;
+        }
+
+        .qa-img:hover {
+            background-image: url(../img/question.jpg);
+        }
+
+        
+        .qa-img-text {
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+        }
+        .qa-img-text div:first-child {
+            margin-top: 200px;
+            font-size: 40px;
+        }
+        .qa-img-text div:nth-child(2) {
+            font-size: 20px;
+        }
