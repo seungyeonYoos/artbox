@@ -99,3 +99,7 @@ a:link, a:visited, a:hover{
     border-color: rgba(0, 0, 0, 0.3);
     box-shadow: none;
 }
+/* pagination 링크 백그라운드. */
+/* .paginationjs .paginationjs-pages li.active>a {
+    background: rgba(181, 181, 181, 0.4)!important;
+} */

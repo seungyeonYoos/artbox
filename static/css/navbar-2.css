@@ -11,7 +11,7 @@
     font-style: normal;
 }
     /* 네비게이션 바 고정 */
-    .nav {
+    .love {
         position: fixed; 
         top: 0;
         left: 0;
@@ -23,12 +23,12 @@
         z-index: 10000;
         justify-content: center;
     }
-    .nav > li {
+    .love > li {
         margin: 20px;
         
     }
     /*  */
-    .nav-link {
+    .love-link {
         text-decoration: none;
         color: white !important;
     }
@@ -43,7 +43,7 @@
         height: 20px;
         display: block;
         position: fixed;
-        top: 24px;
+        top: 35px;
         right: 50px;
         cursor: pointer;
         z-index: 100010;
@@ -157,7 +157,7 @@
         position: fixed;
         font-family: 'PyeongChangPeace-Light';
         font-size: 23px;
-        top: 22px;
+        top: 28px;
         left: 50px;
         text-decoration: none;
         color: black;

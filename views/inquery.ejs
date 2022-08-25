@@ -12,6 +12,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- jquery pagination plugin-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
@@ -20,6 +22,7 @@
     <link rel="stylesheet" href="static/css/variables.css">
     <link rel="stylesheet" href="static/css/navbar.css">
     <link rel="stylesheet" href="static/css/inquery.css">
+    <link rel="stylesheet" href="static/css/footer.css">
 
 </head>
 <body>
@@ -79,11 +82,14 @@
     </div>
   </div>
   
+  
+  <%-include('footer');%>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
   <script>
     // qna or 문의사항 버튼 누를 시 해당 화면으로 전환
-    const btn = document.querySelectorAll('button');
+    const qnaBtn = document.querySelector('#qnaBtn');
+    const inqueryBtn = document.querySelector('#inqueryBtn');
     const qna = document.querySelector('#qnaDiv');
     const inquery = document.querySelector('#inqueryDiv');
     
@@ -102,8 +108,8 @@
       }
     } 
 
-    btn[0].addEventListener('click', handleNavScreen);
-    btn[1].addEventListener('click', handleNavScreen);
+    qnaBtn.addEventListener('click', handleNavScreen);
+    inqueryBtn.addEventListener('click', handleNavScreen);
     
     // pagination.js 사용하여 페이지네이션 적용.
     const listQnA = [
@@ -206,18 +212,20 @@
 
                 $.each(data, function (index, item) {
                     dataHtml += `
-                        <div class="accordion-item">
-                            <h2 class="accordion-header art-boxAccordionHeader" id="flush-qna-heading${item.id}">
-                                <button class="accordion-button collapsed art-boxAccordionBtn" type="button" data-bs-toggle="collapse" data-bs-target="#flush-qna-collapse${item.id}" aria-expanded="false" aria-controls="flush-qna-collapse${item.id}">
-                                    ${item.btn}
-                                </button>
-                            </h2>
+                    <li>
+                      <div class="accordion-item">
+                        <h2 class="accordion-header art-boxAccordionHeader" id="flush-qna-heading${item.id}">
+                            <button class="accordion-button collapsed art-boxAccordionBtn" type="button" data-bs-toggle="collapse" data-bs-target="#flush-qna-collapse${item.id}" aria-expanded="false" aria-controls="flush-qna-collapse${item.id}">
+                                ${item.btn}
+                            </button>
+                        </h2>
                         <div id="flush-qna-collapse${item.id}" class="accordion-collapse collapse" aria-labelledby="flush-qna-heading${item.id}" data-bs-parent="#accordionFlushQnA">
-                            <div class="accordion-body bgColorGray">
-                                ${item.content}
-                            </div>
+                          <div class="accordion-body bgColorGray">
+                              ${item.content}
+                          </div>
                         </div>
-                    </div>`
+                      </div>
+                    </li>`
                 });
 
                 dataHtml += '</ul>';
