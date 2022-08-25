@@ -10,6 +10,17 @@ html {
 
 .museum_img {
     width: 100%;
+    bottom: 0;
+}
+
+.pic_description{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.pic_frame{
+    width: 100%;
     height: 100%;
 }
 
@@ -31,4 +42,7 @@ html {
 .era_title{
     padding-top: 70px;
     padding-left: 14px;
+}
+.a_tag{
+    padding: 0.5rem 0.5rem;
 }
