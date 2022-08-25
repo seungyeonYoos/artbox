@@ -38,26 +38,29 @@
         const timeoutId = setTimeout(change_height, 1000);
     }
 </script>
-
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
+    <% console.log(artbox_img)%>
     <%- include("navbar") %>
     <%- include("quick_search") %>
-    <% var pic_count = 0;%>
+    <% var pic_count = 1;%>
     <div class="row">
         <div class="col-10" id="img_container" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
                 <%for(var i=0; i< artbox_data[0].length; i++) { %>
-                    <h3 class="era_title" id=<%= artbox_data[0][i] %>><%= artbox_data[0][i] %></h3>
+                    <h3 class="era_title" id=<%= artbox_data[0][i] %>> # <%= artbox_data[0][i] %></h3>
                     <hr>
                     <%for(var j=0; j< artbox_data[1][i].length; j++) { %>
-                        <h5 class="era_title" id=<%= artbox_data[1][i][j] %>><%= artbox_data[1][i][j] %></h5>
+                        <h5 class="era_title" id=<%= artbox_data[1][i][j] %>> - <%= artbox_data[1][i][j] %></h5>
                         <hr>
                             <div class="row">
-                                <% for(var three=0; three<3; pic_count++, three++) { %>
+                                <% for(var three=0; three<5; three++) { %>
                                     <% if(pic_count >= artbox_img.length) {%>
                                         <%continue %>
                                     <% } %>
                                     <div class="col-4">
-                                        <img class="museum_img" src="static/img/artbox/<%= artbox_img[pic_count]; %>">
+                                        <% var img_src = "static/img/artbox/" + pic_count++ + ".JPG" %>
+                                        <div style="text-align: center;">작품명 : <%= pic_count %></div>
+                                        <img class="museum_img" src= <%= img_src %>>
+                                        <br>
                                     </div>
                                 <% } %>
                             </div>
@@ -85,6 +88,11 @@
             </nav>
             </div>
             <!-- scrolspy fin -->
-        </div>
+    </div>
+    <!-- active scroll auto move -->
+    <script>
+        browser_height = window.innerHeight/2;
+        $(".active").scrollTop(browser_height);
+    </script>
 </body>
 </html>
