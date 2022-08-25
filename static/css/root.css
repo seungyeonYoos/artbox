@@ -19,7 +19,7 @@
         position: absolute;
         color: white;
         font-size: 200px;
-        top: 510px;
+        top: 700px;
         left: 100px;
         }
         /* 2번째 단락 전체 */
@@ -41,6 +41,7 @@
         /* 자연에서 찾은 순수한 아름다운 ~ */
         .main-text-2 div:nth-child(2) {
             font-size: 25px;
+            margin: 18px 0px;
         }
         /* BRAND STORY */
         .main-text-2 span:nth-child(3) {

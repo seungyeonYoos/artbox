@@ -2,7 +2,7 @@
 
 
 .card_news_all {
-    height: 1030px;
+    height: 1750px;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -117,6 +117,24 @@
 
 .news_text1.fromLeft:after{transform-origin:  0% 50%; }
 
-@media (max-width: 991px) { 
-
+@media (max-width: 1607px) { 
+    .card_news_all {
+        height: 1500px;
+    }
+ }
+ @media (max-width: 1507px) { 
+    .card_news_all {
+        height: 1400px;
+    }
+ }
+ @media (max-width: 1050px) { 
+    .news_title , .news_container , .news_container2 {
+        position: static;
+        width: 65%;
+        text-align: center;
+    }
+    .news_container > a , .news_container2 > a {
+        position: relative;
+    }
+    
  }
