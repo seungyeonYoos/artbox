@@ -1,5 +1,9 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
 .card_news_all {
-    height: 950px;
+    height: 1030px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 
@@ -7,13 +11,18 @@
     color: white;
     position: sticky;
     display: inline;
-    height: 100px;
-    /** color: white; */
-    font-size: 300%;
     top: 40%;
     margin-left: 10%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.news_title div:first-child {
+    font-size: 500%;
+    padding-left: 8%;
+}
+.news_title div:nth-child(2) {
+ font-size: 150%;
+ padding-left: 8%;
+}
+
 
 /* 첫번째 카드뉴스 */
 .news_container {
@@ -107,3 +116,7 @@
 }
 
 .news_text1.fromLeft:after{transform-origin:  0% 50%; }
+
+@media (max-width: 991px) { 
+
+ }

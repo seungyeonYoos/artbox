@@ -51,14 +51,17 @@
             position: absolute;
             top: 240px;
             right: 200px;
-            width: 570px;
-            height: 370px;
+            width: 57vw;
+            height: 48vh;
             background-image: url(../img/museum.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             border-radius: 5%;
         }
         /* 3번째 단락 전체 */
+        .third-floor {
+            height: 2000px;
+        }
         /* Card News */
         .main-text-3 {
             width: 100%;
@@ -97,7 +100,7 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
             url(../img/question.jpg);
             background-size: cover;
-            transition: 0.3s;
+            transition: 1s;
         }
 
         .qa-img:hover {
@@ -117,3 +120,34 @@
         .qa-img-text div:nth-child(2) {
             font-size: 20px;
         }
+
+        /* 반응형 */
+        @media (max-width: 991px) { 
+            .main-text-2 { 
+                position: static;
+            }
+            .main-text-2-img {
+                position: static;
+                width: 57vw;
+                height: 40vh;
+                margin: 17px 0px;
+            }
+            .nature {
+                margin: 20px 0px;
+            }
+         }
+        @media (max-width: 798px) { 
+            .main-text-1 {  font-size: 120px;
+                            top: 580px;
+                            left: 0; }
+         }
+         
+         @media (max-width: 424px) { 
+            .main-text-1 {  
+                display: none;
+             }
+         }
+         @media (max-width: 700px) { 
+            .main-text-2 div:first-child{  font-size: 100px;
+                            }
+         }
