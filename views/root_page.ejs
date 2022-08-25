@@ -43,58 +43,60 @@
     <!-- 배경비디오 -->
     <%-include("bg_video.ejs")%>
 
-    <!-- 1번째 단락 -->
-    <div class="first-floor">
-        <div class="main-text-1">Art-box</div>
-    </div>
-    
-    <!-- 2번째 단락 -->
-    <div class="second-floor">
-        <div class="main-text-2">
-            <div class="welcome">Welcome<br>to Museum</div>
-            <div class="nature">자연에서 찾은<br>순수한 아름다움의 비밀</div>
-            <span class="plus-icon"><i class="fa-solid fa-plus"></i></span>
-            <span>BRAND STORY</span>
-            </div>    
-        <div class="main-text-2-img"></div>    
+    <div class="container-fluid">
+
+        <!-- 1번째 단락 -->
+        <div class="first-floor">
+            <div class="main-text-1">Art-box</div>
+        </div>
         
-    </div>
-    
-    <!-- 3번째 단락 -->
-    <div class="third-floor">
-        <div class="main-text-3">
-            <div>Card News</div>
+        <!-- 2번째 단락 -->
+        <div class="second-floor">
+            <div class="main-text-2">
+                <div class="welcome">Welcome<br>to Museum</div>
+                <div class="nature">자연에서 찾은<br>순수한 아름다움의 비밀</div>
+                <span class="plus-icon"><i class="fa-solid fa-plus"></i></span>
+                <span>BRAND STORY</span>
+            </div>   
+            <div class="main-text-2-img"></div>    
         </div>
-        <%-include("card_news.ejs")%>
-    </div>
-    
-    <!-- 4번째 단락 -->
-    <div class="fourth-floor">
-        <div class="main-text-4">
-            <div>Exhibition</div>
-        </div>
-        <%-include("exhibit.ejs")%>
-    </div>
-
-    <!-- 5번째 단락 -->
-    <div class="fifth-floor">
-        <div class="main-text-5">
-            <div class="qa-text">
-                Ask<br>Questions
+        
+        <!-- 3번째 단락 -->
+        <div class="third-floor">
+            <div class="main-text-3">
+                <div>Card News</div>
             </div>
-            <a href="#">
-                <div class="qa-img">
-                    <div class="qa-img-text">
-                        <div>Q&A</div>
-                        <div>오래도록 순수한 아름다움을 원하시는 고객을 위해<br>
-                            창의적이고 지속적인 연구개발로 인체에 가장 적합한 고기능성 제품을 제안합니다.
-                        </div>
+            <%-include("card_news.ejs")%>
+        </div>
+        
+        <!-- 4번째 단락 -->
+        <div class="fourth-floor">
+            <div class="main-text-4">
+                <div>Exhibition</div>
+            </div>
+            <%-include("exhibit.ejs")%>
+        </div>
+    
+            <!-- 5번째 단락 -->
+            <div class="fifth-floor">
+                <div class="main-text-5">
+                    <div class="qa-text">
+                        Ask<br>Questions
                     </div>
+                    <a href="#">
+                        <div class="qa-img">
+                            <div class="qa-img-text">
+                                <div>Q&A</div>
+                                <div>오래도록 순수한 아름다움을 원하시는 고객을 위해<br>
+                                    창의적이고 지속적인 연구개발로 인체에 가장 적합한 고기능성 제품을 제안합니다.
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
-
     <!-- footer -->
     <div class="footer">
         <%-include("footer.ejs")%>
