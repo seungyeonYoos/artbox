@@ -71,6 +71,7 @@ app.get("/inquery", (req, res) => {
 });
 
 app.get("/show_data", (req, res) => {
+  // res.render("show_data", { artbox_data:artbox_data, artbox_img:artbox_img });
   res.render("show_data", { artbox_data:artbox_data, artbox_img:artbox_img });
 });
 
@@ -92,6 +93,10 @@ app.get("/main", (req, res) => {
 
 app.get("/news_page", (req, res) => {
   res.render("news_page");
+});
+
+app.get("/test", (req, res) => {
+  res.render("test");
 });
 
 app.listen(port, () => {
