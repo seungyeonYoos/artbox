@@ -31,7 +31,12 @@
     /*  */
     .nav-link {
         text-decoration: none;
-        /* color: black !important; */
+        color: black !important;
+    }
+    /* 부트스트랩 .nav 클래스로서 색이 hover시 파란색으로 되어 있어서 black으로 변경*/
+    .nav {
+        /* --bs-nav-link-color: black!important; */
+        --bs-nav-link-hover-color: black!important;
     }
     /* input 중에 id가 trigger인 항목에 대한 css */
     input[id=hamburgerTrigger] {
@@ -158,7 +163,7 @@
         position: fixed;
         font-family: 'PyeongChangPeace-Light';
         font-size: 23px;
-        top: 22px;
+        top: 30px;
         left: 50px;
         text-decoration: none;
         color: black;

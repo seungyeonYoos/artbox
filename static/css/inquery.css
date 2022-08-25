@@ -68,7 +68,7 @@
 }
 a:link, a:visited, a:hover{
     color: black!important; 
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 #q-select {
     min-width: 180px;
