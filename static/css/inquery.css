@@ -54,8 +54,8 @@
         padding-right: 0;
     }
 }
-#arcAndPagination {
-    height: 50vh;
+#pagination {
+    margin-top: 50px;
 }
 #qnaImage {
     /* nav height 수정시 margin-top변경 필요 */
