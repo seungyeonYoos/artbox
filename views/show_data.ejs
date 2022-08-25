@@ -16,11 +16,11 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <!-- navbar CSS -->
-    <!-- <link rel="stylesheet" href="static/css/navbar.css"> -->
+    <link rel="stylesheet" href="static/css/navbar.css">
     <!-- show_data search CSS -->
     <link rel="stylesheet" href="static/css/show_data.css">
     <!-- quick_search_sidebar CSS -->
-    <!-- <link rel="stylesheet" href="static/css/quick_search_sidebar.css"> -->
+    <link rel="stylesheet" href="static/css/quick_search_sidebar.css">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -39,12 +39,12 @@
     }
 </script>
 
-<body>
-    <%#- include("navbar") %>
-    <%#- include("quick_search") %>
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+    <%- include("navbar") %>
+    <%- include("quick_search") %>
     <% var pic_count = 0;%>
-    <div class="row h_test">
-        <div class="col-10 h_test" id="img_container" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+    <div class="row">
+        <div class="col-10" id="img_container" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
                 <%for(var i=0; i< artbox_data[0].length; i++) { %>
                     <h3 class="era_title" id=<%= artbox_data[0][i] %>><%= artbox_data[0][i] %></h3>
                     <hr>
@@ -65,11 +65,11 @@
                     <% } %>
                 <% } %>
         </div>
-        <div class="col-2 h_test" >
+        <div class="col-2" id="scrollspy_container" >
             <!-- scrolspy -->
-            <!-- <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3 scrollspy" onclick="mod_scroll()"> -->
-            <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3 scrollspy h_test">
-                <a class="navbar-brand" href="#">Navbar</a>
+            <!-- <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3" onclick="mod_scroll()"> -->
+            <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+                
                 <nav class="nav nav-pills flex-column">
                 <%for(var i=0; i< artbox_data[0].length; i++) { %>
                     <% var first_id="#" + artbox_data[0][i] %>
