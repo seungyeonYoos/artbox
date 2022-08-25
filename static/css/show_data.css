@@ -4,6 +4,8 @@ html {
 
 #img_container{
     overflow: auto;
+    margin-top: 95px;
+    align-items: center;
 }
 
 .museum_img {
@@ -14,9 +16,9 @@ html {
 #scrollspy_container{
     position: fixed;
     right: 0;
-    padding-top: 10%;
+    padding-top: 95px;
     width: 180px;
-    height: 80%;
+    height: 100%;
     overflow-y: auto;
     word-break: break-all;
     
@@ -29,4 +31,9 @@ html {
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff!important;
     background-color: black;
+}
+
+.era_title{
+    padding-top: 70px;
+    padding-left: 14px;
 }

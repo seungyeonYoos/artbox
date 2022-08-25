@@ -1,6 +1,7 @@
 // scroll 내리면 nav 사라지고, 올리면 나타남.
 var lastScrollTop = 0;
 $(window).scroll(function () {
+  console.log("aaaaaaaaaaa");
   var st = $(this).scrollTop();
   if (st > lastScrollTop) {
     // downscroll code
