@@ -33,10 +33,9 @@
         text-decoration: none;
         color: black !important;
     }
-    /* 부트스트랩 .nav 클래스로서 색이 hover시 파란색으로 되어 있어서 black으로 변경*/
-    .nav {
-        /* --bs-nav-link-color: black!important; */
-        --bs-nav-link-hover-color: black!important;
+    /* nav 링크 타고 다른 페이지 갈때 색변경을 수정. */
+    .love:hover, .love:active, .love:link {
+        color: black !important;
     }
     /* input 중에 id가 trigger인 항목에 대한 css */
     input[id=hamburgerTrigger] {
