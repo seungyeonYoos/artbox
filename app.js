@@ -71,6 +71,7 @@ app.get("/inquery", (req, res) => {
 });
 
 app.get("/show_data", (req, res) => {
+  // res.render("show_data", { artbox_data:artbox_data, artbox_img:artbox_img });
   res.render("show_data", { artbox_data:artbox_data, artbox_img:artbox_img });
 });
 
