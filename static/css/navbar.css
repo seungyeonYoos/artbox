@@ -28,13 +28,13 @@
         margin: 20px;
         
     }
-    /*  */
+    /* nav바 클릭하여 전환할 때 글자 색상이 파란색으로 바뀌는 부분 수정. .nav & .nav-link*/
+    .nav {
+        --bs-nav-link-color: black;
+        --bs-nav-link-hover-color: black;
+    }
     .nav-link {
         text-decoration: none;
-        color: black !important;
-    }
-    /* nav 링크 타고 다른 페이지 갈때 색변경을 수정. */
-    .love:hover, .love:active, .love:link {
         color: black !important;
     }
     /* input 중에 id가 trigger인 항목에 대한 css */
