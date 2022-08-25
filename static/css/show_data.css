@@ -2,21 +2,25 @@ html {
     scroll-behavior: smooth;
 }
 
-/* #img_container{
-    margin-top: 10%; */
-/* } */
-
-#img_container{
-    /* top: 15%; */
-    /* background-color: lightcyan; */
-}
-
-
 .museum_img {
     width: 100%;
     height: 100%;
 }
 
-/* .era_title{
-    padding-top: 16%;
-} */
+#navbar-example3{
+    position:fixed;
+    top: 100px;
+    /* margin-top:20%; */
+}
+.h_test{
+    height: 100%;
+    position: relative;
+}
+
+#img_container{
+    overflow: auto;
+}
+
+body{
+    position: relative;
+}

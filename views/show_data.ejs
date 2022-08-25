@@ -16,13 +16,11 @@
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
     <!-- navbar CSS -->
-    <link rel="stylesheet" href="static/css/navbar.css">
+    <!-- <link rel="stylesheet" href="static/css/navbar.css"> -->
     <!-- show_data search CSS -->
     <link rel="stylesheet" href="static/css/show_data.css">
     <!-- quick_search_sidebar CSS -->
-    <link rel="stylesheet" href="static/css/quick_search_sidebar.css">
-    <!-- quick_search_sidebar CSS -->
-    <link rel="stylesheet" href="static/css/scrollspy.css">
+    <!-- <link rel="stylesheet" href="static/css/quick_search_sidebar.css"> -->
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -34,20 +32,19 @@
         console.log('workdinsdf')
         const change_height = function () {
             var nav_height = $("#navbar").height();
-            c_height = -nav_height - 15;
-            window.scrollBy(0, c_height);
+            c_height = -nav_height - 10;
+            window.scrollBy(0, -nav_height);
         }
         const timeoutId = setTimeout(change_height, 1000);
     }
 </script>
 
 <body>
-    <%-include("navbar") %>
-    <%-include("quick_search") %>
+    <%#- include("navbar") %>
+    <%#- include("quick_search") %>
     <% var pic_count = 0;%>
-    <div class="row"">
-        <div class="col-9" id="img_container">
-            <div data-bs-target="#navbar-example3" data-bs-offset="0">
+    <div class="row h_test">
+        <div class="col-10 h_test" id="img_container" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
                 <%for(var i=0; i< artbox_data[0].length; i++) { %>
                     <h3 class="era_title" id=<%= artbox_data[0][i] %>><%= artbox_data[0][i] %></h3>
                     <hr>
@@ -67,10 +64,27 @@
 
                     <% } %>
                 <% } %>
-            </div>    
         </div>
-        <div class="col-3 scrolspy">
-            <%-include("scrollspy")%>
+        <div class="col-2 h_test" >
+            <!-- scrolspy -->
+            <!-- <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3 scrollspy" onclick="mod_scroll()"> -->
+            <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3 scrollspy h_test">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <nav class="nav nav-pills flex-column">
+                <%for(var i=0; i< artbox_data[0].length; i++) { %>
+                    <% var first_id="#" + artbox_data[0][i] %>
+                    <a class="nav-link" href=<%=first_id %>><%= artbox_data[0][i] %></a>
+                    <nav class="nav nav-pills flex-column">
+                        <%for(var j=0; j< artbox_data[1][i].length; j++) { %>
+                            <% var second_id="#" + artbox_data[1][i][j] %>
+                            <a class="nav-link ms-3 my-1" href=<%=second_id %>><%= artbox_data[1][i][j] %></a>
+                        <% } %>
+                    </nav>
+                <% } %>
+                </nav>
+            </nav>
+            </div>
+            <!-- scrolspy fin -->
         </div>
 </body>
 </html>

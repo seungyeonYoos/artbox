@@ -31,7 +31,7 @@
     /*  */
     .nav-link {
         text-decoration: none;
-        color: black !important;
+        /* color: black !important; */
     }
     /* input 중에 id가 trigger인 항목에 대한 css */
     input[id=hamburgerTrigger] {
