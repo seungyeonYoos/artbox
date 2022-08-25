@@ -29,8 +29,8 @@ html {
     /* margin-top:20%; */
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff!important;
-    background-color: black;
+    color: black!important;
+    background-color: #aaaaaa;
 }
 
 .era_title{
