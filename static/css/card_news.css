@@ -10,9 +10,11 @@
 .news_title {
     color: white;
     position: sticky;
-    display: inline;
+    display: inline-block;
     top: 40%;
-    margin-left: 10%;
+    left: 100px;
+    z-index: 99;
+    width: 50%;
 }
 
 .news_title div:first-child {
@@ -22,7 +24,7 @@
 }
 
 .news_title div:nth-child(2) {
-    font-size: 150%;
+    font-size: calc(0.75em + 1vw);
     padding-left: 8%;
     margin: 25px 0px;
 }
@@ -166,11 +168,9 @@
         margin-left: 18%;
 
     }
-    .news_text {
-        margin-top: 40%;
-    }
-    .news_text2 {
-        display: none;
+    .news_text1 {
+        font-size: calc(0.75em + 1vw);
+
     }
 
  }
@@ -178,5 +178,14 @@
  @media (max-width: 780px) { 
     .card_news_all {
         height: 1400px;
+    }
+}
+
+@media (max-width: 1290px) { 
+    .news_text {
+        margin-top: 40%;
+    }
+    .news_text2 {
+        display: none;
     }
 }
