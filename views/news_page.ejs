@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="/static/css/footer.css">
 <style>
 /** 배너 */
+#bannerDiv {
+    display: block;
+    position: relative;
+    height: 97vh;
+}
 .first_img {
   position: relative;
   z-index: 10;
@@ -25,7 +30,7 @@
 
 .banner_text {
   position: absolute;
-  top: 76%;
+  top: 80%;
   left: 7%;
   /* transform: translate(-50%, -50%); */
   font-size: 650%;
@@ -101,7 +106,7 @@ a {
 <body>
   <%-include('navbar');%>
 
-  <div>
+  <div id="bannerDiv">
     <img src="/static/img/NewsPage/news_banner.png" class="first_img">
     <div class="banner_text">
       ART NEWS
