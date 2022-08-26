@@ -162,7 +162,7 @@
         text-decoration: none;
         color: black;
         display: block;
-        z-index: 100000;
+        z-index: 100001;
     }
     /* 네브바 메뉴 클릭 시 나오는 하위메뉴 */
     .navItem-2 {

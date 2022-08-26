@@ -11,7 +11,7 @@
     font-style: normal;
 }
     /* 네비게이션 바 고정 */
-    #navbar {
+    .love {
         top: 0%;
         position: fixed; 
         font-family: 'MaruBuri-Regular';
@@ -24,12 +24,12 @@
         border-bottom: 1px solid gray;
         background-color: white;
     }
-    #navbar > li {
+    .love > li {
         margin: 20px;
         
     }
     /* nav바 클릭하여 전환할 때 글자 색상이 파란색으로 바뀌는 부분 수정. .nav & .nav-link*/
-    .nav {
+    .love {
         --bs-nav-link-color: black;
         --bs-nav-link-hover-color: black;
     }
@@ -183,3 +183,10 @@
         text-decoration: none;
         color: black;
     }
+
+    @media (max-width: 991px) { 
+        .love {
+            height: 94px;
+        }
+        .love > li > a { display: none; }
+     }
