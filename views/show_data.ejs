@@ -39,12 +39,11 @@
     }
 </script>
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
-    <%# console.log(artbox_img)%>
     <%- include("navbar") %>
     <%- include("quick_search") %>
     <% var pic_count = 1;%>
     <div class="row">
-        <div class="col-10" id="img_container" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+        <div class="col-11" id="img_container" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
                 <%for(var i=0; i< artbox_data[0].length; i++) { %>
                     <h3 class="era_title" id=<%= artbox_data[0][i] %>> # <%= artbox_data[0][i] %></h3>
                     <hr>
@@ -52,15 +51,17 @@
                         <h5 class="era_title" id=<%= artbox_data[1][i][j] %>> - <%= artbox_data[1][i][j] %></h5>
                         <hr>
                             <div class="row">
-                                <% for(var three=0; three<5; three++) { %>
+                                <% for(var three=0; three<3; three++) { %>
                                     <% if(pic_count >= artbox_img.length) {%>
                                         <%continue %>
                                     <% } %>
+                                    <% var img_src = "static/img/artbox/" + pic_count++ + ".JPG" %>
                                     <div class="col-4">
-                                        <% var img_src = "static/img/artbox/" + pic_count++ + ".JPG" %>
-                                        <div style="text-align: center;">작품명 : <%= pic_count %></div>
-                                        <img class="museum_img" src= <%= img_src %>>
-                                        <br>
+                                        <div class="pic_frame">
+
+                                            <img class="museum_img" src= <%= img_src %>>
+                                            <div class="pic_description">작품명 : <%= pic_count %></div>
+                                        </div>
                                     </div>
                                 <% } %>
                             </div>
@@ -76,11 +77,11 @@
                 <nav class="nav nav-pills flex-column">
                 <%for(var i=0; i< artbox_data[0].length; i++) { %>
                     <% var first_id="#" + artbox_data[0][i] %>
-                    <a class="nav-link" href=<%=first_id %>><%= artbox_data[0][i] %></a>
+                    <a class="nav-link a_tag" href=<%=first_id %>><%= artbox_data[0][i] %></a>
                     <nav class="nav nav-pills flex-column">
                         <%for(var j=0; j< artbox_data[1][i].length; j++) { %>
                             <% var second_id="#" + artbox_data[1][i][j] %>
-                            <a class="nav-link ms-3 my-1" href=<%=second_id %>><%= artbox_data[1][i][j] %></a>
+                            <a class="nav-link ms-3 my-1 a_tag" href=<%=second_id %>><%= artbox_data[1][i][j] %></a>
                         <% } %>
                     </nav>
                 <% } %>
@@ -92,7 +93,12 @@
     <!-- active scroll auto move -->
     <script>
         browser_height = window.innerHeight/2;
-        $(".active").scrollTop(browser_height);
+        $(window).on('scroll', e => {
+        // $(window).on('click', e => {
+            $("#scrollspy_container").scrollTop(browser_height);
+            // $("#scrollspy_container").scrollTop(0);
+            // $(window).scrollTop(49);
+    })
     </script>
 </body>
 </html>
