@@ -10,7 +10,8 @@ html {
 
 .museum_img {
     width: 100%;
-    bottom: 0;
+    cursor: pointer;
+
 }
 
 .pic_description{
@@ -32,7 +33,6 @@ html {
     height: 100%;
     overflow-y: auto;
     word-break: break-all;
-    
 }
 
 #navbar-example3{
