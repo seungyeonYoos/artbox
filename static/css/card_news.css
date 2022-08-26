@@ -10,9 +10,11 @@
 .news_title {
     color: white;
     position: sticky;
-    display: inline;
+    display: inline-block;
     top: 40%;
-    margin-left: 10%;
+    left: 100px;
+    z-index: 99;
+    width: 50%;
 }
 .news_title div:first-child {
     /* font-size: 500%; */
@@ -20,16 +22,16 @@
     padding-left: 8%;
 }
 .news_title div:nth-child(2) {
- font-size: 150%;
- padding-left: 8%;
- margin: 25px 0px;
+    font-size: calc(0.75em + 1vw);
+    padding-left: 8%;
+    margin: 25px 0px;
 }
 
 
 /* 첫번째 카드뉴스 */
 .news_container {
     position: relative;
-    top: -60px;
+    top: -160px;
     left: 60%;
     width: 35%;
 }
@@ -37,7 +39,7 @@
 /* 두번째 카드뉴스 */
 .news_container2 {
     position: relative;
-    top: -60px;
+    top: -160px;
     left: 45%;
     width: 35%;
 }
@@ -58,7 +60,7 @@
     bottom: 0px;
     right: 0px;
     height: 100%;
-    width: 200%;
+    width: 100%;
     border-radius: 5%;
     opacity: 0;
     transition: .5s ease;
@@ -147,16 +149,24 @@
         margin-left: 18%;
 
     }
-    .news_text {
-        margin-top: 40%;
+    .news_text1 {
+        font-size: calc(0.75em + 1vw);
+
     }
-    .news_text2 {
-        display: none;
-    }
+
  }
     
  @media (max-width: 780px) { 
     .card_news_all {
         height: 1400px;
+    }
+}
+
+@media (max-width: 1290px) { 
+    .news_text {
+        margin-top: 40%;
+    }
+    .news_text2 {
+        display: none;
     }
 }
