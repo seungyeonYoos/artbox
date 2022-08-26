@@ -27,7 +27,8 @@
   position: absolute;
   top: 78%;
   left: 7%;
-  font-size: calc(0.75em + 5.5vw);
+  /* font-size: calc(0.75em + 5.5vw); */
+  font-size: 750%;
   color: black;
   font-family: Georgia, 'Times New Roman', Times, serif;
   z-index: 100;
@@ -97,7 +98,7 @@ a {
 
 <body>
   <%-include('navbar');%>
-
+<div>
   <div>
     <img src="/static/img/NewsPage/news_banner.png" class="first_img">
     <div class="banner_text">
@@ -175,12 +176,9 @@ a {
 
   <!-- 국내뉴스 -->
 
-  <h1 class="newsPage_title" style="font-family:Georgia, 'Times New Roman', Times, serif ; font-weight: bold; text-align: center; " >
-      <br><br><br><br><br>Domestic News
-  </h1>
-  <h5 class="newsPage_title" style=" text-align: center;" >
-      최신 국내 뉴스
-  </h5>
+  <h1 class="newsPage_title" style="font-weight: bold; text-align: center; " >
+    <br><br><br><br>최신 국내 뉴스<br><br>
+</h1>
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" style="margin: 10%; margin-top: -0.3%;">
 
@@ -191,7 +189,7 @@ a {
             <div class="card-body">
               <h5 class="card-title">자연속에 나고 자라 산수를 그리는 박강미 화가</h5>
           </a>
-              <p class="card-text">예술은 기술, 감정, 문화 및 상상력이 독특하게 혼합된 것이다. 모든 예술운동은 역사에 대한 독특한 관점을 제공한다. 이에 떡잎 때부터 재능을 가감없이 발휘, 주위 분들을 놀라게 한 한 작가를 만났다.</p>
+              <p class="card-text disable">예술은 기술, 감정, 문화 및 상상력이 독특하게 혼합된 것이다. 모든 예술운동은 역사에 대한 독특한 관점을 제공한다. 이에 떡잎 때부터 재능을 가감없이 발휘, 주위 분들을 놀라게 한 한 작가를 만났다.</p>
             </div>
           </div>
         </div>
@@ -344,7 +342,7 @@ a {
   </div>
 
 </div>
-
+</div>
 <%-include("footer.ejs")%>
 
 <script>
