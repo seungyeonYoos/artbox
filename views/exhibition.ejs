@@ -14,8 +14,8 @@ integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1
 /** 배너 */
 .first_img {
     margin-top: 5%;
-    opacity: 0.8;
-    filter: brightness(50%); 
+    opacity: 0.6;
+    filter: brightness(100%); 
     width: 100%;
     height: 70vh;
     position: relative;
@@ -25,30 +25,28 @@ integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1
 
 .banner_text {
   position: absolute;
-  top: 76%;
+  top: 78%;
   left: 7%;
-  /* transform: translate(-50%, -50%); */
-  font-size: 650%;
+  font-size: calc(0.75em + 5.5vw);
   color: black;
-  /* -webkit-text-stroke: 1.5px black; */
-  /* font-weight: bold; */
   font-family: Georgia, 'Times New Roman', Times, serif;
   z-index: 100;
 }
 
 .News_card {
-    margin-right: 15%;
-    margin-left: 7%;
+    margin-right: 6%;
+    margin-left: 18%;
     margin-top: 5%;
+    margin-bottom: 30%;
 }
 
-.news_table {
+.exhibit_menu {
     position:absolute;
     z-index: 0;
-    top: 890px;
+    top: 920px;
     color: black;
     width: 12%;
-    margin-left: 83%;
+    margin-left: 3%;
     bottom: 5%;
 }
 
@@ -69,37 +67,52 @@ integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1
 /* Card News Title hover 색 변화 효과*/
 a:hover {
     color: rgb(110, 37, 37);
+    font-weight: bold;
+
 }
 
 a {
     text-decoration-line: none;
     color: black;
-    font-weight: bolder;
 }
 
 .card-title {
     font-weight: bolder;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+.click-ment {
+    vertical-align: bottom;
+}
+
 
 /* 반응형 */
 @media(max-width:900px){
-    .news_table{
+    .exhibit_menu{
     display: none;
     }
 }
 
 @media(max-width:900px){
     .News_card{
-    margin-right: 0px;
+    margin-left: 3%;
     }
-    }
+}
 
+/* @media (max-width: 1067px) { 
+    .card_news_all {
+        height: 1500px;
+    }
+ } */
 
 </style>
 </head>
 
 <body>
-    <%-include('navbar');%>
+    <%-include('navbar-fixed');%>
 
 <div>
 <img src="/static/img/qna.jpeg" class="first_img">
@@ -108,38 +121,29 @@ a {
 </div>
 </div>
 
-<!-- 페이지 오른쪽에 고정된 표 -->
 
-<table class="table news_table" >
-<tr>
-    <td style="font-weight: bold;">Latest</td>
-</tr>
-<tr>
-    <td>
-        2022<br>
-        August 22<br><br>
-        <a href="https://www.seoul.co.kr/news/newsView.php?id=20220822500049">
-            비비안 마이어 사진전
-        </a><br>
-    </td>
-</tr>
-<tr>
-    <td>
-        July 15<br><br>
-        news text<br>
-        news text<br>
-        news text<br><br>
-    </td>
-</tr>
-<tr>
-    <td>
-        May 5<br><br>
-        news text<br>
-        news text<br>
-        news text<br><br>
-    </td>
-</tr>
-</table>
+<div class="exhibit_menu">
+    <div>
+        월별 전시회
+    </div>
+    <hr>
+    <div>
+        월별 전시회
+    </div>
+    <hr>
+    <div>
+        월별 전시회
+    </div>
+    <hr>
+    <div>
+        월별 전시회
+    </div>
+    <hr>
+    <div>
+        월별 전시회
+    </div>
+    <hr>
+</div>
 
 
 <div class="News_card">
@@ -147,7 +151,7 @@ a {
 
     <!-- 국내뉴스 -->
     <h1 class="newsPage_title" style="font-weight: bold; text-align: center; " >
-        <br><br><br><br>8월 전시회<br><br>
+        <br><br><br><br>전시회<br><br>
     </h1>
 
     <div class="row">
@@ -160,11 +164,32 @@ a {
                     </div>
                     <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">비비안 마이어 사진전</h5>
+                        <h5 class="card-title"><a href="#"> 비비안 마이어 사진전</a></h5>
                         <p class="card-text">
                             장소 | 그라운드시소 성수<br>
                             기간 | 2022.04.23 ~2022.09.12<br>
-                            가격 | 18,000원<br><br><br>
+                            가격 | 18,000원
+                        </p>
+                        <p class="card-text click-ment"><small class="text-muted">클릭시 예약 사이트로 이동</small></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 px-3">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4 img_eff">
+                    <img src="/static/img/poster_2.gif" class="card-img-top">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="#"> 빛의벙커 모네|르누아르|샤갈 </a></h5>
+                        <p class="card-text">
+                            장소 | 빛의 벙커(제주 성산)<br>
+                            기간 | 2022.08.01 ~2022.08.31<br>
+                            가격 | 18,000원
                         </p>
                         <p class="card-text"><small class="text-muted">클릭시 예약 사이트로 이동</small></p>
                     </div>
@@ -173,37 +198,20 @@ a {
             </div>
         </div>
 
-        <div class="card mb-3 col-5">
-            <div class="row g-0">
-                <div class="col-md-4 img_eff">
-                <img src="/static/img/poster_2.gif" class="card-img-top">
-                </div>
-                <div class="col-md-8">
-                <div class="card-body">
-                    <h5 class="card-title">빛의벙커 모네|르누아르|샤갈 8월</h5>
-                    <p class="card-text">
-                        장소 | 빛의 벙커(제주 성산)<br>
-                        기간 | 2022.08.01 ~2022.08.31<br>
-                        가격 | 18,000원<br><br><br>
-                    </p>
-                    <p class="card-text"><small class="text-muted">클릭시 예약 사이트로 이동</small></p>
-                </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="card mb-3 col-6">
+        <div class="col-12 col-md-6 px-3">
+            <div class="card mb-3">
             <div class="row g-0">
                 <div class="col-md-4 img_eff">
                 <img src="/static/img/poster.gif" class="card-img-top">
                 </div>
                 <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title">비비안 마이어 사진전</h5>
+                    <h5 class="card-title"><a href="#">비비안 마이어 사진전</a></h5>
                     <p class="card-text">
                         장소 | 그라운드시소 성수<br>
                         기간 | 2022.04.23 ~2022.09.12<br>
-                        가격 | 18,000원<br><br><br>
+                        가격 | 18,000원
                     </p>
                     <p class="card-text"><small class="text-muted">클릭시 예약 사이트로 이동</small></p>
                 </div>
@@ -213,6 +221,8 @@ a {
         
 
     </div>
+
+</div>
 
 </div>
 
