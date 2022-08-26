@@ -29,5 +29,30 @@
     
 }
 .sns > span {
-    margin-right: 10px;
+    margin-right: 13px;
 }
+.footerLinks:link, .footerLinks:visited, .footerLinks:hover{
+    color: white!important; 
+    text-decoration: none;
+}
+.footerLinks{
+    transition: all 0.7s ease-in-out;
+}
+.footerLinks:hover{ 
+    font-size: 1.3rem;
+}
+
+/* a:hover {
+    animation: fontBigger 1.4s ease-in-out infinite;
+}
+@keyframes fontBigger {
+    0% {
+        font-size: 1rem;
+    }
+    50% {
+        font-size: 1.2rem;
+    }
+    100% {
+        font-size: 1rem;
+    }
+} */

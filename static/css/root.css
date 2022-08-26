@@ -29,6 +29,9 @@
             color: white;
             z-index: 10000;
         }
+        .root-show_data {
+            text-decoration: none;
+        }
         
         
         /* Welcome to Museum */
@@ -51,8 +54,8 @@
             position: absolute;
             top: 240px;
             right: 200px;
-            width: 57vw;
-            height: 48vh;
+            width: 50vw;
+            height: 60vh;
             background-image: url(../img/museum.jpg);
             background-size: cover;
             background-repeat: no-repeat;
@@ -149,10 +152,21 @@
              }
          }
          @media (max-width: 700px) { 
-            .main-text-2 div:first-child{  font-size: 100px;
+            .main-text-2 div:first-child{  font-size: 450%;
                             }
+            /* Ask Question 크기 줄이기 */
             .qa-text {
                 margin-left: 0;
-                overflow-x: hidden;
+                font-size: 450%;
+            }
+            /* Ask Question 이미지 크기 줄이기 */
+            .qa-img {
+                top: 450px;
+            }
+            .main-text-4-1 {
+                font-size: 35%;
+            }
+            .main-text-3-1 {
+                font-size: 35%;
             }
          }

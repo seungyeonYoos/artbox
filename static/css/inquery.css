@@ -1,3 +1,6 @@
+* {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
 #qnaBtn, #inqueryBtn{
     margin-left: 10px;
     width: 120px;
@@ -20,13 +23,33 @@
     color: white!important;
     font-weight: 700;
 }
+/* banner */
+#bannerDiv {
+    display: block;
+    position: relative;
+    height: 97vh;
+}
+#qnaImage {
+    /* nav height 수정시 margin-top변경 필요 */
+    margin-top: 5%;
+    opacity: 0.9;
+    width: 100%;
+    height: 70vh;
+}
+.banner_text {
+    position: absolute;
+    top: 80%;
+    left: 7%;
+    font-size: calc(0.75em + 5.5vw);
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
 /* 576 이하일때는 navBtn이 가로로 보여짐*/
 @media screen and (max-width: 576px){
     #navCol {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: flex-end;
-
     }
     #qnaDiv {
         display: flex;
@@ -37,6 +60,15 @@
     }
     #data-container > ul {
         padding-left: 0;
+    }
+    .banner_text {
+        position: static;
+        font-size: 5em;
+        display: flex;
+        justify-content: center;
+    }
+    #qnaBtn, #inqueryBtn{
+        margin-left: 20px;
     }
 }
 /* 576 이상일때는 navBtn이 세로로 보여짐*/
@@ -54,22 +86,30 @@
         padding-right: 0;
     }
 }
+@media screen and (min-width: 1200px) {
+    #navCol, #contentCol, .accordion-button{
+        font-size: 1.2rem;
+    }
+    .btn {
+        --bs-btn-font-size: 1.2rem;
+    }
+    .paginationjs .paginationjs-pages li>a{
+        font-size: 1.2rem;
+    }
+    .banner_text {
+        font-size: 700%;
+    }
+}
 #pagination {
     margin-top: 50px;
-}
-#qnaImage {
-    /* nav height 수정시 margin-top변경 필요 */
-    margin-top: 5%;
-    width: 100%;
-    height: 70vh;
 }
 .accordion-collapse > .bgColorGray {
     background-color: rgba(237, 237, 237, 0.2);
 }
-a:link, a:visited, a:hover{
+/* a:link, a:visited, a:hover{
     color: black!important; 
-    /* text-decoration: none; */
-}
+    text-decoration: none;
+} */
 #q-select {
     min-width: 180px;
     width: 35%;

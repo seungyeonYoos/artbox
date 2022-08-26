@@ -10,8 +10,6 @@ html {
 
 .museum_img {
     width: 100%;
-    cursor: pointer;
-
 }
 
 .pic_description{
@@ -21,23 +19,31 @@ html {
 }
 
 .pic_frame{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     width: 100%;
     height: 100%;
 }
+.aaa{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
 
 #scrollspy_container{
-    position: fixed;
+    position: sticky;
     right: 0;
     padding-top: 95px;
-    width: 180px;
-    height: 100%;
-    overflow-y: auto;
+    height: inherit;
     word-break: break-all;
 }
 
 #navbar-example3{
     top: 0;
-    /* margin-top:20%; */
+    height: 100vh;
+    position: sticky;
+    overflow: auto;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: black!important;
@@ -48,6 +54,7 @@ html {
     padding-top: 70px;
     padding-left: 14px;
 }
+
 .a_tag{
     padding: 0.5rem 0.5rem;
 }
