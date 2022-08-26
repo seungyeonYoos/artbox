@@ -39,7 +39,7 @@
 /* 첫번째 카드뉴스 */
 .news_container {
     position: relative;
-    top: -60px;
+    top: -160px;
     left: 60%;
     width: 35%;
 }
@@ -47,7 +47,7 @@
 /* 두번째 카드뉴스 */
 .news_container2 {
     position: relative;
-    top: -60px;
+    top: -160px;
     left: 45%;
     width: 35%;
 }
