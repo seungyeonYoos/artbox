@@ -47,8 +47,9 @@ input[id=quick_search_sidebar_checkbox]:checked ~ label {
 .qucik_search_sidebar {
     display: block;
     position: fixed;
-    width: 200px;
+    width: 180px;
     height: 30vh;
+    padding-top: 95px;
     background-color: #dfe2e5c2;
     left: -300px;
     transition: 1.2s;

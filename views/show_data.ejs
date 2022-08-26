@@ -23,27 +23,40 @@
     <link rel="stylesheet" href="static/css/quick_search_sidebar.css">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    <!-- sweetalert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- 사진 클릭시 navbar 숨김처리 -->
+    <script>
+        document.addEventListener('click', nav_fade);
+        document.addEventListener('scroll', nav_fade);
+        
+        function nav_fade(){
+            if($("div").hasClass("swal2-container")){
+                $("#navbar").fadeOut(500);
+            }else{
+                $("#navbar").fadeIn(500);
+            }
+        }
+    </script>
 </head>
 
-<!-- nav바 아래에 body가 오도록 height를 찾고 body margin top을 변경해준다 -->
-<script>
-    function mod_scroll() {
-        console.log('workdinsdf')
-        const change_height = function () {
-            var nav_height = $("#navbar").height();
-            c_height = -nav_height - 10;
-            window.scrollBy(0, -nav_height);
+    <!-- 사진 클릭시 sweetalert2 설명 나오는 script -->
+    <script>
+        function sweet_alert(get_pic_src) {
+            Swal.fire({
+                imageUrl: get_pic_src.src,
+                html: '고세구! 고세구! 고세구! <br> 고양이가 세상을 구한다!!!!',
+            })
         }
-        const timeoutId = setTimeout(change_height, 1000);
-    }
-</script>
+    </script>
+
+
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
     <%- include("navbar") %>
-    <%- include("quick_search") %>
+    <%#- include("quick_search") %>
     <% var pic_count = 1;%>
     <div class="row">
-        <div class="col-11" id="img_container" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+        <div class="col-10" id="img_container" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
                 <%for(var i=0; i< artbox_data[0].length; i++) { %>
                     <h3 class="era_title" id=<%= artbox_data[0][i] %>> # <%= artbox_data[0][i] %></h3>
                     <hr>
@@ -56,11 +69,11 @@
                                         <%continue %>
                                     <% } %>
                                     <% var img_src = "static/img/artbox/" + pic_count++ + ".JPG" %>
-                                    <div class="col-4">
+                                    <div class="col-lg-4  col-md-6 col-sm-12">
                                         <div class="pic_frame">
-
-                                            <img class="museum_img" src= <%= img_src %>>
-                                            <div class="pic_description">작품명 : <%= pic_count %></div>
+                                            <img class="museum_img" src=<%=img_src %>  onclick="sweet_alert(this);">
+                                            <div class="pic_description">작품명 : <%= pic_count %>
+                                            </div>
                                         </div>
                                     </div>
                                 <% } %>
@@ -71,7 +84,6 @@
         </div>
         <div class="col-2" id="scrollspy_container" >
             <!-- scrolspy -->
-            <!-- <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3" onclick="mod_scroll()"> -->
             <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
                 
                 <nav class="nav nav-pills flex-column">
