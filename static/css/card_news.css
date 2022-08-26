@@ -16,15 +16,23 @@
     z-index: 99;
     width: 50%;
 }
+
 .news_title div:first-child {
     /* font-size: 500%; */
     font-size: calc(0.75em + 5vw);
     padding-left: 8%;
 }
+
 .news_title div:nth-child(2) {
     font-size: calc(0.75em + 1vw);
     padding-left: 8%;
     margin: 25px 0px;
+}
+.news_title > span {
+    font-size: 110%;
+}
+.news_title_1 {
+    padding-left: 8%;
 }
 
 
@@ -69,20 +77,20 @@
 
 
 
-.news_container:hover .news_textbox{
+.news_container:hover .news_textbox {
     opacity: 0.7;
 }
 
-.news_container2:hover .news_textbox{
+.news_container2:hover .news_textbox {
     opacity: 0.7;
 }
-  
+
 .news_text {
     z-index: 10;
     position: relative;
     display: flex;
     color: white;
-    font-family:verdana, sans-serif;
+    font-family: verdana, sans-serif;
     white-space: pre;
     text-align: center;
     justify-content: center;
@@ -92,7 +100,7 @@
 
 /* CardNews Title */
 .news_text1 {
-    display:inline-block; 
+    display: inline-block;
     position: absolute;
     /* font-size: 120%; */
   font-size: calc(0.75em + 0.7vw);
@@ -108,10 +116,10 @@
 }
 
 .news_text1:after {
-    display:block;
+    display: block;
     content: '';
-    border-bottom: solid 2px white;  
-    transform: scaleX(0);  
+    border-bottom: solid 2px white;
+    transform: scaleX(0);
     transition: transform 200ms ease-in-out;
 }
 
@@ -119,33 +127,44 @@
     transform: scaleX(1);
 }
 
-.news_text1.fromLeft:after{transform-origin:  0% 50%; }
+.news_text1.fromLeft:after {
+    transform-origin: 0% 50%;
+}
 
-@media (max-width: 1607px) { 
+@media (max-width: 1607px) {
     .card_news_all {
         height: 1500px;
     }
- }
- @media (max-width: 1507px) { 
+}
+
+@media (max-width: 1507px) {
     .card_news_all {
         height: 1400px;
     }
- }
- @media (max-width: 1050px) { 
-    .news_title , .news_container , .news_container2 {
+}
+
+@media (max-width: 1050px) {
+
+    .news_title,
+    .news_container,
+    .news_container2 {
         position: static;
         width: 65%;
+        height: auto;
         text-align: center;
         justify-content: center;
         align-items: center;   
     }
-    .news_container > a , .news_container2 > a {
+
+    .news_container>a,
+    .news_container2>a {
         position: relative;
     }
+
     .news_textbox {
         width: 200%;
     }
-    .news_container , .news_container2 {
+
         margin-left: 18%;
 
     }

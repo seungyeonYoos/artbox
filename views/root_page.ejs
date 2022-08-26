@@ -51,19 +51,21 @@
         
         <!-- 2번째 단락 -->
         <div class="second-floor">
-            <div class="main-text-2">
-                <div class="welcome">Welcome<br>to Museum</div>
-                <div class="nature">자연에서 찾은<br>순수한 아름다움의 비밀</div>
-                <span class="plus-icon"><i class="fa-solid fa-plus"></i></span>
-                <span>BRAND STORY</span>
-            </div>   
-            <div class="main-text-2-img"></div>    
+            <a href="/show_data" class="root-show_data">
+                <div class="main-text-2">
+                    <div class="welcome">Welcome<br>to Gallery</div>
+                    <div class="nature">자연에서 찾은<br>순수한 아름다움의 비밀</div>
+                    <span class="plus-icon"><i class="fa-solid fa-plus"></i></span>
+                    <span>바로가기</span>
+                </div>   
+                <div class="main-text-2-img"></div>
+            </a>    
         </div>
         
         <!-- 3번째 단락 -->
         <div class="third-floor">
             <div class="main-text-3">
-                <div>Card News</div>
+                <div class="main-text-3-1">Card News</div>
             </div>
             <%-include("card_news.ejs")%>
         </div>
@@ -71,7 +73,7 @@
         <!-- 4번째 단락 -->
         <div class="fourth-floor">
             <div class="main-text-4">
-                <div>Exhibition</div>
+                <div class="main-text-4-1">Exhibition</div>
             </div>
 
             <%-include("exhibit.ejs")%>
@@ -110,12 +112,12 @@
         var st = $(this).scrollTop();
         if (st > lastScrollTop) {
             // downscroll code
-            console.log("aaaa");
+            
             $("#navbar").fadeOut(500);
             
         } else if( $(window).width() >= 991 ) {
             // upscroll code
-            console.log("bbbb");
+            
             $("#navbar").fadeIn(500);
             
 
@@ -133,15 +135,7 @@
         }
     });
 
-    $(function () {
-        $(window).scroll(function () {
-            var scroll_height = $(document).scrollTop();
-
-            if (scroll_height >= $(".second-floor").offset().top) {
-                $().addClass();
-            }
-        });
-    });
+    
 </script>
 
 

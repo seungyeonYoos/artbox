@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="/static/css/footer.css">
 <style>
 /** 배너 */
+#bannerDiv {
+    display: block;
+    position: relative;
+    height: 97vh;
+}
 .first_img {
   position: relative;
   z-index: 10;
@@ -25,9 +30,10 @@
 
 .banner_text {
   position: absolute;
-  top: 78%;
+  top: 80%;
   left: 7%;
-  font-size: calc(0.75em + 5.5vw);
+  /* font-size: calc(0.75em + 5.5vw); */
+  font-size: 750%;
   color: black;
   font-family: Georgia, 'Times New Roman', Times, serif;
   z-index: 100;
@@ -99,13 +105,13 @@
   <%-include('navbar');%>
 
   <div class="NewsPage_all">
-    <div>
-      <img src="/static/img/NewsPage/news_banner.png" class="first_img">
-      <div class="banner_text">
-        ART NEWS
-      </div>
+  <div id="bannerDiv">
+    <img src="/static/img/NewsPage/news_banner.png" class="first_img">
+    <div class="banner_text">
+      ART NEWS
     </div>
-
+  </div>
+  
   <!-- 페이지 오른쪽에 고정된 표 -->
 
   <table class="table news_table">
@@ -178,6 +184,7 @@
     최신 국내 뉴스
   </h5>
 
+
     <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4" style="margin: 10%; margin-top: -0.3%;">
 
         <div class="col">
@@ -188,6 +195,7 @@
             <div class="card-body">
               <h5 class="card-title">
                 <a href="http://www.kbsm.net/news/view.php?idx=361207">자연속에 나고 자라 산수를 그리는 박강미 화가</a></h5>
+
               <p class="card-text disable">예술은 기술, 감정, 문화 및 상상력이 독특하게 혼합된 것이다. 모든 예술운동은 역사에 대한 독특한 관점을 제공한다. 이에 떡잎 때부터 재능을 가감없이 발휘, 주위 분들을 놀라게 한 한 작가를 만났다.</p>
             </div>
           </div>
@@ -365,9 +373,9 @@
 
   </div>
 
-  </div>
-  </div>
 
+ </div>
+ </div>
 
 <%-include("footer.ejs")%>
 
