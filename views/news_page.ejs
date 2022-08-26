@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="/static/css/footer.css">
 <style>
 /** 배너 */
+#bannerDiv {
+    display: block;
+    position: relative;
+    height: 97vh;
+}
 .first_img {
   position: relative;
   z-index: 10;
@@ -25,13 +30,10 @@
 
 .banner_text {
   position: absolute;
-  top: 76%;
+  top: 80%;
   left: 7%;
-  /* transform: translate(-50%, -50%); */
-  font-size: 650%;
+  font-size: calc(0.75em + 5.5vw);
   color: black;
-  /* -webkit-text-stroke: 1.5px black; */
-  /* font-weight: bold; */
   font-family: Georgia, 'Times New Roman', Times, serif;
   z-index: 100;
 
@@ -101,7 +103,7 @@ a {
 <body>
   <%-include('navbar');%>
 
-  <div>
+  <div id="bannerDiv">
     <img src="/static/img/NewsPage/news_banner.png" class="first_img">
     <div class="banner_text">
       ART NEWS
