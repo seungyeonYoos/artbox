@@ -21,6 +21,7 @@
 .news_title div:nth-child(2) {
  font-size: 150%;
  padding-left: 8%;
+ margin: 25px 0px;
 }
 
 
@@ -54,10 +55,9 @@
     margin: 0%;
     top: 0px;
     bottom: 0px;
-    left: 0px;
     right: 0px;
     height: 100%;
-    width: 100%;
+    width: 200%;
     border-radius: 5%;
     opacity: 0;
     transition: .5s ease;
@@ -136,5 +136,12 @@
     .news_container > a , .news_container2 > a {
         position: relative;
     }
+    .news_container , .news_container2 {
+        margin-left: 18%;
+    }
     
  }
+ @media (max-width: 780px) { 
+    .card_news_all {
+        height: 1400px;
+    }

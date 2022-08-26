@@ -4,7 +4,6 @@
     font-weight: 400;
     font-style: normal;
 }
-        /* 바디 오퍼시티 */
         
         /* 1번째 단락 전체 */
         .first-floor , .second-floor , .third-floor , .fourth-floor , .fifth-floor {
@@ -19,7 +18,7 @@
         position: absolute;
         color: white;
         font-size: 200px;
-        top: 700px;
+        top: 69%;
         left: 100px;
         }
         /* 2번째 단락 전체 */
@@ -85,6 +84,7 @@
         .main-text-5 {
             color: white;
         }
+        /* Ask Question */
         .qa-text {
             font-size: 130px;
             margin-left: 100px;
@@ -151,4 +151,8 @@
          @media (max-width: 700px) { 
             .main-text-2 div:first-child{  font-size: 100px;
                             }
+            .qa-text {
+                margin-left: 0;
+                overflow-x: hidden;
+            }
          }
