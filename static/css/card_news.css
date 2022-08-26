@@ -24,6 +24,12 @@
  padding-left: 8%;
  margin: 25px 0px;
 }
+.news_title > span {
+    font-size: 110%;
+}
+.news_title_1 {
+    padding-left: 8%;
+}
 
 
 /* 첫번째 카드뉴스 */
@@ -58,7 +64,7 @@
     bottom: 0px;
     right: 0px;
     height: 100%;
-    width: 200%;
+    width: 100%;
     border-radius: 5%;
     opacity: 0;
     transition: .5s ease;
@@ -133,6 +139,7 @@
     .news_title , .news_container , .news_container2 {
         position: static;
         width: 65%;
+        height: auto;
         text-align: center;
         justify-content: center;
         align-items: center;   
