@@ -163,21 +163,22 @@
 
     .news_textbox {
         width: 200%;
-    }
-
-        margin-left: 18%;
+        /* margin-left: 18%; */
 
     }
     .news_text1 {
         font-size: calc(0.75em + 1vw);
 
     }
+}
 
- }
     
  @media (max-width: 780px) { 
     .card_news_all {
         height: 1400px;
+        margin-left: 15%;
+        margin-right: -20%;
+
     }
 }
 
@@ -187,5 +188,10 @@
     }
     .news_text2 {
         display: none;
+    }
+    .card_news_all {
+        margin-left: 15%;
+        margin-right: -20%;
+
     }
 }
