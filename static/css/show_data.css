@@ -52,10 +52,9 @@ html {
 #navbar-example3 {
     top: 95px;
     height: 90vh;
-    /* margin-top: 95px; */
     position: sticky;
     overflow: scroll;
-    /* word-break: break-all; */
+    word-break: break-all;
 }
 /* overflow: scroll; */
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {

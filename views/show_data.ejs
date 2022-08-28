@@ -56,9 +56,33 @@
 
     <!-- scrollspy auto move -->
     <script>
+        var check_scrollbar = 0;
+        var save_result = 3;
+
         window.addEventListener("scroll", (event) => {
-            let scrollY = this.scrollY;
-            console.log(scrollY);
+            var current_height = this.scrollY;
+            var total_height = $("html").height();
+            var current_height_percent = scrollY/total_height;
+            
+            if (current_height_percent < 0.5)
+            {
+                check_scrollbar = 0;
+            }else{
+                check_scrollbar = 1;
+            }
+
+
+            if (check_scrollbar != save_result){
+                setTimeout(function() {
+                    if (check_scrollbar == 0){
+                        $("#navbar-example3").scrollTop(0);
+                        save_result = 0;
+                    }else{
+                        $("#navbar-example3").scrollTop(1000);
+                        save_result = 1;
+                    }
+                }, 1000);
+            }
         });
         </script>
 
