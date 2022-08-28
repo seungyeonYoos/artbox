@@ -12,11 +12,6 @@
     <link rel="stylesheet" href="/static/css/footer.css">
 <style>
 /** 배너 */
-#bannerDiv {
-    display: block;
-    position: relative;
-    height: 900px;
-}
 .first_img {
   position: relative;
   z-index: 10;
@@ -28,39 +23,16 @@
   /* padding-bottom: 3%; */
   /* overflow: hidden; */
 }
+
 .banner_text {
-    position: absolute;
-    top: 80%;
-    left: 7%;
-    font-size: calc(0.75em + 5.5vw);
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    z-index: 100;
-}
-/* bannerDiv 반응형 */
-@media screen and (max-width: 426px) {
-    #bannerDiv{
-        height: 760px;
-    }
-    .banner_text {
-        top: 90%;
-    }
-}
-@media screen and (min-width: 426px) and (max-width: 768px) {
-    #bannerDiv{
-        height: 800px;
-    }
-    .banner_text {
-        top: 86%;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    #bannerDiv{
-        height: 860px;
-    }
-    .banner_text {
-        top: 82%;
-    }
+  position: absolute;
+  top: 78%;
+  left: 7%;
+  font-size: calc(0.75em + 5.5vw);
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  z-index: 100;
+
 }
 
 .News_card {
@@ -70,11 +42,16 @@
 .news_table {
   position:absolute;
   z-index: 0;
-  top: 890px;
+  top: 125%;
+  /* top: 890px; */
   color: black;
   width: 15%;
   margin-left: 80%;
   bottom: 5%;
+}
+
+.table2 {
+  top: 290%;
 }
 
  /* Card News img hover 커지는 효과 */
@@ -120,6 +97,12 @@
   }
   }
 
+@media(max-width:1200px){
+    .table2 {
+      top: 350%;
+  }
+}
+
 
 </style>
 </head>
@@ -128,7 +111,7 @@
   <%-include('navbar');%>
 
   <div class="NewsPage_all">
-    <div id="bannerDiv">
+    <div>
       <img src="/static/img/NewsPage/news_banner.png" class="first_img">
       <div class="banner_text">
         ART NEWS
@@ -145,7 +128,7 @@
         <td>
             8월<br><br>
             <a href="https://www.seoul.co.kr/news/newsView.php?id=20220822500049">
-              제주 해녀를 재해석하다…<br>선관위 사무총장서 화가 변신 김대년 제주 첫 전시회<br><br>
+              제주 해녀를 재해석하다… 선관위 사무총장 김대년 제주 첫 전시회<br><br>
             </a>
         </td>
     </tr>
@@ -153,7 +136,7 @@
         <td>
             7월<br><br>
             <a href="https://www.theguru.co.kr/news/article.html?no=40762">
-              재불 화가 지창림,<br> 유나이티드 갤러리에서 개인전 열어<br><br>
+              재불 화가 지창림, 유나이티드 갤러리에서 개인전 열어<br><br>
         </td>
     </tr>
     <tr>
@@ -165,7 +148,7 @@
     </tr>
   </table>
 
-  <table class="table news_table" style="top: 2040px;">
+  <table class="table news_table table2">
     <tr>
         <td style="font-weight: bold;">추천 뉴스</td>
     </tr>
@@ -297,85 +280,6 @@
 
     </div>
 
-
-    <h1 class="newsPage_title" style="font-family:Georgia, 'Times New Roman', Times, serif ; font-weight: bold; text-align: center;">
-      International News
-    </h1>
-    <h5 class="newsPage_title" style=" text-align: center;" >
-    최신 해외 뉴스
-    </h5>
-  
-    <div class="row row-cols-1 row-cols-md-3 g-4" style="margin: 10%; margin-top: -0.3%;">
-  
-      <div class="col">
-        <div class="card h-100 news_eff">
-          <a href="#">
-            <img src="/static/img/NewsPage/K_news_5.jpg" class="card-img-top">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="https://www.theguru.co.kr/news/article.html?no=40762">‘얼굴 없는 화가’ 뱅크시를 추적하다</a>
-            </h5>
-            <p class="card-text">얼굴과 본명을 드러내지 않는 영국 미술가 뱅크시(Banksy)의 그림 ‘풍선과 소녀’가 2018년 10월 런던 소더비 경매에 나왔다. 당시 낙찰 가격만 104만파운드(약 16억원).</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col">
-        <div class="card h-100 news_eff">
-          <a href="#">
-            <img src="/static/img/NewsPage/K_news_6.JPG" class="card-img-top">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="https://www.theguru.co.kr/news/article.html?no=40762">브라질서 열린 '반 고흐 라이브 8K' 디지털 전시회</a>
-            </h5>
-            <p class="card-text">브라질 리우데자네이루에서 열린 '반 고흐 라이브 8K 전시회'에서 관객들이 작품을 둘러보고 있다. 이 전시회에서는 8K 화질로 디지털화된 반 고흐의 작품들이 전시됐다.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col">
-        <div class="card h-100 news_eff">
-          <a href="#">
-            <img src="/static/img/NewsPage/K_news_7.JPG" class="card-img-top">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="https://www.theguru.co.kr/news/article.html?no=40762">독일 20세기, 21세기 타이포그래피 작품을 한눈에</a>
-            </h5>
-            <p class="card-text">9월 2일부터 10월 16일까지 한국 청주 문화제조창(Culture Factory) 본관 3층 갤러리3에서 독일 오펜바흐 클링스포르 박물관의 소장품을 전시한다.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col">
-        <div class="card h-100 news_eff">
-          <a href="#">
-            <img src="/static/img/NewsPage/K_news_8.JPG" class="card-img-top">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="https://www.theguru.co.kr/news/article.html?no=40762">온몸을 내던진 열정의 화가, 터너</a>
-            </h5>
-            <p class="card-text">사실적 묘사에 그치지 않고, 자신의 순간의 감정을 포착하고 고스란히 표현하려는 '낭만주의'</p>
-          </div>
-        </div>
-      </div>
-  
-      <div class="col">
-        <div class="card h-100 news_eff">
-          <a href="#">
-            <img src="/static/img/NewsPage/K_news_9.JPG" class="card-img-top">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="https://www.theguru.co.kr/news/article.html?no=40762">썩은 육신에서 삶의 진실을 마주하다</a>
-            </h5>
-            <p class="card-text">19세기 영국 화가 존 에버렛 밀레이의 ‘오필리아’. 윌리엄 셰익스피어의 비극 ‘햄릿’에 나오는 주인공 햄릿의 연인인 오필리아가 물에 빠져 죽어가는 모습을 그렸다. 미모와 죽음을 병치시켜서 상황의 비극성과 여성의 아름다움을 두드러지게 하고 있다. </p>
-          </div>
-
-
     <!-- 해외 뉴스 -->
     
   <h1 class="newsPage_title" style="font-family:Georgia, 'Times New Roman', Times, serif ; font-weight: bold; text-align: center;">
@@ -455,33 +359,33 @@
           <p class="card-text">19세기 영국 화가 존 에버렛 밀레이의 ‘오필리아’. 윌리엄 셰익스피어의 비극 ‘햄릿’에 나오는 주인공 햄릿의 연인인 오필리아가 물에 빠져 죽어가는 모습을 그렸다. 미모와 죽음을 병치시켜서 상황의 비극성과 여성의 아름다움을 두드러지게 하고 있다. </p>
         </div>
       </div>
-  
-      <div class="col">
-        <div class="card h-100 news_eff">
-          <a href="#">
-            <img src="/static/img/NewsPage/K_news_10.jpg" class="card-img-top">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="https://www.theguru.co.kr/news/article.html?no=40762">식물과 군인, 꽃과 총, 아름다움과 전쟁의 대비</a>
-            </h5>
-            <p class="card-text">꼭 50년 전인 1972년, 천경자가 베트남전쟁 종군화가단의 한 사람으로 뽑혀 전장을 다녀와서 그린 '정글 속에서'다.</p>
-          </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 news_eff">
+        <a href="#">
+          <img src="/static/img/NewsPage/K_news_10.jpg" class="card-img-top">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="https://www.theguru.co.kr/news/article.html?no=40762">식물과 군인, 꽃과 총, 아름다움과 전쟁의 대비</a>
+          </h5>
+          <p class="card-text">꼭 50년 전인 1972년, 천경자가 베트남전쟁 종군화가단의 한 사람으로 뽑혀 전장을 다녀와서 그린 '정글 속에서'다.</p>
         </div>
       </div>
-  
     </div>
-  
-    </div>
-    </div>
-  
-  
-  <%-include("footer.ejs")%>
-  
-  <script>
-  
-  </script>
-  
-  </body>
-  </html>
- 
+
+  </div>
+
+  </div>
+  </div>
+
+
+<%-include("footer.ejs")%>
+
+<script>
+
+</script>
+
+</body>
+</html>
