@@ -172,6 +172,7 @@
         font-size: calc(0.75em + 1vw);
 
     }
+
     .card_news_all {
         margin-left: 10%;
         margin-right: -20%;
@@ -182,6 +183,9 @@
  @media (max-width: 780px) { 
     .card_news_all {
         height: 1400px;
+        margin-left: 15%;
+        margin-right: -20%;
+
     }
 }
 

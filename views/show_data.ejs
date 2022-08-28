@@ -27,6 +27,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- sweetalert2 -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+    
     <!-- 사진 클릭시 navbar 숨김처리 -->
     <script>
         document.addEventListener('click', nav_fade);
@@ -40,7 +43,6 @@
             }
         }
     </script>
-</head>
 
     <!-- 사진 클릭시 sweetalert2 설명 나오는 script -->
     <script>
@@ -51,6 +53,38 @@
             })
         }
     </script>
+
+    <!-- scrollspy auto move -->
+    <script>
+        var check_scrollbar = 0;
+        var save_result = 3;
+
+        window.addEventListener("scroll", (event) => {
+            var current_height = this.scrollY;
+            var total_height = $("html").height();
+            var current_height_percent = scrollY/total_height;
+            
+            if (current_height_percent < 0.5)
+            {
+                check_scrollbar = 0;
+            }else{
+                check_scrollbar = 1;
+            }
+
+
+            if (check_scrollbar != save_result){
+                setTimeout(function() {
+                    if (check_scrollbar == 0){
+                        $("#navbar-example3").scrollTop(0);
+                        save_result = 0;
+                    }else{
+                        $("#navbar-example3").scrollTop(1000);
+                        save_result = 1;
+                    }
+                }, 700);
+            }
+        });
+        </script>
 
 
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
@@ -82,14 +116,13 @@
                                     </div>
                                 <% } %>
                             </div>
-
                     <% } %>
                 <% } %>
         </div>
         <div class="col-4 col-lg-2" id="scrollspy_container" >
             <!-- scrolspy -->
+            <!-- <div id="sticky_block"></div> -->
             <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
-                
                 <nav class="nav nav-pills flex-column">
                     <%for(var i=0; i< artbox_data[0].length; i++) { %>
                         <% var first_id="#" + artbox_data[0][i] %>
@@ -106,16 +139,6 @@
         </div>
                 <!-- scrolspy fin -->
     </div>
-    <!-- active scroll auto move -->
-    <!-- <script>
-        browser_height = window.innerHeight/2;
-        $(window).on('scroll', e => {
-        // $(window).on('click', e => {
-            $("#scrollspy_container").scrollTop(browser_height);
-            // $("#scrollspy_container").scrollTop(0);
-            // $(window).scrollTop(49);
-    })
-    </script> -->
     <%-include("footer.ejs")%>
 
 </body>
