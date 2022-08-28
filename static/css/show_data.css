@@ -14,6 +14,7 @@ html {
 
 .museum_img {
     width: 100%;
+   cursor: pointer; 
 }
 
 .pic_description {
