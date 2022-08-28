@@ -27,7 +27,7 @@
 #bannerDiv {
     display: block;
     position: relative;
-    height: 97vh;
+    height: 900px;
 }
 #qnaImage {
     /* nav height 수정시 margin-top변경 필요 */
@@ -38,7 +38,7 @@
 }
 .banner_text {
     position: absolute;
-    top: 72%;
+    top: 80%;
     left: 7%;
     font-size: calc(0.75em + 5.5vw);
     color: black;
