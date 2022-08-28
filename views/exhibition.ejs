@@ -37,9 +37,30 @@ integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1
   font-family: Georgia, 'Times New Roman', Times, serif;
   z-index: 100;
 }
-
-.exhi_all {
-    height: 2100px;
+/* bannerDiv 반응형 */
+@media screen and (max-width: 426px) {
+    #bannerDiv{
+        height: 760px;
+    }
+    .banner_text {
+        top: 90%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    #bannerDiv{
+        height: 800px;
+    }
+    .banner_text {
+        top: 86%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #bannerDiv{
+        height: 860px;
+    }
+    .banner_text {
+        top: 82%;
+    }
 }
 
 .News_card {
@@ -215,6 +236,7 @@ integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1
             <span style="color: lightgray;">|</span>
             <span><a href="#">추천<br><br></a></span>
     </div>
+
 
     <!-- 8월 -->
     <div id="Month_8">
@@ -523,9 +545,6 @@ integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1
     </div>
 
 </div>
-</div>
-
-
 
 
 <%-include("footer.ejs")%>

@@ -114,8 +114,10 @@
 .news_text2 {
     position: absolute;
     font-size: 15px;
-    top: 50px;
-    margin-right: 10%;
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%); text-align: center;
+    /* top: 50px;
+    margin-right: 10%; */
 }
 
 .news_text1:after {
@@ -175,6 +177,7 @@
         margin-left: 15%;
         margin-right: -24%;
     } */
+
 }
 
     
