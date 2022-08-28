@@ -38,14 +38,49 @@
 }
 .banner_text {
     position: absolute;
-    top: 80%;
+    top: 72%;
     left: 7%;
     font-size: calc(0.75em + 5.5vw);
     color: black;
-    font-family:Georgia, 'Times New Roman', Times, serif
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 100;
 }
-/* 576 이하일때는 navBtn이 가로로 보여짐*/
-@media screen and (max-width: 576px){
+/* bannerDiv 반응형 */
+@media screen and (max-width: 426px) {
+    #bannerDiv{
+        height: 760px;
+    }
+    .banner_text {
+        top: 90%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    #bannerDiv{
+        height: 800px;
+    }
+    .banner_text {
+        top: 86%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #bannerDiv{
+        height: 860px;
+    }
+    .banner_text {
+        top: 82%;
+    }
+}
+@media screen and (min-width: 992px) {
+    #bannerDiv{
+        height: 900px;
+    }
+    .banner_text {
+        top: 80%;
+    }
+}
+
+/* 425 이하일 때 */
+@media screen and (max-width: 425px) {
     #navCol {
         display: flex;
         justify-content: center;
@@ -63,7 +98,7 @@
     }
     .banner_text {
         position: static;
-        font-size: 5em;
+        /* font-size: 5em; */
         display: flex;
         justify-content: center;
     }
@@ -71,8 +106,61 @@
         margin-left: 20px;
     }
 }
-/* 576 이상일때는 navBtn이 세로로 보여짐*/
-@media screen and (min-width: 576px){
+@media screen and (min-width: 426px) and (max-width: 576px) {
+    #navCol {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    #qnaDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        margin-left: 0;
+    }
+    #data-container > ul {
+        padding-left: 0;
+    }
+    .banner_text {
+        position: static;
+        /* font-size: 5em; */
+        display: flex;
+        justify-content: center;
+    }
+    #qnaBtn, #inqueryBtn{
+        margin-left: 20px;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    #navCol {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .control {
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #navCol {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .control {
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
     #navCol {
         display: flex;
         flex-direction: column;
@@ -87,6 +175,18 @@
     }
 }
 @media screen and (min-width: 1200px) {
+    #navCol {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .control {
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
     #navCol, #contentCol, .accordion-button{
         font-size: 1.2rem;
     }
@@ -96,9 +196,7 @@
     .paginationjs .paginationjs-pages li>a{
         font-size: 1.2rem;
     }
-    .banner_text {
-        font-size: 700%;
-    }
+    
 }
 #pagination {
     margin-top: 50px;

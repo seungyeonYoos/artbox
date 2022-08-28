@@ -11,6 +11,45 @@
     <link rel="stylesheet" href="/static/css/footer.css">
 <style>
 /** 배너 */
+#bannerDiv {
+    display: block;
+    position: relative;
+    height: 900px;
+}
+.banner_text {
+    position: absolute;
+    top: 80%;
+    left: 7%;
+    font-size: calc(0.75em + 5.5vw);
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    z-index: 100;
+}
+/* bannerDiv 반응형 */
+@media screen and (max-width: 426px) {
+    #bannerDiv{
+        height: 760px;
+    }
+    .banner_text {
+        top: 90%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 768px) {
+    #bannerDiv{
+        height: 800px;
+    }
+    .banner_text {
+        top: 86%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #bannerDiv{
+        height: 860px;
+    }
+    .banner_text {
+        top: 82%;
+    }
+}
 .first_img {
   position: relative;
   z-index: 10;
@@ -21,17 +60,6 @@
   height: 70vh;
   /* padding-bottom: 3%; */
   /* overflow: hidden; */
-}
-
-.banner_text {
-  position: absolute;
-  top: 78%;
-  left: 7%;
-  font-size: calc(0.75em + 5.5vw);
-  color: black;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  z-index: 100;
-
 }
 
 .News_card {
