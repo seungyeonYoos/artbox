@@ -21,10 +21,15 @@
     <link rel="stylesheet" href="static/css/show_data.css">
     <!-- quick_search_sidebar CSS -->
     <link rel="stylesheet" href="static/css/quick_search_sidebar.css">
+    <!-- footer CSS -->
+    <link rel="stylesheet" href="static/css/footer.css">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- sweetalert2 -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+    
     <!-- 사진 클릭시 navbar 숨김처리 -->
     <script>
         document.addEventListener('click', nav_fade);
@@ -38,7 +43,6 @@
             }
         }
     </script>
-</head>
 
     <!-- 사진 클릭시 sweetalert2 설명 나오는 script -->
     <script>
@@ -50,13 +54,21 @@
         }
     </script>
 
+    <!-- scrollspy auto move -->
+    <script>
+        window.addEventListener("scroll", (event) => {
+            let scrollY = this.scrollY;
+            console.log(scrollY);
+        });
+        </script>
+
 
 <body data-bs-spy="scroll" data-bs-target="#navbar-example">
     <%- include("navbar") %>
     <%#- include("quick_search") %>
     <% var pic_count = 1;%>
-    <div class="row">
-        <div class="col-10" id="img_container" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+    <div class="row gallery_container">
+        <div class="col-8 col-lg-10" id="img_container" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
                 <%for(var i=0; i< artbox_data[0].length; i++) { %>
                     <h3 class="era_title" id=<%= artbox_data[0][i] %>> # <%= artbox_data[0][i] %></h3>
                     <hr>
@@ -69,48 +81,41 @@
                                         <%continue %>
                                     <% } %>
                                     <% var img_src = "static/img/artbox/" + pic_count++ + ".JPG" %>
-                                    <div class="col-lg-4  col-md-6 col-sm-12">
+                                    <div class="col-lg-4  col-md-6 col-xs-12">
                                         <div class="pic_frame">
-                                            <img class="museum_img" src=<%=img_src %>  onclick="sweet_alert(this);">
+                                            <div class="aaa">
+                                                <img class="museum_img" src=<%=img_src %>  onclick="sweet_alert(this);">
+                                            </div>
                                             <div class="pic_description">작품명 : <%= pic_count %>
                                             </div>
                                         </div>
                                     </div>
                                 <% } %>
                             </div>
-
                     <% } %>
                 <% } %>
         </div>
-        <div class="col-2" id="scrollspy_container" >
+        <div class="col-4 col-lg-2" id="scrollspy_container" >
             <!-- scrolspy -->
+            <!-- <div id="sticky_block"></div> -->
             <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
-                
                 <nav class="nav nav-pills flex-column">
-                <%for(var i=0; i< artbox_data[0].length; i++) { %>
-                    <% var first_id="#" + artbox_data[0][i] %>
-                    <a class="nav-link a_tag" href=<%=first_id %>><%= artbox_data[0][i] %></a>
-                    <nav class="nav nav-pills flex-column">
-                        <%for(var j=0; j< artbox_data[1][i].length; j++) { %>
+                    <%for(var i=0; i< artbox_data[0].length; i++) { %>
+                        <% var first_id="#" + artbox_data[0][i] %>
+                        <a class="nav-link a_tag" href=<%=first_id %>><%= artbox_data[0][i] %></a>
+                        <nav class="nav nav-pills flex-column">
+                            <%for(var j=0; j< artbox_data[1][i].length; j++) { %>
                             <% var second_id="#" + artbox_data[1][i][j] %>
                             <a class="nav-link ms-3 my-1 a_tag" href=<%=second_id %>><%= artbox_data[1][i][j] %></a>
-                        <% } %>
+                            <% } %>
+                        </nav>
+                    <% } %>
                     </nav>
-                <% } %>
                 </nav>
-            </nav>
-            </div>
-            <!-- scrolspy fin -->
+        </div>
+                <!-- scrolspy fin -->
     </div>
-    <!-- active scroll auto move -->
-    <script>
-        browser_height = window.innerHeight/2;
-        $(window).on('scroll', e => {
-        // $(window).on('click', e => {
-            $("#scrollspy_container").scrollTop(browser_height);
-            // $("#scrollspy_container").scrollTop(0);
-            // $(window).scrollTop(49);
-    })
-    </script>
+    <%-include("footer.ejs")%>
+
 </body>
 </html>
