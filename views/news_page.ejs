@@ -12,11 +12,6 @@
     <link rel="stylesheet" href="/static/css/footer.css">
 <style>
 /** 배너 */
-#bannerDiv {
-    display: block;
-    position: relative;
-    height: 900px;
-}
 .first_img {
   position: relative;
   z-index: 10;
@@ -28,39 +23,16 @@
   /* padding-bottom: 3%; */
   /* overflow: hidden; */
 }
+
 .banner_text {
-    position: absolute;
-    top: 80%;
-    left: 7%;
-    font-size: calc(0.75em + 5.5vw);
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    z-index: 100;
-}
-/* bannerDiv 반응형 */
-@media screen and (max-width: 426px) {
-    #bannerDiv{
-        height: 760px;
-    }
-    .banner_text {
-        top: 90%;
-    }
-}
-@media screen and (min-width: 426px) and (max-width: 768px) {
-    #bannerDiv{
-        height: 800px;
-    }
-    .banner_text {
-        top: 86%;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    #bannerDiv{
-        height: 860px;
-    }
-    .banner_text {
-        top: 82%;
-    }
+  position: absolute;
+  top: 78%;
+  left: 7%;
+  font-size: calc(0.75em + 5.5vw);
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  z-index: 100;
+
 }
 
 .News_card {
@@ -131,8 +103,6 @@
   }
 }
 
-
-
 </style>
 </head>
 
@@ -140,7 +110,7 @@
   <%-include('navbar');%>
 
   <div class="NewsPage_all">
-    <div id="bannerDiv">
+    <div>
       <img src="/static/img/NewsPage/news_banner.png" class="first_img">
       <div class="banner_text">
         ART NEWS
@@ -308,6 +278,7 @@
     </div>
 
 
+
     <h1 class="newsPage_title" style="font-family:Georgia, 'Times New Roman', Times, serif ; font-weight: bold; text-align: center;">
       International News
     </h1>
@@ -384,8 +355,10 @@
             </h5>
             <p class="card-text">19세기 영국 화가 존 에버렛 밀레이의 ‘오필리아’. 윌리엄 셰익스피어의 비극 ‘햄릿’에 나오는 주인공 햄릿의 연인인 오필리아가 물에 빠져 죽어가는 모습을 그렸다. 미모와 죽음을 병치시켜서 상황의 비극성과 여성의 아름다움을 두드러지게 하고 있다. </p>
           </div>
+
         </div>
       </div>
+
 
       <div class="col">
         <div class="card h-100 news_eff">
