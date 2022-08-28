@@ -111,8 +111,10 @@
 .news_text2 {
     position: absolute;
     font-size: 15px;
-    top: 50px;
-    margin-right: 10%;
+    left: 50%; top: 50%; 
+    transform: translate(-50%, -50%); text-align: center;
+    /* top: 50px;
+    margin-right: 10%; */
 }
 
 .news_text1:after {
@@ -169,6 +171,11 @@
     .news_text1 {
         font-size: calc(0.75em + 1vw);
 
+    }
+
+    .card_news_all {
+        margin-left: 10%;
+        margin-right: -20%;
     }
 }
 
