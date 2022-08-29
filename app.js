@@ -8,43 +8,84 @@ app.use("/static", express.static(__dirname + "/static"));
 const port = 8000;
 // 전역으로 사용할 변수
 
-
-var year = ["1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1800", "1900", "2000"];
+var year = [
+  "1000",
+  "1100",
+  "1200",
+  "1300",
+  "1400",
+  "1500",
+  "1600",
+  "1700",
+  "1800",
+  "1900",
+  "2000",
+];
 var era = ["고대", "중세", "근세", "근대", "현대"];
 
-var era_1 = {"로마미술":["Unknown-봄"]};
+var era_1 = { 로마미술: ["Unknown-봄"] };
 
 var era_2 = {
-"비잔틴미술": ["Theodore_Apsevdis-Jesus"],
-"고딕": ["노트르담_대성당"]
-}
-
+  비잔틴미술: ["Theodore_Apsevdis-Jesus"],
+  고딕: ["Notre_Dame_Cathedral"],
+};
 var era_3 = {
-"르네상스": ["알브레히트_뒤러-어린토끼", "조토_디_본도네-동방박사의_경배", "레오나르도_다빈치-모나리자", "레오나드로_다빈치-흰_담비를_안은_귀부인"], 
-"매너리즘":["미켈란젤로-비너스와_큐피드", "파르미자니노-목이_긴_성모", "엘_그레코-라오콘", "엘_그레코-오르가스_백작의_매장", "파올로_베로네세-가나의_혼인_잔치"], 
-"바로크":["디에고_벨라스케스-시녀들", "잔_로렌초_베르니니-성_테레사의_법열", "렘브란트-야경"], 
-"로코코":["장오노레_프라고나르-그네", "장오노레_프라고나르-빗장"]
-}
+  르네상스: [
+    "Albrecht_Durer-Young_Hare",
+    "Giotto_D_Bondone-The_Adoration_of_the_Magi",
+    "Leonardo_da_Vinci-Mona_Lisa",
+    "Leonardo_da_Vinci-The_Lady_with_the_Ermine",
+  ],
+  매너리즘: [
+    "Michelangelo-Venus_and_Cupid",
+    "Girolamo_Francesco_Maria_Mazzola-Madonna_with_the_Long_Neck",
+    "El_Greco-Laocoon",
+    "El_Greco-The_Burial_of_the_Count_of_Orgaz",
+    "Paolo_Veronese-The_Wedding_at_Cana",
+  ],
+  바로크: [
+    "Diego_Velazquez-Las_Meninas_The_Maids_of_Honour",
+    "Giovanni_Lorenzo_Bernini-Ecstasy_of_Saint_Teresa",
+    "rembrandt-night_watch",
+  ],
+  로코코: ["jean-honore_fragonard-The_swing", "jean-honore_fragonard-The_Bolt"],
+};
 
 var era_4 = {
-"사실주의":["귀스타브_쿠르베-돌깨는_사람", "빈센트_반_고흐-감자_먹는_사람들", "오귀스트_로댕-생각하는_사람", "빈센트_반_고흐-담배_피는_해골"], 
-"인상주의":["클로드_모네-인상,_해돋이", "클로드_모네-파라솔을_든_여인", "에두아르_마네-올랭피아"], 
-"야수파":["앙리_마티스-초록색_띠", "앙드레_드랭-The_Turning_Road,_L_'Estaque", "앙리_마티스-춤"], 
-"다다이즘":["오토_딕스-The_Skat_Players"], 
-"초현실주의":["살바도르_달리-기억의_지속", "르네_마그리트-철학자의_램프"]
-}
+  사실주의: [
+    "Gustave_Courbet-The_Stone_Breakers",
+    "Vincent_van_Gogh-The_Potato_Eaters",
+    "Auguste_Rodin-Thinking_person",
+    "Vincent_van_Gogh-Skull_of_a_Skeleton_with_Burning_Cigarette",
+  ],
+  인상주의: [
+    "Claude_Monet-Impression_Sunrise",
+    "Claude_Monet-Woman_with_a_Parasol",
+    "Edouard_Manet-Olympia",
+  ],
+  야수파: [
+    "Henri_Matisse-Green_Stripe",
+    "Andre_Derain-The_The_Turning_Road_L_Estaque",
+    "Henri_Matisse-The_Dance",
+  ],
+  다다이즘: ["Otto_Dix-The_Skat_Players"],
+  초현실주의: [
+    "Salvador_Dali-The_Persistence_of_Memory",
+    "Rene_Magritte-The_Philospher's_Lamp",
+  ],
+};
 
 var era_5 = {
-"포스트 모더니즘":["루보_크리스테크-In_the_Captivity_of_the_Wordly_Cathedral"],
-"추상표현주의":["잭슨_폴록-No._1", "잭슨_폴록-No._1A"], 
-"팝아트":["앤디_워홀-마린린-먼로","로이_리히텐슈타인-차안에서"], 
-}
+  "포스트 모더니즘": ["Lubo_Kristek-In_the_Captivity_of_the_Wordly_Cathedral"],
+  추상표현주의: ["Jackson_Pollock-No_1", "Jackson_Pollock-No_1A"],
+  팝아트: ["andy_warhol-marilyn_monroe", "Roy_Lichtenstein-In_the_Car"],
+};
 
 var artbox_data = [era, [era_1, era_2, era_3, era_4, era_5]];
 
 // 사진 폴더 리스트 디렉토리
-const testFolder = './static/img/artbox';
-const fs = require('fs');
+const testFolder = "./static/img/artbox";
+const fs = require("fs");
 var artbox_img;
 
 artbox_img = fs.readdirSync(testFolder, (err, files) => {
@@ -61,7 +102,7 @@ app.get("/inquery", (req, res) => {
 });
 
 app.get("/show_data", (req, res) => {
-  res.render("show_data", { artbox_data:artbox_data, artbox_img:artbox_img });
+  res.render("show_data", { artbox_data: artbox_data, artbox_img: artbox_img });
 });
 
 app.get("/exhibit", (req, res) => {
