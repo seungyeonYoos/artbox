@@ -1,36 +1,87 @@
-
-
-    <div class="exhibit-contents">
-        <div class="exhibit">
-            <div class="allExhibit hover">
-                <a href="#" class="allexhibit-view">전체 보기</a>
-            </div>
-            <div class="exhibit7">
-                <a href="#" class="exhibit7-view">7월 전시회</a>
-            </div>
-            <div class="exhibit8">
-                <a href="#" class="exhibit8-view">8월 전시회</a>
-            </div>
-            <div class="exhibit9">
-                <a href="#" class="exhibit9-view">9월 전시회</a>
-            </div>
-            <div class="etc">
-                <a href="#" class="etc-view">etc</a>
-            </div>
+<div class="exhibit-contents">
+    <div class="exhibit">
+        <div class="allExhibit hover">
+            <a href="#" class="allexhibit-view">전체 전시회</a>
+        </div>
+        <div class="exhibit7">
+            <a href="#" class="exhibit7-view">8월 전시회</a>
+        </div>
+        <div class="exhibit8">
+            <a href="#" class="exhibit8-view">9월 전시회</a>
+        </div>
+        <div class="exhibit9">
+            <a href="#" class="exhibit9-view">10월 전시회</a>
+        </div>
+        <div class="etc">
+            <a href="#" class="etc-view">추천 전시회</a>
         </div>
     </div>
-    <script>
-        $().ready(function() {$(".exhibit > div").hover(
-            function() {
+</div>
+
+<script>
+
+
+    $().ready(function () {
+        $(".exhibit > div").hover(
+            function () {
                 $(".exhibit > div").removeClass("hover");
                 $(this).addClass("hover");
-
-                // $(this).animate({'width':'400px'});
-                // $(".exhibit > div").not(this).animate({'width':'100px'},400,"swing");
-                // $(this).children(".divBox").css("display","block");
             });
-        });
+    });
 
-        
-    </script>
- 
+    // var lastwidth = $(window).width();
+    // $(window).resize(function(){
+    //     console.log($(window).width());
+    //     if($(window).width() <= 675 && lastwidth > 675 ){
+    //         $(".exhibit > div").unbind('mouseenter mouseleave');
+    //     } else if ($(window).width() > 675 && lastwidth <= 675 ){
+    //         $(".exhibit > div").hover(
+    //         function () {
+    //             $(".exhibit > div").removeClass("hover");
+    //             $(this).addClass("hover");
+    //         });
+    //     }
+
+    //     lastwidth = $(window).width();
+    // })
+
+    // const media = matchMedia("screen and (min-width: 975px)")
+
+    // media.addEventListener((a) => {
+    //     $(".exhibit > div").hover(
+    //         function () {
+    //             $(".exhibit > div").removeClass("hover");
+    //             $(this).addClass("hover");
+    //         });
+    // })
+
+
+    // var width = window.matchMedia();
+
+    // $().ready(function () {
+    //     if (width <= '975px' ) {
+    //         $().ready(function () {
+    //             $(".exhibit > div").hover(
+    //                 function () {
+    //                     $(".exhibit > div").removeClass("hover");
+    //                     $(this).addClass("hover");
+    //                 });
+    //         });
+    //     }
+    // })
+
+    //    내가슨거
+        // const mediaSize768 = window.matchMedia('(max-width: 975px)');
+        // const changeMedia = function(e) {
+        //     if (e.matches) {
+        //         $(".exhibit > div").addClass("hover");
+        //     }
+        // }
+        // mediaSize768.addListener(changeMedia);
+        // changeMedia(mediaSize768);
+
+
+
+
+
+</script>
