@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <!-- navbar CSS -->
+    <link rel="stylesheet" href="static/css/navbar.css">
+    <!-- show_data search CSS -->
+    <link rel="stylesheet" href="static/css/show_data.css">
+    <!-- quick_search_sidebar CSS -->
+    <link rel="stylesheet" href="static/css/quick_search_sidebar.css">
+    <!-- footer CSS -->
+    <link rel="stylesheet" href="static/css/footer.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- sweetalert2 -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+    
+    <!-- 사진 클릭시 navbar 숨김처리 -->
+    <script>
+        document.addEventListener('click', nav_fade);
+        document.addEventListener('scroll', nav_fade);
+        
+        function nav_fade(){
+            if($("div").hasClass("swal2-container")){
+                $("#navbar").fadeOut(500);
+            }else{
+                $("#navbar").fadeIn(500);
+            }
+        }
+    </script>
+
+    <!-- 사진 클릭시 sweetalert2 설명 나오는 script -->
+    <script>
+        var art_desc = {"Unknown-봄": "BC 1세기경<br>폼페이 벽화",
+        "Theodore_Apsevdis-Jesus": "",
+        "노트르담_대성당": "",
+        "알브레히트_뒤러-어린토끼": "어린 토끼, 또는 산토끼는 독일의 화가 알브레히트 뒤러의 1502년 수채화·구아슈 작품이다. 이듬해 그린 《큰 잔디밭》과 함께 뒤러의 관찰력을 엿볼 수 있는 걸작으로 평가받고 있다.",
+        "조토_디_본도네-동방박사의_경배": "Botticelli는 1475년경 Santa Maria Novella에 있는 Gaspare di Zanobi del Lama의 예배당 제단을 위해 이 작품을 그렸습니다.",
+        "레오나르도_다빈치-모나리자": "이 그림은 뭐라고 딱 잘라 말할 수 없는 미묘한 미소가 특징인데, 입을 보면 웃고 있는데 눈만 보면 알 수 없다.",
+        "레오나드로_다빈치-흰_담비를_안은_귀부인" :"에르마인을 안은 숙녀라고도 불린다. 르네상스 시대 초상화의 걸작으로, 1489년부터 1490년까지 약 1년에 걸쳐 그려졌다고 한다. 현재 폴란드 크라쿠프의 차르토리스키 미술관에 소장중이다."
+        }
+
+        function sweet_alert(get_pic_src) {
+            desc_title = decodeURI(get_pic_src.src.split('/').reverse()[0]).split('.')[0];
+            art_title = desc_title.replace(/_/g, " ").replace(/-/g, " - ");
+            console.log(desc_title)
+            console.log(art_desc[desc_title])
+            Swal.fire({
+                imageUrl: get_pic_src.src,
+                html: "<b>" + art_title + "</b>" + "<br><br>" + art_desc[desc_title]
+            })
+        }
+    </script>
+
+    <!-- scrollspy auto move -->
+    <script>
+        var check_scrollbar = 0;
+        var save_result = 3;
+
+        window.addEventListener("scroll", (event) => {
+            var current_height = this.scrollY;
+            var total_height = $("html").height();
+            var current_height_percent = scrollY/total_height;
+            
+            if (current_height_percent < 0.5)
+            {
+                check_scrollbar = 0;
+            }else{
+                check_scrollbar = 1;
+            }
+
+
+            if (check_scrollbar != save_result){
+                setTimeout(function() {
+                    if (check_scrollbar == 0){
+                        $("#navbar-example3").scrollTop(0);
+                        save_result = 0;
+                    }else{
+                        $("#navbar-example3").scrollTop(1000);
+                        save_result = 1;
+                    }
+                }, 1000);
+            }
+        });
+        </script>
+
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-example">
+    <%- include("navbar") %>
+    <%#- include("quick_search") %>
+    <% var pic_count = 1;%>
+    <div class="row gallery_container">
+        <div class="col-8 col-lg-10" id="img_container" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+                <%for(var i=0; i< artbox_data[0].length; i++) { %>
+                    <h3 class="era_title" id=<%= artbox_data[0][i] %>> # <%= artbox_data[0][i] %></h3>
+                    <% var big_title = artbox_data[1][i]%>
+                    <hr>
+                    <%for(var mini_title in big_title) { %>
+                        <h5 class="era_title" id=<%= mini_title %>> # <%= mini_title %></h3>
+                        <hr>
+                        <% var art_list = big_title[mini_title]%>
+                        
+                        <% var art_list_len = art_list.length %>
+                        <% for(var art_number = 0; art_number <= art_list_len; art_number++) { %>
+                            <div class="row">
+                                <% for(var three=0; three<3; three++, art_number++) { %>
+                                    <% if(art_number >= art_list.length) { %>
+                                        <% break; %>
+                                    <% } %>
+                                    <% var art_title = art_list[art_number].replace(/_/g, " ").replace(/-/g, " - ")%>
+                                    <% var art_src = "static/img/artbox/" + art_list[art_number] + ".jpg"%>
+                                    <div class="col-lg-4  col-md-6 col-xs-12">
+                                        <div class="pic_frame">
+                                            <div class="aaa">
+                                                <img class="museum_img" src=<%= art_src %>  onclick="sweet_alert(this);">
+                                            </div>
+                                            <div class="pic_description"> <%= art_title %> </div>
+                                        </div>
+                                    </div>
+                                    <% if( three == 2 ) { %>
+                                        <% --art_number; %>
+                                    <% } %>
+                                <% } %>
+                            </div>
+                        <% } %>
+                    <% } %>
+                <% } %>
+        </div>
+        <div class="col-4 col-lg-2" id="scrollspy_container" >
+            <!-- scrolspy -->
+            <!-- <div id="sticky_block"></div> -->
+            <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+                <nav class="nav nav-pills flex-column">
+                    <%for(var i=0; i< artbox_data[0].length; i++) { %>
+                        <% var first_id="#" + artbox_data[0][i] %>
+                        <a class="nav-link a_tag" href=<%=first_id %>><%= artbox_data[0][i] %></a>
+                        <nav class="nav nav-pills flex-column">
+                            <%for(var j=0; j< artbox_data[1][i].length; j++) { %>
+                            <% var second_id="#" + artbox_data[1][i][j] %>
+                            <a class="nav-link ms-3 my-1 a_tag" href=<%=second_id %>><%= artbox_data[1][i][j] %></a>
+                            <% } %>
+                        </nav>
+                    <% } %>
+                    </nav>
+                </nav>
+        </div>
+                <!-- scrolspy fin -->
+    </div>
+    <%-include("footer.ejs")%>
+
+</body>
+</html>

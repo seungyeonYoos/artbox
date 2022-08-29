@@ -14,6 +14,7 @@ html {
 
 .museum_img {
     width: 100%;
+    cursor: pointer;
 }
 
 .pic_description {
@@ -36,6 +37,10 @@ html {
     align-items: center;
 }
 
+#pic_line{
+    margin-bottom: 100px;
+}
+
 #scrollspy_container {
     position: sticky;
     right: 0;
@@ -52,11 +57,11 @@ html {
 #navbar-example3 {
     top: 95px;
     height: 90vh;
-    /* margin-top: 95px; */
     position: sticky;
     overflow: scroll;
-    /* word-break: break-all; */
-}
+    word-break: break-all;
+}   
+
 /* overflow: scroll; */
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: black!important;
@@ -64,7 +69,7 @@ html {
 }
 
 .era_title{
-    padding-top: 70px;
+    padding-top: 110px;
     padding-left: 14px;
 }
 

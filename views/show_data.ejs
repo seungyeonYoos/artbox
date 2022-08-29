@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -46,19 +47,82 @@
 
     <!-- 사진 클릭시 sweetalert2 설명 나오는 script -->
     <script>
+        var art_desc = {"Unknown-봄": "BC 1세기경<br>폼페이 벽화",
+        "Theodore_Apsevdis-Jesus": "",
+        "노트르담_대성당": "",
+        "알브레히트_뒤러-어린토끼": "어린 토끼, 또는 산토끼는 독일의 화가 알브레히트 뒤러의 1502년 수채화·구아슈 작품이다. 이듬해 그린 《큰 잔디밭》과 함께 뒤러의 관찰력을 엿볼 수 있는 걸작으로 평가받고 있다.",
+        "조토_디_본도네-동방박사의_경배": "Botticelli는 1475년경 Santa Maria Novella에 있는 Gaspare di Zanobi del Lama의 예배당 제단을 위해 이 작품을 그렸습니다.",
+        "레오나르도_다빈치-모나리자": "이 그림은 뭐라고 딱 잘라 말할 수 없는 미묘한 미소가 특징인데, 입을 보면 웃고 있는데 눈만 보면 알 수 없다.",
+        "레오나드로_다빈치-흰_담비를_안은_귀부인" :"에르마인을 안은 숙녀라고도 불린다. 르네상스 시대 초상화의 걸작으로, 1489년부터 1490년까지 약 1년에 걸쳐 그려졌다고 한다. 현재 폴란드 크라쿠프의 차르토리스키 미술관에 소장중이다.",
+        "미켈란젤로-비너스와_큐피드": "화가는 자신이 의도하는 것을 사실적으로 보여줄 때도 있지만 우의적으로 표현하기도 한다. 그리스 로마 신화를 통해 성적 쾌락을 동반한 부도덕한 행위를 우의적으로 보여준 작품이 아그놀로 브론치노(1503~1572)의 <비너스와 큐피드의 우화>이다.",
+        "파르미자니노-목이_긴_성모": "마돈나와 천사와 성 제롬이있는 긴 아이로도 알려진 긴 목을 가진 마돈나는 파르 미지 아니 노의 이탈리아 매너리스트 유화로 c. 1535-1540 년에 천사와 함께 마돈나와 어린이를 묘사합니다.",
+        "엘_그레코-라오콘": "Laocoön은 그리스 화가 El Greco가 1610년에서 1614년 사이에 그린 유화입니다. 워싱턴 D.C.에 있는 내셔널 갤러리 오브 아트 컬렉션의 일부입니다.",
+        "엘_그레코-오르가스_백작의_매장": "오르가스 백작의 매장은 스페인 르네상스 시대의 그리스인 화가 엘 그레코가 1586년에서 1588년에 걸쳐 그린 그림이다. 톨레도의 산토 토메 교회에서 소장하고 있으며, 그림은 천계와 현세가 명확하게 상하 분할되어 있다.",
+        "파올로_베로네세-가나의_혼인_잔치": "가나에서의 혼인잔치는 예수께서 기적적으로 물을 적포도주로 바꾸는 가나에서의 결혼에 대한 성경 이야기를 묘사한 대표적인 그림입니다.",
+        "디에고_벨라스케스-시녀들": "스페인 마드리드의 프라도 미술관이 소장하고 있는, 스페인 예술의 황금기를 이끌었던 거장 디에고 벨라스케스가 1656년에 완성한 작품이다.",
+        "잔_로렌초_베르니니-성_테레사의_법열": "산타 마리아 델라 비토리아 성당에 있다. 1647년부터 1652년까지에 걸쳐 제작하였다.",
+        "렘브란트-야경": "《야경》 또는 《야간순찰》은 네덜란드에서 태어난 유명한 화가 렘브란트 하르먼손 판 레인의 작품이다. 《야경》의 정확한 작품명은 《프란스 반닝 코크와 빌럼 반 루이텐부르크의 민병대》이다. 《야경》은 네덜란드 암스테르담 국립미술관에 전시 중이다.",
+        "장오노레_프라고나르-그네": "스윙의 행복한 사고로도 알려진 스윙은 런던 월리스 컬렉션의 장 호노 레 프라 고 나르 (Jean-Honoré Fragonard)의 18 세기 유화입니다. 로코코 시대의 걸작 중 하나로 여겨지며 Fragonard의 가장 잘 알려진 작품입니다.",
+        "장오노레_프라고나르-빗장": "1777년 장오노레 프라고나르가 그린, 연애를 묘사한 회화이다. 이 그림은 화가의 가장 유명한 그림 중 하나이다. 일반적인 해석은 이 장면이 침실에 묶인 두 연인과 문을 잠그는 남자의 묘사를 암시했다는 것이다.",
+        "귀스타브_쿠르베-돌깨는_사람": "프랑스 화가 Gustave Courbet의 1849년 그림입니다. 두 농부, 청년과 노인이 바위를 깨는 모습을 그린 리얼리즘 작품이었습니다. Stone Breakers는 1850년 파리 살롱에서 처음 전시되었습니다.",
+        "빈센트_반_고흐-감자_먹는_사람들": "1885년 4월 네덜란드 뉘넌에서 그린 유화이다. 암스테르담의 반 고흐 미술관에 위치해 있다.",
+        "오귀스트_로댕-생각하는_사람": "이 사람은 턱을 오른팔에 괴고 있는데, 그 오른팔은 왼쪽 다리에 팔꿈치를 얹고 있다. 높이는 186cm이다. 작품의 석고상은 1880년에 완성되어, 최초에는 《시인》이란 이름이 붙여졌다.",
+        "빈센트_반_고흐-담배_피는_해골": "담배를 피우는 해골의 해골은 Vincent van Gogh의 초기 작품입니다. 해골과 담배를 특징으로하는 작고 날짜가없는 캔버스에 오일 페인팅은 암스테르담에있는 반 고흐 미술관의 영구 소장품의 일부입니다.",
+        "클로드_모네-인상,_해돋이": "클로드 모네가 르아브르 항구의 아침 풍경을 그린 유화이다. '인상주의'라는 용어의 유래로 알려져 있다. 현재 파리 마르모탕 미술관에서 소장되어 있다.",
+        "클로드_모네-파라솔을_든_여인": "마담 모네와 그녀의 아들 (때로는 The Stroll이라고도 함)은 1875 년 클로드 모네가 그린 캔버스에 유화로 그린 작품입니다. 인상파 작품은 1871 년부터 1877 년까지의 기간 동안 그의 아내 카밀 모네와 아들 장 모네를 묘사합니다.",
+        "에두아르_마네-올랭피아": "캔버스에 유화로 그린 그림이다. 규격은 190 x 130.5cm 이다. 프랑스는 1890년 클로드 모네의 공식적인 요청으로 그림을 취득하였고 현재 파리 오르세 미술관에 전시 중이다.",
+        "앙리_마티스-초록색_띠": "마담 마티스의 초상화로도 알려진 녹색 줄무늬. Green Line은 그의 아내 Amélie Noellie Matisse-Parayre의 Henri Matisse의 초상화입니다. 1905 년 가을 또는 겨울에 완성 된 캔버스에 유화입니다.",
+        "앙드레_드랭-The_Turning_Road,_L_'Estaque": "",
+        "앙리_마티스-춤": "1910 년 앙리 마티스 (Henri Matisse)가 러시아 사업가이자 미술 수집가 인 세르게이 슈 추친 (Sergei Shchukin)의 요청에 따라 러시아 상트 페테르부르크에있는 허미 티지 박물관 (Hermitage Museum)에 큰 장식 패널을 물었습니다.910 년 앙리 마티스 (Henri Matisse)가 러시아 사업가이자 미술 수집가 인 세르게이 슈 추친 (Sergei Shchukin)의 요청에 따라 러시아 상트 페테르부르크에있는 허미 티지 박물관 (Hermitage Museum)에 큰 장식 패널을 물었습니다.",
+        "오토_딕스-The_Skat_Players": "1920년에 그린 캔버스 페인팅에 유화와 콜라주입니다. 카드 게임을 하는 1차 세계 대전의 병자들을 묘사합니다. 크기는 110 x 88 cm입니다. 베를린 노이에 국립 미술관에서 개최됩니다.",
+        "살바도르_달리-기억의_지속": "기억의 지속은 살바도르 달리의 작품 중 가장 잘 알려진 그림이다. 특별히 시계의 모습이 특이한 형태로 그려져 있다. 녹아내리는 시계, 늘어진 시계 등으로도 널리 알려져 왔다. 1934년 이후로 뉴욕의 현대미술관이 소장하고 있다.",
+        "르네_마그리트-철학자의_램프": "",
+        "루보_크리스테크-In_the_Captivity_of_the_Wordly_Cathedral": "",
+        "잭슨_폴록-No._1": "",
+        "잭슨_폴록-No._1A": "",
+        "앤디_워홀-마린린-먼로": "제작 시기: 1968년",
+        "로이_리히텐슈타인-차안에서": "이 그림의 두 가지 버전 중 더 작고 오래된 것은 이전에 리히텐슈타인 그림에 대한 최고 경매 가격으로 기록을 세웠습니다."
+        }
+
         function sweet_alert(get_pic_src) {
+            desc_title = decodeURI(get_pic_src.src.split('/').reverse()[0]).split('.')[0];
+            art_title = desc_title.replace(/_/g, " ").replace(/-/g, " - ");
             Swal.fire({
                 imageUrl: get_pic_src.src,
-                html: '고세구! 고세구! 고세구! <br> 고양이가 세상을 구한다!!!!',
+                html: "<b>" + art_title + "</b>" + "<br><br>" + art_desc[desc_title]
             })
         }
     </script>
 
     <!-- scrollspy auto move -->
     <script>
+        var check_scrollbar = 0;
+        var save_result = 3;
+
         window.addEventListener("scroll", (event) => {
-            let scrollY = this.scrollY;
-            console.log(scrollY);
+            var current_height = this.scrollY;
+            var total_height = $("html").height();
+            var current_height_percent = scrollY/total_height;
+            
+            if (current_height_percent < 0.5)
+            {
+                check_scrollbar = 0;
+            }else{
+                check_scrollbar = 1;
+            }
+
+
+            if (check_scrollbar != save_result){
+                setTimeout(function() {
+                    if (check_scrollbar == 0){
+                        $("#navbar-example3").scrollTop(0);
+                        save_result = 0;
+                    }else{
+                        $("#navbar-example3").scrollTop(1000);
+                        save_result = 1;
+                    }
+                }, 700);
+            }
         });
         </script>
 
@@ -71,27 +135,36 @@
         <div class="col-8 col-lg-10" id="img_container" data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
                 <%for(var i=0; i< artbox_data[0].length; i++) { %>
                     <h3 class="era_title" id=<%= artbox_data[0][i] %>> # <%= artbox_data[0][i] %></h3>
+                    <% var big_title = artbox_data[1][i]%>
                     <hr>
-                    <%for(var j=0; j< artbox_data[1][i].length; j++) { %>
-                        <h5 class="era_title" id=<%= artbox_data[1][i][j] %>> - <%= artbox_data[1][i][j] %></h5>
+                    <%for(var mini_title in big_title) { %>
+                        <h5 class="era_title" id=<%= mini_title %>> # <%= mini_title %></h3>
                         <hr>
-                            <div class="row">
-                                <% for(var three=0; three<3; three++) { %>
-                                    <% if(pic_count >= artbox_img.length) {%>
-                                        <%continue %>
+                        <% var art_list = big_title[mini_title]%>
+                        
+                        <% var art_list_len = art_list.length %>
+                        <% for(var art_number = 0; art_number <= art_list_len; art_number++) { %>
+                            <div class="row" id="pic_line">
+                                <% for(var three=0; three<3; three++, art_number++) { %>
+                                    <% if(art_number >= art_list.length) { %>
+                                        <% break; %>
                                     <% } %>
-                                    <% var img_src = "static/img/artbox/" + pic_count++ + ".JPG" %>
+                                    <% var art_title = art_list[art_number].replace(/_/g, " ").replace(/-/g, " - ")%>
+                                    <% var art_src = "static/img/artbox/" + art_list[art_number] + ".jpg"%>
                                     <div class="col-lg-4  col-md-6 col-xs-12">
                                         <div class="pic_frame">
                                             <div class="aaa">
-                                                <img class="museum_img" src=<%=img_src %>  onclick="sweet_alert(this);">
+                                                <img class="museum_img" src=<%= art_src %>  onclick="sweet_alert(this);">
                                             </div>
-                                            <div class="pic_description">작품명 : <%= pic_count %>
-                                            </div>
+                                            <div class="pic_description"> <%= art_title %> </div>
                                         </div>
                                     </div>
+                                    <% if( three == 2 ) { %>
+                                        <% --art_number; %>
+                                    <% } %>
                                 <% } %>
                             </div>
+                        <% } %>
                     <% } %>
                 <% } %>
         </div>
@@ -104,9 +177,10 @@
                         <% var first_id="#" + artbox_data[0][i] %>
                         <a class="nav-link a_tag" href=<%=first_id %>><%= artbox_data[0][i] %></a>
                         <nav class="nav nav-pills flex-column">
-                            <%for(var j=0; j< artbox_data[1][i].length; j++) { %>
-                            <% var second_id="#" + artbox_data[1][i][j] %>
-                            <a class="nav-link ms-3 my-1 a_tag" href=<%=second_id %>><%= artbox_data[1][i][j] %></a>
+                            <% var big_title = artbox_data[1][i]%>
+                            <%for(var mini_title in big_title) { %>
+                                <% var second_id="#" + mini_title %>
+                                <a class="nav-link ms-3 my-1 a_tag" href=<%= second_id %>><%= mini_title %></a>
                             <% } %>
                         </nav>
                     <% } %>
