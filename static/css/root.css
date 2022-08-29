@@ -37,7 +37,7 @@
         /* Welcome to Museum */
         .main-text-2 div:first-child {
             font-size: 130px;
-            margin-top: 20px;
+            margin-top: 50px;
             line-height: 170px;
         }
         /* 자연에서 찾은 순수한 아름다운 ~ */
@@ -102,13 +102,15 @@
             border-radius: 10px;
             border: 1px solid gray;
             background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
-            url(../img/question.jpg);
+            url(../img/pp.jpg);
             background-size: cover;
+            background-position: center;
             transition: 1s;
         }
 
         .qa-img:hover {
-            background-image: url(../img/question.jpg);
+            background-image:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            url(../img/pp.jpg);
         }
 
         
@@ -129,12 +131,13 @@
         @media (max-width: 991px) { 
             .main-text-2 { 
                 position: static;
+                margin-left: 5%;
             }
             .main-text-2-img {
                 position: static;
                 width: 57vw;
                 height: 40vh;
-                margin: 17px 0px;
+                margin: 17px 5%;
             }
             .nature {
                 margin: 20px 0px;
@@ -144,19 +147,25 @@
             .main-text-1 {  font-size: 120px;
                             top: 580px;
                             left: 0; }
+            .third-floor { height: 1200px; }
          }
-         
+                     
          @media (max-width: 424px) { 
             .main-text-1 {  
                 display: none;
              }
          }
          @media (max-width: 700px) { 
-            .main-text-2 div:first-child{  font-size: 450%;
+            .main-text-2 div:first-child {  font-size: 450%;
+                line-height: 100px;
                             }
+            .main-text-2 div:nth-child(2) { 
+                font-size: 20px;
+                
+            }
             /* Ask Question 크기 줄이기 */
             .qa-text {
-                margin-left: 0;
+                margin-left: 5%;
                 font-size: 450%;
             }
             /* Ask Question 이미지 크기 줄이기 */
@@ -170,3 +179,37 @@
                 font-size: 35%;
             }
          }
+        
+         /* third floor 크기 */
+         @media (max-width: 890px) {
+             .third-floor {
+                height: 1800px;
+             }
+         }
+         @media (max-width: 748px) {
+            .third-floor {
+               height: 1550px;
+            }
+        }
+        @media (max-width: 600px) {
+            .third-floor {
+               height: 1200px;
+            }
+        }
+        @media (max-width: 479px) {
+            .third-floor {
+               height: 1000px;
+            }
+        }
+
+        /* Q&A 게시판 텍스트 없어지게 */
+        @media (max-width: 515px) {
+            .qa-img-text > div:nth-child(2) {
+               display: none;
+            }
+            .qa-img-text > div:first-child {
+                margin-top: 300px;
+
+            }
+
+        }
