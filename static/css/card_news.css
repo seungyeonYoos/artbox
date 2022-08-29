@@ -116,10 +116,8 @@
 .news_text2 {
     position: absolute;
     font-size: 15px;
-    top: 70px;
-    left: 0;
-    /* top: 50px;
-    margin-right: 10%; */
+    margin-top: 50%;
+    text-align: center;
 }
 
 .news_text1:after {
@@ -179,10 +177,8 @@
 
     }
     /* .card_news_all {
-        margin-left: 15%;
-        margin-right: -24%;
+        margin: auto;
     } */
-
 }
 
     
