@@ -97,7 +97,6 @@
     display: flex;
     color: white;
     font-family: verdana, sans-serif;
-    white-space: pre;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -117,8 +116,8 @@
 .news_text2 {
     position: absolute;
     font-size: 15px;
-    left: 50%; top: 50%; 
-    transform: translate(-50%, -50%); text-align: center;
+    top: 70px;
+    left: 0;
     /* top: 50px;
     margin-right: 10%; */
 }
