@@ -19,24 +19,7 @@
 </div>
 
 <script>
-// 내가슨거
-    // $().ready(function () {
-    //     var jbMedia = window.matchMedia( '( max-width: 675px )' );
-    //     if ( jbMedia.matches == true) {
-    //         // 1024px 이상에서 사용할 스크립트
-    //         $(".exhibit > div").hover(
-    //             function () {
-    //                 console.log("aaaa");
-    //             });
-    //     } else {
-    //         // 1024px 미만에서 사용할 스크립트
-    //         $(".exhibit > div").hover(
-    //             function() {
-    //                 console.log("bbbb");                }
-    //         );
 
-    //     }
-    // });
 
     $().ready(function () {
         $(".exhibit > div").hover(
@@ -46,6 +29,31 @@
             });
     });
 
+    // var lastwidth = $(window).width();
+    // $(window).resize(function(){
+    //     console.log($(window).width());
+    //     if($(window).width() <= 675 && lastwidth > 675 ){
+    //         $(".exhibit > div").unbind('mouseenter mouseleave');
+    //     } else if ($(window).width() > 675 && lastwidth <= 675 ){
+    //         $(".exhibit > div").hover(
+    //         function () {
+    //             $(".exhibit > div").removeClass("hover");
+    //             $(this).addClass("hover");
+    //         });
+    //     }
+
+    //     lastwidth = $(window).width();
+    // })
+
+    // const media = matchMedia("screen and (min-width: 975px)")
+
+    // media.addEventListener((a) => {
+    //     $(".exhibit > div").hover(
+    //         function () {
+    //             $(".exhibit > div").removeClass("hover");
+    //             $(this).addClass("hover");
+    //         });
+    // })
 
 
     // var width = window.matchMedia();

@@ -2,16 +2,19 @@
         .exhibit {
             display: flex;
             justify-content: center;
+
         }
         .exhibit div a {
             position: absolute;
             height: 100%;
             top: 90%;
-            margin-left: 1%;
+            margin-left: 2%;
             text-decoration: none;
             color: white;
             font-size: 20px;
             display: none;
+       
+
         }
         /* 전체 단락 앱솔뤁 */
         .exhibit-contents {
@@ -52,19 +55,32 @@
         .exhibit > div.hover {
             width: 400px;
         }
+
+        .exhibit > div.hover > a {
+            display: block;
+        }
         
 
         
 
 
         @media (max-width: 675px) { 
-            .exhibit { display: block; }
-            .exhibit div a { position: static; 
-            padding-top: 100px;
+            .exhibit { 
+            display: block; 
+            height: auto;
             }
-            .exhibit > div.hover { 
+            .fourth-floor {
+            height: 2200px;
+            }
+            
+            .exhibit div a { 
+            position: static; 
+            padding-top: 350px;
+            }
+            .exhibit > div {
                 width: 400px;
-             }
+                margin:10px auto ;
+            }
         }
         
 
