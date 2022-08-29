@@ -158,11 +158,14 @@
         position: static;
         width: 65%;
         height: auto;
-        margin-left: 15%;
-        margin-right: -20%;
+        margin: auto;
         text-align: center;
     }
     
+    .news_title {
+        transform: translateX(27%);
+        margin-bottom: 5%;
+    }
 
     .news_container>a,
     .news_container2>a {
