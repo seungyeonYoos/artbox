@@ -12,15 +12,16 @@
 }
     /* 네비게이션 바 고정 */
     .love {
-        top: 0%;
+        display: flex;
         position: fixed; 
         font-family: 'MaruBuri-Regular';
+        justify-content: center;
+        z-index: 10000;
         font-size: 25px;
-        display: flex;
         margin-top: 0px;
         width: 100%;
-        z-index: 10000;
-        justify-content: center;
+        top: 0%;
+        
         border-bottom: 1px solid gray;
         background-color: white;
     }
@@ -189,4 +190,4 @@
             height: 94px;
         }
         .love > li > a { display: none; }
-     }
+    }

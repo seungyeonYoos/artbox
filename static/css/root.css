@@ -4,15 +4,12 @@
     font-weight: 400;
     font-style: normal;
 }
-        
         /* 1번째 단락 전체 */
         .first-floor , .second-floor , .third-floor , .fourth-floor , .fifth-floor {
             position: relative;
             width: 100%;
             min-height: 100vh;
         }
-
-
         /* Art-box */
         .main-text-1 {
         position: absolute;
@@ -32,8 +29,6 @@
         .root-show_data {
             text-decoration: none;
         }
-        
-        
         /* Welcome to Museum */
         .main-text-2 div:first-child {
             font-size: 130px;
@@ -48,7 +43,6 @@
         /* BRAND STORY */
         .main-text-2 span:nth-child(3) {
             font-size: 20px;
-
         }
         .main-text-2-img {
             position: absolute;
@@ -79,7 +73,6 @@
             width: 100%;
             text-align: center;
         }
-
         /* 5번째 단락 */
         .fifth-floor {
             height: 1000px;
@@ -107,13 +100,10 @@
             background-position: center;
             transition: 1s;
         }
-
         .qa-img:hover {
             background-image:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
             url(../img/pp.jpg);
         }
-
-        
         .qa-img-text {
             text-decoration: none;
             color: white;
@@ -126,7 +116,6 @@
         .qa-img-text div:nth-child(2) {
             font-size: 20px;
         }
-
         /* 반응형 */
         @media (max-width: 991px) { 
             .main-text-2 { 
@@ -142,20 +131,19 @@
             .nature {
                 margin: 20px 0px;
             }
-         }
+        }
         @media (max-width: 798px) { 
             .main-text-1 {  font-size: 120px;
                             top: 580px;
                             left: 0; }
             .third-floor { height: 1200px; }
-         }
-                     
-         @media (max-width: 424px) { 
-            .main-text-1 {  
-                display: none;
-             }
-         }
-         @media (max-width: 700px) { 
+        }
+        @media (max-width: 424px) { 
+        .main-text-1 {  
+            display: none;
+            }
+        }
+        @media (max-width: 700px) { 
             .main-text-2 div:first-child {  font-size: 450%;
                 line-height: 100px;
                             }
@@ -178,38 +166,35 @@
             .main-text-3-1 {
                 font-size: 35%;
             }
-         }
+        }
         
          /* third floor 크기 */
-         @media (max-width: 890px) {
-             .third-floor {
-                height: 1800px;
-             }
-         }
-         @media (max-width: 748px) {
+        @media (max-width: 890px) {
             .third-floor {
-               height: 1550px;
+            height: 1800px;
+            }
+        }
+        @media (max-width: 748px) {
+            .third-floor {
+                height: 1550px;
             }
         }
         @media (max-width: 600px) {
             .third-floor {
-               height: 1200px;
+                height: 1200px;
             }
         }
         @media (max-width: 479px) {
             .third-floor {
-               height: 1000px;
+                height: 1000px;
             }
         }
-
         /* Q&A 게시판 텍스트 없어지게 */
         @media (max-width: 515px) {
             .qa-img-text > div:nth-child(2) {
-               display: none;
+                display: none;
             }
             .qa-img-text > div:first-child {
                 margin-top: 300px;
-
             }
-
         }

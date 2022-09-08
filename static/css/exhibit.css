@@ -2,7 +2,6 @@
         .exhibit {
             display: flex;
             justify-content: center;
-
         }
         .exhibit div a {
             position: absolute;
@@ -13,15 +12,12 @@
             color: white;
             font-size: 20px;
             display: none;
-       
-
         }
         /* 전체 단락 앱솔뤁 */
         .exhibit-contents {
             position: absolute;
             z-index: 100000;
             width: 100%;
-  
         }
         /* all 박스 */
         .exhibit > div {
@@ -39,7 +35,6 @@
         }
         .exhibit7 {
             background-image: url(../img/art_5.jpg);
-
         }
         .exhibit8 {
             background-image: url(../img/art_3.jpg);
@@ -51,19 +46,13 @@
             background-image: url(../img/art_4.jpg);
         }
 
-
         .exhibit > div.hover {
             width: 400px;
         }
-
         .exhibit > div.hover > a {
             display: block;
         }
         
-
-        
-
-
         @media (max-width: 675px) { 
             .exhibit { 
             display: block; 
@@ -72,7 +61,6 @@
             .fourth-floor {
             height: 2200px;
             }
-            
             .exhibit div a { 
             position: static; 
             padding-top: 350px;

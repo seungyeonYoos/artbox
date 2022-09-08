@@ -12,16 +12,18 @@
 }
     /* 네비게이션 바 고정 */
     .love {
-        position: fixed; 
-        top: 0;
-        left: 0;
-        font-family: 'MaruBuri-Regular';
-        font-size: 25px;
         display: flex;
-        margin-top: 0px;
-        width: 100%;
-        z-index: 100001;
+        position: fixed; 
+        font-family: 'MaruBuri-Regular';
         justify-content: center;
+        z-index: 100001;
+        font-size: 25px;
+        margin-top: 0px;
+        top: 0;
+
+        
+        left: 0;
+        width: 100%;
     }
     .love > li {
         margin: 20px;
@@ -174,5 +176,5 @@
 
     @media (max-width: 991px) { 
         .love { display: none; }
-     }
+    }
     

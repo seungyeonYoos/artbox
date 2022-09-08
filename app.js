@@ -117,16 +117,8 @@ app.get("/exhibition", (req, res) => {
   res.render("exhibition");
 });
 
-app.get("/main", (req, res) => {
-  res.render("main");
-});
-
 app.get("/news_page", (req, res) => {
   res.render("news_page");
-});
-
-app.get("/test", (req, res) => {
-  res.render("test");
 });
 
 app.listen(port, () => {
