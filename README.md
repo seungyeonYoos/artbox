@@ -10,6 +10,5 @@
 * 유승연 - Main page
 * 김동현 - Q&A page, main video
 
-### Link
-[art-box](http://118.67.142.110:8000/)
+### Link - [art-box](http://118.67.142.110:8000/)
 
