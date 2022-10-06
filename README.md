@@ -11,5 +11,5 @@
 * 김동현 - Q&A page, main video
 
 ### Link
-[art-box](118.67.142.110:8000/)
+[art-box](https://118.67.142.110:8000/)
 
