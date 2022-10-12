@@ -10,6 +10,6 @@
 * 유승연 - Main page
 * 김동현 - Q&A page, main video
 
-#### 🔗 Link : [art-box](http://118.67.142.110:8000/)
-
 ![all-page](https://user-images.githubusercontent.com/26360179/195307262-9760a556-265d-40f5-a446-02e9b2293ac4.gif)
+
+#### 🔗 Link : [art-box](http://118.67.142.110:8000/)
