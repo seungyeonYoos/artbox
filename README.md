@@ -19,7 +19,7 @@
 
 |NAME|WORK|DESCRIPTION|
 |:---:|:---:|:---:|
-|[sangsun No](https://github.com/sangsunNo "sangsun No")|[GALLERY](http://118.67.142.110:8000/show_data "GALLERY")|[Description](https://sangsunno.github.io/art%20box/art-box-2-GALLERY/ "Description")|
+|[sangsun No](https://github.com/sangsunNo "sangsun No")|[GALLERY](http://118.67.142.110:8000/show_data "GALLERY")|[Description](https://sangsunno.github.io/art%20box/art-box-3-GALLERY-%EC%84%A4%EA%B3%84/ "Description")|
 |[Dong Hyun, Kim](https://github.com/GarlicScent "Dong Hyun, Kim")|[Q&A](http://118.67.142.110:8000/inquery "Q&A"), [MAIN ( video )](http://118.67.142.110:8000/ "MAIN ( video )")||
 |[seungyeonYoos](https://github.com/seungyeonYoos "seungyeonYoos")|[MAIN](http://118.67.142.110:8000/ "MAIN ")||
 |[ShinHanna98](https://github.com/ShinHanna98 "ShinHanna98")|[NEWS](http://118.67.142.110:8000/news_page "NEWS"), [EXHIBITION](http://118.67.142.110:8000/exhibition "EXHIBITION")||
