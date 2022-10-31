@@ -4,7 +4,7 @@
 
 <br/>
 
-## 상세 소개  
+## 🔬 상세 소개  
 &nbsp;코딩온 교육기관을 통해 진행한 첫 번째 프론트엔드 프로젝트입니다.  
 <br />
 &nbsp;알고 보면 더 재미있는 예술, 하지만 예상 외로 폐쇄적이고 이론을 배우기 녹록치 않은 분야라고 생각이 되었습니다.  
@@ -27,7 +27,7 @@
 |[ShinHanna98](https://github.com/ShinHanna98 "ShinHanna98")|[NEWS](http://118.67.142.110:8000/news_page "NEWS") <br/> [EXHIBITION](http://118.67.142.110:8000/exhibition "EXHIBITION")||
 <br/>
 
-## 기간  
+## 🗓 기간  
 2022/08/12 ~ 2022/08/29  
 
 <br/>
