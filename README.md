@@ -37,7 +37,7 @@
 
 <br/><br/>
 
-🔗 Link : [Art box](http://118.67.142.110:8000/) &nbsp;&nbsp;&nbsp;
+🔗 Link : [Art box](http://101.101.219.234:8000/) &nbsp;&nbsp;&nbsp;
 [프로젝트 개요](https://sangsunno.github.io/art%20box/art-box-1-%EA%B0%9C%EC%9A%94/ "프로젝트 개요")
 =======
 # artbox
