@@ -37,5 +37,3 @@
 ## :link: Link
 [artbox](http://101.101.219.234:8000/)
 
-# artbox
->>>>>>> d496b44517ca6d13ba923d12c48302c81fbb952f
